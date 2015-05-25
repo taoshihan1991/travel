@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+	<title>旅游-景点门票，出境游，特价机票，周末游，邮轮旅行，酒店预订</title>
+	<meta name='keywords' content='' />
+	<meta name='description' content='' />
+	<link rel="stylesheet" type="text/css" href="css/tcIndex.css" media="screen"/>
+
+	<link rel="stylesheet" type="text/css" href="css/extend.css"/>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/extend.js"></script>
+</head>
+<body>
+<!-- [导航头部部分] -->
+<div id="header">
+		<div class="commonhead">
+			<span id="bulletin"></span>
+			<div id="topNavWrapper">
+				<div id="topNavPanel">
+					<div id="topLogin">
+						<span>您好，欢迎使用！</span>
+						<a class="login" rel="nofollow" href="https://passport.ly.com/" onclick="this.href = this.href + '?pageurl=' + encodeURIComponent(window.location)">登录</a>
+						<a class="register" rel="nofollow" href="https://passport.ly.com/register/index/" onclick="this.href = this.href + '?pageurl=' + encodeURIComponent(window.location.href)">注册</a>
+					</div>
+					<ul id="topNav">
+						<li id="topMyTc">
+							<a href="http://member.ly.com/">我的旅游</a>
+							<div data-height="100px">
+								<a rel="nofollow" href="http://member.ly.com/">订单中心</a>
+								<a rel="nofollow" href="http://member.ly.com/Member/MyFavorites.aspx">我的收藏</a>
+								<a rel="nofollow" href="http://member.ly.com/Member/MemberInfomation.aspx">我的信息</a>
+								<a rel="nofollow" href="http://www.ly.com/vip/rights/">会员专享</a>
+							</div>
+						</li>
+					
+						<li id="weixinTc">
+							<a href="javascript:void(0);">微信<i></i></a>
+							<div></div>
+							<span></span>
+						</li>
+						<li id="tcPhone">
+							<a href="javascript:void(0);">电话<i></i></a>
+							<div>
+								<p>国内电话：4007-777-777</p>
+								<p>海外电话：+86-512-8220-9000</p>
+							</div>
+							<span></span>
+						</li>	
+						<li id="servicePhone">
+							<a href="javascript:void(0);">
+								客户服务
+								<i></i>
+							</a>
+							<div>								
+								<a target="_blank" href="http://www.ly.com/newhelp/">帮助中心</a>
+								<a target="_blank" href="http://www.ly.com/newhelp/CustomerService.html" onclick="_tcTraObj._tcTrackEvent('customerservice5353', 'Pcnavigation', 'CN首页','30');">在线客服</a>
+								<a target="_blank" href="http://www.ly.com/newhelp/MyAdvice.aspx">人工申诉</a>
+							</div>
+							<span></span>
+						</li>
+                         <li id="topJoinTc">
+						 	<a href="javascript:;">合作中心<i></i></a>
+                          	<div  data-height="57px">
+                              <a rel="nofollow" target="_blank" href="http://www.ly.com/subject/jiudianjiameng.aspx">联盟合作</a>
+                              <a rel="nofollow" target="_blank" href="http://www.ly.com/zhuanti/lianmingka/">商务合作</a>
+                          </div>
+                          <span></span>
+                      </li>
+					</ul>
+				</div>
+			</div>
+			<div id="headerWrapper">
+				<div id="pageheader" class="clearfix">
+					<div class="logo_style">
+                      <img src="images/topnormal.jpg" alt="" srcset="images/mactopnormal.jpg 2x"/>
+						<h1 class="logo" title="旅游">
+							<a href="" title="旅游"></a>
+						</h1>
+					</div>
+					<div style="margin-right: 25px;">
+						<a target="_blank" href="">
+							<img src="images/app.png" alt="手机客户端"></a>
+					</div>
+				</div>
+			</div>
+			<div id="menuNavOuter">
+				<div id="menuNavWrapper">
+					<div id="menuNavPanel">
+						<ul id="menuNav">
+							<li class="current">
+								<a href="http://www.ly.com/" onclick="_tcTraObj._tcTrackEvent('homepage5353frist', 'Pcnavigation', 'CN首页','30');">首页</a>
+							</li>
+							<li>
+								<!-- <p>
+									<span>行业领先</span>
+								</p> -->
+								<a href="http://www.ly.com/scenery/" onclick="_tcTraObj._tcTrackEvent('scenery5353frist', 'Pcnavigation', 'CN首页','30');">
+									景点
+									<i></i>
+								</a>
+								<div class="submenu-nav">
+									<a class="scenery-submenu1" href="http://www.ly.com/scenery/" onclick="_tcTraObj._tcTrackEvent('guonei5353scsecond', 'Pcnavigation', 'CN首页','30');">国内景点</a>
+									<a href="http://www.ly.com/globalscenery/" onclick="_tcTraObj._tcTrackEvent('global5353scsecond', 'Pcnavigation', 'CN首页','30');">国际景点</a>
+									<a href="http://www.ly.com/globalscenery/gangaotai/" onclick="_tcTraObj._tcTrackEvent('gangaotai5353scsecond', 'Pcnavigation', 'CN首页','30');">港澳台门票</a>
+									<a href="http://www.ly.com/zizhuyou/" onclick="_tcTraObj._tcTrackEvent('jiuplusjing5353scsecond', 'Pcnavigation', 'CN首页','30');">景点+酒店</a>
+									<a href="http://www.ly.com/bustour/searchlist.html" onclick="_tcTraObj._tcTrackEvent('busscenery5353scsecond', 'Pcnavigation', 'CN首页','30');">巴士跟团游</a>
+									<a href="http://www.ly.com/scenery/chwl/" onclick="_tcTraObj._tcTrackEvent('chwl5353scsecond', 'Pcnavigation', 'CN首页','30');">当地玩乐</a>
+									<a href="http://www.ly.com/scenery/njl/SearchList_0_0_0__0_0.html" onclick="_tcTraObj._tcTrackEvent('njl5353scsecond', 'Pcnavigation', 'CN首页','30');">农家乐</a>
+									<a href="http://www.ly.com/activity/" onclick="_tcTraObj._tcTrackEvent('activity5353scsecond', 'Pcnavigation', 'CN首页','30');">景点活动</a>
+									<a class="menuorder" href="http://member.ly.com/Scenery/SceneryMemberOrderList.aspx">
+										景点订单
+										<i>&gt;&gt;</i>
+									</a>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.ly.com/hotel/" onclick="_tcTraObj._tcTrackEvent('hotelfirst5353', 'Pcnavigation', 'CN首页','30');">
+									酒店
+									<i></i>
+								</a>
+								<div class="submenu-nav">
+									<a class="hotel-submenu1" href="http://www.ly.com/hotel/" onclick="_tcTraObj._tcTrackEvent('guonei5353hosecond', 'Pcnavigation', 'CN首页','30');">国内酒店</a>
+									<a href="http://tuan.ly.com/" onclick="_tcTraObj._tcTrackEvent('tuangou5353hosecond', 'Pcnavigation', 'CN首页','30');">团购酒店</a>
+									<a href="http://www.ly.com/zizhuyou/" onclick="_tcTraObj._tcTrackEvent('jiuplusjing5353hosecond', 'Pcnavigation', 'CN首页','30');">酒店+景点</a>
+									<a href="http://www.ly.com/gangaohotel/" onclick="_tcTraObj._tcTrackEvent('gangaotai5353hosecond', 'Pcnavigation', 'CN首页','30');">港澳台酒店</a>
+									<a href="http://globalhotel.ly.com/" onclick="_tcTraObj._tcTrackEvent('international5353hosecond', 'Pcnavigation', 'CN首页','30');">国际酒店</a>
+									<a href="http://www.ly.com/hotel/kezhan/" style="position: relative;" onclick="_tcTraObj._tcTrackEvent('minsu5353hosecond', 'Pcnavigation', 'CN首页','30');">
+										民宿客栈
+										<!-- <span class="scmnew"></span> -->
+									</a>
+									<a href="http://www.ly.com/hotel/liansuo/" rel="nofollow" onclick="_tcTraObj._tcTrackEvent('pinpai5353hosecond', 'Pcnavigation', 'CN首页','30');">品牌汇</a>
+									<a class="menuorder" href="http://member.ly.com/Hotel/HotelMemberOrderList.aspx">
+										酒店订单
+										<i>&gt;&gt;</i>
+									</a>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.ly.com/FlightQuery.aspx" onclick="_tcTraObj._tcTrackEvent('Flightfirst5353', 'Pcnavigation', 'CN首页','30');">
+									机票
+									<i></i>
+								</a>
+								<div class="submenu-nav">
+									<a class="flight-submenu1" href="http://www.ly.com/FlightQuery.aspx" onclick="_tcTraObj._tcTrackEvent('guonei5353flisecond', 'Pcnavigation', 'CN首页','30');">国内机票</a>
+									<a href="http://www.ly.com/iflight/" onclick="_tcTraObj._tcTrackEvent('guoji5353flisecond', 'Pcnavigation', 'CN首页','30');">国际机票</a>
+									<a class="menuorder" href="http://member.ly.com/Flight/FlightMemberOrderList.aspx">
+										机票订单
+										<i>&gt;&gt;</i>
+									</a>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.ly.com/huochepiao/train/" onclick="_tcTraObj._tcTrackEvent('huochepiaofirst5353', 'Pcnavigation', 'CN首页','30');">火车</a>
+							</li>
+                            <li>
+								<a href="http://bus.ly.com/" onclick="_tcTraObj._tcTrackEvent('busfirst5353', 'Pcnavigation', 'CN首页','30');">汽车</a>
+							</li>
+							<li>
+							<!-- 	<p>
+									<span>酒+景</span>
+								</p> -->
+								<a href="http://www.ly.com/zizhuyou/" onclick="_tcTraObj._tcTrackEvent('Zhoubianyoufirst5353', 'Pcnavigation', 'CN首页','30');">
+									周边游
+									<i></i>
+								</a>
+								<div class="submenu-nav">
+									<a class="zmy-submenu1" href="http://www.ly.com/zizhuyou/" onclick="_tcTraObj._tcTrackEvent('jingplusjiu5353zhousecond', 'Pcnavigation', 'CN首页','30');">景点+酒店</a>
+									<a href="http://www.ly.com/zizhuyou/temai/" onclick="_tcTraObj._tcTrackEvent('temai5353zhousecond', 'Pcnavigation', 'CN首页','30');">周边特卖</a>
+									<a href="http://www.ly.com/zizhuyou/qinzi/" onclick="_tcTraObj._tcTrackEvent('qinzi5353zhousecond', 'Pcnavigation', 'CN首页','30');"><em>欢度六一<i></i></em>周边亲子</a>
+									<a href="http://www.ly.com/zizhuyou/fivestar-pc/" onclick="_tcTraObj._tcTrackEvent('ka5353zhousecond', 'Pcnavigation', 'CN首页','30');">周末卡</a>
+									<a href="http://www.ly.com/scenery/chwl/" onclick="_tcTraObj._tcTrackEvent('cjwl5353zhousecond', 'Pcnavigation', 'CN首页','30');">当地玩乐</a>
+									<a href="http://www.ly.com/bustour/searchlist.html" onclick="_tcTraObj._tcTrackEvent('bus5353zhousecond', 'Pcnavigation', 'CN首页','30');">巴士跟团游</a>
+									<a href="http://www.ly.com/scenery/njl/SearchList_0_0_0__0_0.html" onclick="_tcTraObj._tcTrackEvent('njl5353zhousecond', 'Pcnavigation', 'CN首页','30');">农家乐</a>
+									<a href="http://www.ly.com/globalscenery/gangaotai/" onclick="_tcTraObj._tcTrackEvent('gangaotai5353zhousecond', 'Pcnavigation', 'CN首页','30');">港澳台门票</a>
+									<a href="http://www.ly.com/scenery/" onclick="_tcTraObj._tcTrackEvent('scenery5353zhousecond', 'Pcnavigation', 'CN首页','30');">景点</a>
+									<a class="menuorder" href="http://member.ly.com/zizhuyou/orderlist.aspx">
+										周边游订单
+										<i>&gt;&gt;</i>
+									</a>
+								</div>
+							</li>
+							<li>
+								<a href="http://gny.ly.com/guoneiyou/" onclick="_tcTraObj._tcTrackEvent('Guoneiyoufirst5353', 'Pcnavigation', 'CN首页','30');">国内游</a>
+							</li>
+							<li>
+								<p>
+                                <em style="right:20px">暑期惠<i></i></em>
+                               </p>
+								<a href="http://www.ly.com/dujia/" onclick="_tcTraObj._tcTrackEvent('Dujiafirst5353', 'Pcnavigation', 'CN首页','30');">
+									出境游
+									<i></i>
+								</a>
+								<div class="submenu-nav">
+									<a class="dujia-submenu1" href="http://www.ly.com/dujia/" onclick="_tcTraObj._tcTrackEvent('Dujia5353dusecond', 'Pcnavigation', 'CN首页','30');">出境首页</a>
+									<a href="http://www.ly.com/dujia/group/" id="group" mname="group" onclick="_tcTraObj._tcTrackEvent('gentuan5353dusecond', 'Pcnavigation', 'CN首页','30');">跟团游</a>
+									<a href="http://www.ly.com/dujia/freetour/" id="freetour" mname="freetour" onclick="_tcTraObj._tcTrackEvent('ziyouxing5353dusecond', 'Pcnavigation', 'CN首页','30');">自由行</a>
+									<a href="http://www.ly.com/globalscenery/" onclick="_tcTraObj._tcTrackEvent('globle5353dusecond', 'Pcnavigation', 'CN首页','30');">国际景点</a>
+									<a href="http://www.ly.com/globalscenery/gangaotai/" onclick="_tcTraObj._tcTrackEvent('gangaotai5353dusecond', 'Pcnavigation', 'CN首页','30');">港澳台门票</a>
+									<a href="http://www.ly.com/dujia/temai/" onclick="_tcTraObj._tcTrackEvent('temai5353dusecond', 'Pcnavigation', 'CN首页','30');">出境特卖</a>
+									<a href="http://www.ly.com/dujia/yushou/" onclick="_tcTraObj._tcTrackEvent('yushou5353dusecond', 'Pcnavigation', 'CN首页','30');">出境预售</a>
+									<a href="http://www.ly.com/dujia/schedule.html" onclick="_tcTraObj._tcTrackEvent('dingzhi5353dusecond', 'Pcnavigation', 'CN首页','30');">出境定制</a>
+									<a target="_blank" href="http://www.ly.com/zhuanti/chujingbao/" onclick="_tcTraObj._tcTrackEvent('giftcard5353dusecond', 'Pcnavigation', 'CN首页','30');">礼品卡</a>
+									<a class="menuorder" href="http://member.ly.com/dujia/DujiaOrderList.aspx">
+										出境游订单
+										<i>&gt;&gt;</i>
+									</a>
+								</div>
+							</li>
+							<li>
+								<p>
+                                <em style="right:16px">HOT<i></i></em>
+                               </p>
+								<a href="http://www.ly.com/youlun/" onclick="_tcTraObj._tcTrackEvent('Youlunfirst5353', 'Pcnavigation', 'CN首页','30');">
+									邮轮
+									<i></i>
+								</a>
+								<div class="submenu-nav">
+									<a class="youlun-submenu1" href="http://www.ly.com/youlun/" onclick="_tcTraObj._tcTrackEvent('guoji5353yousecond', 'Pcnavigation', 'CN首页','30');">邮轮首页</a>
+									<a href="http://www.ly.com/youlun/yuanyang/" mname="yuanyang" onclick="_tcTraObj._tcTrackEvent('yuanyang5353yousecond', 'Pcnavigation', 'CN首页','30');">远洋航线</a>
+									<a href="http://www.ly.com/youlun/guonei/" mname="youlun/guonei" onclick="_tcTraObj._tcTrackEvent('guonei5353yousecond', 'Pcnavigation', 'CN首页','30');">国内航线</a>
+									<a href="http://www.ly.com/youlun/baochuan.html" onclick="_tcTraObj._tcTrackEvent('baochuan5353yousecond', 'Pcnavigation', 'CN首页','30');">包船专区</a>
+									<a href="http://www.ly.com/youlun/temai/" onclick="_tcTraObj._tcTrackEvent('zaoding5353yousecond', 'Pcnavigation', 'CN首页','30');">邮轮特卖</a>
+									<a href="http://www.ly.com/zhuanti/cruise-shipcard/" target="_blank" onclick="_tcTraObj._tcTrackEvent('giftcard5353yousecond', 'Pcnavigation', 'CN首页','30');">礼品卡</a>
+									<a href="http://www.ly.com/youlun/parentstour/" onclick="_tcTraObj._tcTrackEvent('bama5353yousecond', 'Pcnavigation', 'CN首页','30');">爸妈游</a>
+                                    <a href="http://www.ly.com/youlun/gonglve/" onclick="_tcTraObj._tcTrackEvent('chuandui5353yousecond', 'Pcnavigation', 'CN首页','30');">船队</a>
+									<a class="menuorder" href="http://member.ly.com/youlun/YoulunOrderList.aspx">
+										邮轮订单
+										<i>&gt;&gt;</i>
+									</a>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.ly.com/dujia/visa/" onclick="_tcTraObj._tcTrackEvent('Qianzhengfirst5353', 'Pcnavigation', 'CN首页','30');">签证</a>
+							</li>
+							<li>
+								<a href="http://tuan.ly.com/" onclick="_tcTraObj._tcTrackEvent('Tuanfirst5353', 'Pcnavigation', 'CN首页','30');">
+									团购
+									<i></i>
+								</a>
+								<div class="submenu-nav">
+									<a class="tuan-submenu1" href="http://tuan.ly.com/hotel/" onclick="_tcTraObj._tcTrackEvent('jiutuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">酒店团购</a>
+									<a href="http://tuan.ly.com/scenery/" onclick="_tcTraObj._tcTrackEvent('jingtuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">景点团购</a>
+									<a href="http://tuan.ly.com/holiday/" onclick="_tcTraObj._tcTrackEvent('chujingtuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">出境游团购</a>
+									<a href="http://tuan.ly.com/youlun/" onclick="_tcTraObj._tcTrackEvent('youtuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">邮轮团购</a>
+									<a href="http://tuan.ly.com/visa/" onclick="_tcTraObj._tcTrackEvent('qiantuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">签证团购</a>
+									<a href="http://www.ly.com/zhuanti/huiyuanri/" target="_blank" onclick="_tcTraObj._tcTrackEvent('membertuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">会员日团购</a>
+								</div>
+							</li>
+							<li>
+								<a href="http://go.ly.com/" onclick="_tcTraObj._tcTrackEvent('Gonglvefirst5353', 'Pcnavigation', 'CN首页','30');">
+									攻略
+									<i></i>
+								</a>
+								<div class="submenu-nav">
+									<a class="gl-submenu1" href="http://go.ly.com/" onclick="_tcTraObj._tcTrackEvent('glsq5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">攻略社区</a>
+									<a href="http://go.ly.com/gonglve/" onclick="_tcTraObj._tcTrackEvent('gnmdd5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">国内目的地</a>
+									<a href="http://go.ly.com/abroad/" onclick="_tcTraObj._tcTrackEvent('jwmdd5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">境外目的地</a>
+									<a href="http://go.ly.com/youji/" onclick="_tcTraObj._tcTrackEvent('yj5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">游记</a>
+									<a href="http://go.ly.com/user/" onclick="_tcTraObj._tcTrackEvent('grzy5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">个人主页</a>
+									<a class="menuorder" href="http://go.ly.com/youji/edit/">
+										写游记
+										<i>&gt;&gt;</i>
+									</a>
+								</div>
+							</li>
+						</ul>
+						<div id="menuMyTc">
+							<a href="http://member.ly.com/">
+								我的旅游
+								<i></i>
+							</a>
+							<div data-height="150px">
+								<a rel="nofollow" href="http://member.ly.com/">订单中心</a>
+								<!-- 需要分割线 -->
+								<i></i>
+								<a rel="nofollow" href="http://member.ly.com/Member/MyFavorites.aspx">我的收藏</a>
+								<a rel="nofollow" href="http://member.ly.com/Member/MemberInfomation.aspx">我的信息</a>
+								<a rel="nofollow" href="http://www.ly.com/vip/rights/">会员专享</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <i id="submenuNavBg"></i> -->
+			</div>
+		</div>
+</div>
+<!-- [//导航头部部分] -->
+
+
+<!-- [主体部分] -->
+<div class="listPage">
+	<div class="listPageLeft">
+		<!-- 条件筛选 -->
+		<div class="searchAttr">
+				<div class="box_change"><div class="theme"><i style="display: inline;"></i><dl req="/xianlu/xianlu_index_dest_ajax.php?zone=370100&amp;type_en=zhoubian&amp;action=dest&amp;type=&amp;dest=&amp;recache=0"><dt>主题分类</dt><dd><a href="#?" zhuti-id="0" class="on">全部</a><a href="#?" zhuti-id="584">休闲度假</a><a href="#?" zhuti-id="600">自然风光</a><a href="#?" zhuti-id="593">名山胜水</a><a href="#?" zhuti-id="583">海滨海岛</a><a href="#?" zhuti-id="587">名胜古迹</a><a href="#?" zhuti-id="585">主题乐园</a><a href="#?" zhuti-id="597">进香祈福</a><a href="#?" zhuti-id="580">温泉</a><a href="#?" zhuti-id="579">购物</a></dd></dl></div><dl class="dl-dest"><dt>目 的 地</dt><dd class="choice"><a class="all checkbox on" href="/jinan/zhoubian-s1">全部</a><a href="/jinan/zhoubian-6896">红叶谷</a><a href="/jinan/zhoubian-6876">灵岩寺</a><a href="/jinan/zhoubian-7288">泰山</a><a href="/jinan/zhoubian-20864">方特欢乐世界</a><a href="/jinan/zhoubian-12312">云台山</a><a href="/jinan/zhoubian-7434">地下大峡谷</a><a href="/jinan/zhoubian-7014">崂山</a><a href="/jinan/zhoubian-qingdao">青岛</a><a href="/jinan/zhoubian-weihai">威海</a><a href="/jinan/zhoubian-rizhao">日照</a><a href="/jinan/zhoubian-liaocheng">聊城</a><a href="/jinan/zhoubian-6991">青岛海底世界</a><a href="/jinan/zhoubian-7187">长岛</a><a href="/jinan/zhoubian-linyi">临沂</a><a href="/jinan/zhoubian-beijing">北京</a><a href="/jinan/zhoubian-6878">趵突泉</a><a href="/jinan/zhoubian-6877">大明湖</a><a href="/jinan/zhoubian-6894">千佛山</a><a href="/jinan/zhoubian-6940">栈桥</a></dd><dd class="btn"></dd></dl><dl><dt>行程天数</dt><dd><a href="/jinan/zhoubian-s1" class="on">全部</a><a href="/jinan/zhoubian-d1">1日游</a><a href="/jinan/zhoubian-d2">2日游</a><a href="/jinan/zhoubian-d3">3日游</a><a href="/jinan/zhoubian-d4">4日游</a><a href="/jinan/zhoubian-d5">5日游及以上</a></dd></dl><dl class="noborder"><dt>出游方式</dt><dd><a href="/jinan/zhoubian-s1" class="on">全部</a><a href="/jinan/zhoubian-t1">跟团游</a><a href="/jinan/zhoubian-t4">自由行</a><a href="/jinan/zhoubian-t6">自驾游</a><a href="/jinan/zhoubian-t3">独立包团</a></dd></dl></div>
+		</div>
+		<!-- //条件筛选 -->
+
+		<!-- 列表 -->
+		<div class="box_list">
+			<ul>
+				<li>
+					<div class="tu">
+						<a href="http://www.cncn.com/xianlu/835193100507" target="_blank">
+						<img src="http://c.cncnimg.cn/039/342/cb82_s.jpg" width="120" height="90" alt="济南出发去齐河泉城欧乐堡梦幻世界【特价】一日 含大通票赠保险"></a>
+						<a href="#?" class="btn_add"></a>
+					</div>
+					<div class="xl_con">
+						<div class="xl_type">
+							<div class="title">
+							<i class="i0"></i>
+							<a href="http://www.cncn.com/xianlu/835193100507" target="_blank" data="3100507">济南出发去齐河泉城欧乐堡梦幻世界【特价】一日 含大通票赠保险</a>
+							<s class="s2" title="支持支付宝在线支付"></s>
+							<s class="s3" title="游客保障：该旅行社已签署游客保障协议，并交纳1300元保证金，承诺如实描述、诚信经营、品质服务，在线预订100%有保障！"></s>
+						</div>
+						<div class="xl_jd">
+							<dl>
+								<dt>行程概览:</dt>
+								<dd><span>济南出发</span><em>&gt;</em><span>泉城欧乐堡梦幻世界</span><em>&gt;</em><span>泉城海洋极地世界</span><em>&gt;</em><span>德州</span><em>&gt;</em><span>返回济南</span>
+								</dd>
+							</dl>
+						</div>
+						<div class="lxs"><i></i><a href="http://lxs.cncn.com/83519" target="_blank">中国国旅（山东）国际旅行社有限公司济南泉城路营业部</a>
+						</div>
+					</div>
+					<div class="xl_num">
+						<span class="price">¥<em>165</em>起</span><a href="http://www.cncn.com/xianlu/835193100507" class="btn_go" target="_blank">去看看</a><span class="guanzhu">最近成交<b>349</b>笔&nbsp;&nbsp;76901人关注</span>
+					</div>
+				</div>
+				</li>
+				<li>
+					<div class="tu">
+						<a href="http://www.cncn.com/xianlu/835193100507" target="_blank">
+						<img src="http://c.cncnimg.cn/039/342/cb82_s.jpg" width="120" height="90" alt="济南出发去齐河泉城欧乐堡梦幻世界【特价】一日 含大通票赠保险"></a>
+						<a href="#?" class="btn_add"></a>
+					</div>
+					<div class="xl_con">
+						<div class="xl_type">
+							<div class="title">
+							<i class="i0"></i>
+							<a href="http://www.cncn.com/xianlu/835193100507" target="_blank" data="3100507">济南出发去齐河泉城欧乐堡梦幻世界【特价】一日 含大通票赠保险</a>
+							<s class="s2" title="支持支付宝在线支付"></s>
+							<s class="s3" title="游客保障：该旅行社已签署游客保障协议，并交纳1300元保证金，承诺如实描述、诚信经营、品质服务，在线预订100%有保障！"></s>
+						</div>
+						<div class="xl_jd">
+							<dl>
+								<dt>行程概览:</dt>
+								<dd><span>济南出发</span><em>&gt;</em><span>泉城欧乐堡梦幻世界</span><em>&gt;</em><span>泉城海洋极地世界</span><em>&gt;</em><span>德州</span><em>&gt;</em><span>返回济南</span>
+								</dd>
+							</dl>
+						</div>
+						<div class="lxs"><i></i><a href="http://lxs.cncn.com/83519" target="_blank">中国国旅（山东）国际旅行社有限公司济南泉城路营业部</a>
+						</div>
+					</div>
+					<div class="xl_num">
+						<span class="price">¥<em>165</em>起</span><a href="http://www.cncn.com/xianlu/835193100507" class="btn_go" target="_blank">去看看</a><span class="guanzhu">最近成交<b>349</b>笔&nbsp;&nbsp;76901人关注</span>
+					</div>
+				</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //列表 -->
+
+	</div>
+	<div class="listPageRight">
+		<div class="box280">
+			<div class="tit"><strong>当季旅游推荐</strong></div>
+			<div class="zhuti">
+				<a href="http://www.cncn.com/zhuti/qinziyou/" title="亲子游专题" target="_blank"><img src="http://s.cncnimg.cn/images/a/2014/250x195_qinziyou_140528.png" alt="亲子游专题"></a>
+			</div>
+		</div>
+
+		<div class="box280">
+			<div class="tit"><a href="http://guilin.cncn.com/lvyougonglue/" target="_blank"><strong>旅游景点分类</strong></a>
+			</div>
+			<div class="guide">
+				<div class="type_nav">
+					<a href="http://guilin.cncn.com/jingdian/" target="_blank">旅游景点大全</a>
+					<a class="bd_r0" href="http://guilin.cncn.com/jingdian/gonglue/" target="_blank">景点游玩攻略</a>
+					<a href="http://guilin.cncn.com/zhusu/" target="_blank">住宿攻略</a>
+					<a class="bd_r0" href="http://guilin.cncn.com/jiaotong/" target="_blank">交通指南</a>
+					<a href="http://guilin.cncn.com/meishi/" target="_blank">美食小吃</a><a class="bd_r0" href="http://guilin.cncn.com/techan/" target="_blank">桂林特产</a><a href="http://wan.cncn.com/guide_guilin.htm" target="_blank">旅游贴士</a><a class="bd_r0" href="http://guilin.cncn.com/photo/" target="_blank">风景图片</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="box280">
+			<div class="tit">
+				<strong>最新预订</strong>
+			</div>
+			<div class="txt_order">
+				<dl>
+					<i class="i1"></i>
+					<dt><span class="time">1小时前</span><em>张**</em><span>预订了</span></dt>
+					<dd clss="title"><a href="/xianlu/697131629826" target="_blank">【北京到白洋淀狼牙山旅游多少钱】白洋淀狼牙山二日|红色旅游团</a></dd>
+				</dl>
+			</div>
+		</div>
+
+
+		
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!-- [//主体部分] -->
+
+<!-- [底部] -->
+<div id="footer">
+	<ul class="clearfix">
+		<!-- 反馈 -->
+		<li>
+			<dl class="clearfix question_icon">
+				<dt></dt>
+				<dd>意见反馈</dd>
+			</dl>
+			<dl class="clearfix tel24">
+				<dt></dt>
+				<dd><p>24小时服务热线</p><p>4007-777-777</p></dd>
+			</dl>
+		</li>
+		<!-- 关于同程 -->
+		<li>
+			<ul class="tcAboat">
+				<li>
+					<h3>关于旅游</h3>
+				</li>
+				<li>
+					<a target="_blank" title="同程简介" href="http://www.ly.com/about/about17u/intro.html" rel="nofollow">同程简介</a>
+				</li>
+				<li>
+					<a target="_blank" title="可信网站" href="https://ss.knet.cn/verifyseal.dll?sn=2010112300100002970&amp;ct=df&amp;pa=036218" rel="nofollow">可信网站</a>
+				</li>
+				<li>
+					<a target="_blank" title="法律声明" href="http://www.17u.com/About17U/law.asp" rel="nofollow">法律声明</a>
+				</li>
+				<li>
+					<a target="_blank" title="网站地图" href="/CnSiteMap.aspx">网站地图</a>
+				</li>
+			</ul>
+		</li>
+		<!-- 加盟 -->
+		<li>
+			<ul class="joinTc">
+				<li>
+					<h3>加盟合作</h3>
+				</li>
+				<li>
+					<a target="_blank" title="商务合作" href="/subject/jiudianjiameng.aspx" rel="nofollow">商务合作</a>
+				</li>
+				<li>
+					<a target="_blank" title="网站联盟" href="http://union.ly.com/" rel="nofollow">网站联盟</a>
+				</li>
+				<li>
+					<a target="_blank" title="友情链接" href="/FriendlyLink.aspx">友情链接</a>
+				</li>
+				<li class="bor_non">
+					<a target="_blank" title="旅游度假租车业务资质" href="/subject/zizhi/" rel="nofollow">业务资质</a>
+				</li>
+			</ul>
+		</li>
+		<!-- 联系我们 -->
+		<li>
+			<ul class="contactTc">
+				<li>
+					<h3>联系我们</h3>
+				</li>
+				<li class="contactTcLi">
+					<a target="_blank" title="联系我们" href="/about/about17u/contactus.html" rel="nofollow">联系我们</a>
+				</li>
+				<li class="contactTcLi">
+					<a target="_blank" title="投诉建议" href="/newhelp/MyAdvice.aspx" class="specialList" rel="nofollow">投诉建议</a>
+				</li>
+				<li class="contactTcLi">
+					<a target="_blank" title="诚聘英才" href="http://job.ly.com/social/" rel="nofollow">诚聘英才</a>
+				</li>
+			</ul>
+		</li>
+		<!-- 旗下网站 -->
+		<li>
+			<ul class="tcWebSite">
+				<li>
+					<h3>旗下网站</h3>
+				</li>
+				<li>
+					<a target="_blank" class="tcWebCn" title="同程旅游 www.LY.com" href="/"></a>
+				</li>
+				<li>
+					<a target="_blank" class="tcWebCom" title="一起游 WWW.17U.COM" href="http://www.17u.com/"></a>
+				</li>
+				<li>
+					<a target="_blank" class="tcWebNet" title="旅交汇 WWW.17U.NET" href="http://www.17u.net/"></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<h3>旅游app</h3>
+			<img src="images/ewm1.png" style="margin-top:10px;" />
+		</li>
+	</ul>
+	<div class="friendLink">
+			<div class="friendMain clearfix">
+				<dl class="friendAnchor" id="fdLinklist">
+					<dt>友情链接：</dt>
+					<dd>
+						<a target="_blank" href="http://www.feiren.com">腾邦国际</a>
+						<a target="_blank" href="http://www.daodao.com">到到网</a>
+						<a target="_blank" href="http://www.8264.com">户外运动</a>
+						<a href="http://www.mapbar.com/" target="_blank">地图查找</a>
+						<a target="_blank" href="http://lvyou.baidu.com">百度旅游</a>
+						<a target="_blank" href="http://www.cncn.com">欣欣旅游网</a>
+						<a target="_blank" href="http://trip.elong.com">艺龙旅游指南</a>
+						<a target="_blank" href="http://www.mipang.com/">米胖网</a>
+						<a target="_blank" href="http://www.cdyou.net">长岛旅游</a>
+						<a target="_blank" href="http://www.5fen.com/">五分旅游网</a>
+						<a target="_blank" href="http://www.lvmama.com/">驴妈妈旅游网</a>
+						<a target="_blank" href="http://www.tujia.com">途家网</a>
+						<a target="_blank" href="http://www.ctcnn.com/">劲旅网</a>
+						<a target="_blank" href="http://www.tianqi.com">天气网</a>
+						<a target="_blank" href="http://www.utourworld.com">众信旅游</a>
+						<a target="_blank" href="http://www.zglxw.com">北京中国国旅</a>
+						<a target="_blank" href="http://www.edushi.com">e都市</a>
+						<a target="_blank" href="http://www.9tour.cn">九游网</a>
+						<a target="_blank" href="http://www.goldenholiday.com">黄金假日旅游网</a>
+						<a target="_blank" href="http://www.qianzhengdaiban.com">中国签证资讯网</a>
+						<a target="_blank" href="http://www.177dj.net">北京旅行社</a>
+						<a target="_blank" href="http://www.yododo.com">游多多自助游</a>
+						<a target="_blank" href="http://www.huoche.net">火车网</a>
+						<a target="_blank" href="http://www.51you.com">新华旅行网</a>
+						<a target="_blank" href="http://www.qyer.com/">穷游网</a>
+						<a target="_blank" href="http://www.byecity.com">佰程旅行网</a>
+						<a target="_blank" href="http://www.gwyou.com">昆明旅行社</a>
+						<a target="_blank" href="http://www.ctcnn.com">旅游新媒体</a>
+						<a target="_blank" title="中国经济网" href="http://travel.ce.cn">中国经济网</a>
+						<a target="_blank" title="春秋航空" href="http://www.china-sss.com">春秋航空</a>
+						<a target="_blank" href="http://www.19lou.com">19楼</a>
+						<a target="_blank" href="http://www.becod.com">百酷特色住宿</a>
+						<a target="_blank" href="http://www.sipjinjilake.com">金鸡湖景区</a>
+						<a target="_blank" href="http://www.zhuna.cn">酒店预订</a>
+						<a target="_blank" href="http://www.youbian.com">邮编生活网</a>
+						<a target="_blank" href="http://www.sunnychina.com">阳光旅行网</a>
+						<a target="_blank" href="http://jipiao.ly.com">同程机票查询</a>
+						<a target="_blank" href="http://www.keyunzhan.com">客运站</a>
+						<a target="_blank" href="http://dujia.qunar.com">旅游度假</a>
+						<a target="_blank" href="http://www.city8.com">中国地图</a>
+						<a target="_blank" href="http://www.fotosay.com">图说天下</a>
+						<a target="_blank" href="http://www.uzai.com">悠哉旅游网</a>
+						<a target="_blank" href="http://www.mafengwo.cn">蚂蜂窝旅游攻略</a>
+						<a target="_blank" href="http://www.lvye.cn">绿野户外网</a>
+						<a target="_blank" href="http://www.ethainan.com">三亚旅游</a>
+						<a target="_blank" href="http://www.kuxun.cn">酷讯旅游网</a>
+						<a target="_blank" href="http://www.beibaotu.com">背包兔旅游行程</a>
+						<a target="_blank" href="http://www.tuniu.com">途牛旅游网</a>
+						<a target="_blank" href="http://www.springtour.com">春秋旅游</a>
+						<a target="_blank" href="http://www.cngaosu.com/">中国高速网</a>
+						<a target="_blank" href="http://www.guolv.com/">北京神舟国旅</a>
+						<a target="_blank" href="http://www.xialv.com/">侠侣周边游</a>
+						<a target="_blank" href="http://you.ctrip.com/">携程旅游社区</a>
+						<a target="_blank" href="http://www.autonavi.com/">高德地图</a>
+					</dd>
+				</dl>
+				<a href="javascript:;" id="showLinkMore"><i></i></a>
+			</div>
+	</div>
+	<p class="foot_info c9">
+			Copyright © 2002-2015&nbsp;&nbsp;版权所有&nbsp;&nbsp;<a class="c9" href="/about/about17u/intro.html" target="_blank" title="网络科技股份有限公司">科技股份有限公司</a><br>
+			<a class="c9" target="_blank" href="images/20141103174615.jpg" title="苏ICP证B2-20100204">苏ICP证B2-20100204</a>&nbsp;&nbsp;[乙测资字32005078]<br>
+			<a class="c9" target="_blank" href="/subject/zizhi/" title="旅行社业务许可证：L-JS-CJ00070">旅行社业务许可证：L-JS-CJ00070</a>
+	</p>
+	<ul class="tcHonour clearfix">
+			<li class="expImg">
+				<span class="expIco"></span>
+				<a target="_blank" title="首批商务部电商示范企业" href="http://www.mofcom.gov.cn/aarticle/b/c/201108/20110807700444.html" rel="nofollow">
+					首批商务部
+					<br>电商示范企业</a>
+			</li>
+			<li class="travelImg">
+				<span class="trlIco"></span>
+				<a target="_blank" title="2014中国旅游集团20强" href="http://www.ctaweb.org/html/2014-12/2014-12-11-10-50-88272.html" rel="nofollow">
+					2014中国
+					<br>旅游集团20强</a>
+			</li>
+			<li class="wellMark">
+				<span class="wekIco"></span>
+				<a ref="nofollow" href="http://www.jsgsj.gov.cn:60101/keyLicense/verifKey.jsp?serial=320000163820140527100000016881&amp;signData=gyBrY2EbFl5alGm7Ey2qD7+aR0sqxPXbaql4PfK0o+FJJlFOYIi2+wV2clLXPXWGOjPYohO8YuBDqWmqrZbOIyOdsoMxM3gSqCTSX92vUEkTVc/o0wJ/7Gz6Wr6LtonAY7pN95JIUDTx0Va5hlKvUNsyPP4UeVsfO2KxPxebW4E=" class="" target="_blank" title="可信网站">
+					同程旅游
+					<br>电子营业执照</a>
+			</li>
+			<li class="creditImg">
+				<span class="crtIco thrbg"></span>
+				<a target="_blank" title="AAA级信用企业" href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1758957666" rel="nofollow">
+					AAA级
+					<br>信用企业</a>
+			</li>
+		</ul></div>
+</div>
+<!-- [//底部] -->
+
+
+
+</body>
+</html>
