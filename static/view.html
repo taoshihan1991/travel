@@ -303,37 +303,39 @@
 	<div class="viewPageLeft">
 		<div class="viewInfo">
 			<div class="viewInfoLeft">
-				<div id="demo1" class="picBtnTop">
+				<!-- 轮播图 -->
+				<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+				<div id="viewPicScoll" class="picBtnTop">
 				<div class="hd">
 					<ul>
-						<li><img src="images/pic1.jpg" /></li>
-						<li><img src="images/pic2.jpg" /></li>
-						<li><img src="images/pic3.jpg" /></li>
+						<li><img src="images/x1ijqm_218x147_00.jpg" /></li>
+						<li><img src="images/x1ijqm_218x147_00.jpg" /></li>
+						<li><img src="images/x1ijqm_218x147_00.jpg" /></li>
 					</ul>
 				</div>
 				<div class="bd">
 					<ul>
 						<li>
 							<div class="bg"></div>
-							<div class="pic"><a href=""><img src="images/pic1.jpg" /></a></div>
+							<div class="pic"><a href=""><img src="images/x1ijqm_218x147_00.jpg" /></a></div>
 							<div class="title"><a href="">效果图1</a></div>
 						</li>
 						<li>
 							<div class="bg"></div>
-							<div class="pic"><a href=""><img src="images/pic2.jpg" /></a></div>
+							<div class="pic"><a href=""><img src="images/x1ijqm_218x147_00.jpg" /></a></div>
 							<div class="title"><a href="">效果图2</a></div>
 						</li>
 						<li>
 							<div class="bg"></div>
-							<div class="pic"><a href=""><img src="images/pic3.jpg" /></a></div>
+							<div class="pic"><a href=""><img src="images/x1ijqm_218x147_00.jpg" /></a></div>
 							<div class="title"><a href="">效果图3</a></div>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<script type="text/javascript">
-			//唯一不同：jQuery("#demo1")
-			jQuery("#demo1").slide({ mainCell:".bd ul",effect:"top",autoPlay:true,triggerTime:0 });</script>
+			$("#viewPicScoll").slide({ mainCell:".bd ul",effect:"top",autoPlay:true,triggerTime:0 });</script>
+			<!-- 轮播图 -->
 			</div>
 			<div class="viewInfoRight">
 				<table>
