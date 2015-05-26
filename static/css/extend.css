@@ -459,17 +459,18 @@ a {
 	text-decoration:none
 }
 	/* 焦点图效果 */
-	.picBtnTop{ width:500px; height:214px; border:1px solid #ccc; padding:5px;  position:relative;  overflow:hidden;  zoom:1;   }
-	.picBtnTop .hd{ width:98px;  height:214px; position:absolute; right:5px; overflow:hidden; }
-	.picBtnTop .hd ul li{ width:93px; text-align:center; padding:0 0 5px 5px;  }
-	.picBtnTop .hd ul li img{ width:85px; height:60px; border:4px solid #ddd; cursor:pointer; vertical-align:bottom; }
-	.picBtnTop .hd ul li.on{ background:url("images/icoleft.gif") no-repeat 0 28px; }
+	.picBtnTop{ width:540px; height:250px;position:relative;  overflow:hidden;  zoom:1;   }
+	.picBtnTop .hd{ width:107px; position:absolute; right:5px; overflow:hidden; }
+	.picBtnTop .hd ul li{ width:95px; text-align:center; padding:0 0 5px 5px;  }
+	.picBtnTop .hd ul li img{ width:95px; height:75px; border:2px solid #ddd; cursor:pointer; vertical-align:bottom; }
+	.picBtnTop .hd ul li.on{ background:url("../images/icoleft.gif") no-repeat 0 28px; }
 	.picBtnTop .hd ul li.on img{ border-color:#f60;  }
-	.picBtnTop .bd{ width:400px;  height:214px; position:relative;  }
+
+	.picBtnTop .bd{ width:430px;  height:245px; position:relative;  }
 	.picBtnTop .bd li{ position:relative; zoom:1; vertical-align:middle;}
 	.picBtnTop .bd li .pic{ position:relative; z-index:0;  }
-	.picBtnTop .bd li .pic img{ width:400px; height:214px; vertical-align:bottom; }
-	.picBtnTop .bd li .bg{ width:400px; height:30px; position:absolute; left:0; bottom:0; z-index:1;  background:#000; filter:alpha(opacity=60);opacity:0.6;    }
-	.picBtnTop .bd li .title{ width:400px; height:30px; line-height:30px; left:0; bottom:0;   position:absolute; z-index:2;  }
+	.picBtnTop .bd li .pic img{ width:430px; height:245px; vertical-align:bottom; }
+	.picBtnTop .bd li .bg{ width:420px; height:30px; position:absolute; left:0; bottom:0; z-index:1;  background:#000; filter:alpha(opacity=60);opacity:0.6;    }
+	.picBtnTop .bd li .title{ width:420px; height:30px; line-height:30px; left:0; bottom:0;   position:absolute; z-index:2;  }
 	.picBtnTop .bd li .title a{ color:#fff; padding-left:15px;  }
 
