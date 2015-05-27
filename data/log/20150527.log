@@ -1,0 +1,6 @@
+[2015-05-27 10:53:11] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-05-27 10:56:19] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`

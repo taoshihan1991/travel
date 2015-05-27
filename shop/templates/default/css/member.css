@@ -4,7 +4,7 @@
 
 .wrap-shadow { background-color: #F9FAFC; padding:4px; border-radius: 4px;}
 .wrap-all{ background-color: #FFF; border: solid 1px #C4D5E0;  border-radius: 4px;}
-#footer { width: 1000px; margin: 0 auto; text-align: center; color: #aaa; line-height: 18px; padding: 15px 0; }
+#footer { margin: 0 auto; text-align: center; color: #aaa; line-height: 18px; padding: 15px 0; }
 .clear { font-size: 0px; line-height: 0px; height: 0; margin: 0; padding: 0; float: none; clear: both; border: 0;}
 
 

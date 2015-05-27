@@ -1,40 +1,19 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
 
-    <ul class="tabs-nav">
-                  <?php if (!empty($output['code_sale_list']['code_info']) && is_array($output['code_sale_list']['code_info'])) { 
-                    $i = 0;
-                    ?>
-                  <?php foreach ($output['code_sale_list']['code_info'] as $key => $val) { 
-                    $i++;
-                    ?>
-        <li class="<?php echo $i==1 ? 'tabs-selected':'';?>"><i class="arrow"></i><h3><?php echo $val['recommend']['name'];?></h3></li>
-                  <?php } ?>
-                  <?php } ?>
-    </ul>
-                  <?php if (!empty($output['code_sale_list']['code_info']) && is_array($output['code_sale_list']['code_info'])) { 
-                    $i = 0;
-                    ?>
-                  <?php foreach ($output['code_sale_list']['code_info'] as $key => $val) { 
-                    $i++;
-                    ?>
-                          <?php if(!empty($val['goods_list']) && is_array($val['goods_list'])) { ?>
-                                  <div class="tabs-panel sale-goods-list <?php echo $i==1 ? '':'tabs-hide';?>">
-                                    <ul>
-                                    <?php foreach($val['goods_list'] as $k => $v){ ?>
-                                      <li>
-                                        <dl>
-                                          <dt class="goods-name"><a target="_blank" href="<?php echo urlShop('goods','index',array('goods_id'=>$v['goods_id'])); ?>" title="<?php echo $v['goods_name']; ?>">
-                                          	<?php echo $v['goods_name']; ?></a></dt>
-                                          <dd class="goods-thumb">
-                                          	<a target="_blank" href="<?php echo urlShop('goods','index',array('goods_id'=>$v['goods_id'])); ?>">
-                                          	<img src="<?php echo strpos($v['goods_pic'],'http')===0 ? $v['goods_pic']:UPLOAD_SITE_URL."/".$v['goods_pic'];?>" alt="<?php echo $v['goods_name']; ?>" />
-                                          	</a></dd>
-                                          <dd class="goods-price"><?php echo $lang['index_index_store_goods_price'].$lang['nc_colon'];?><em><?php echo ncPriceFormatForList($v['goods_price']); ?></em></dd>
-                                        </dl>
-                                      </li>
-                                    <?php } ?>
-                                    </ul>
-                                  </div>
-                          <?php } ?>
-                  <?php } ?>
-                  <?php } ?>
+<?php if (is_array($output['code_sale_list']['code_info']) && !empty($output['code_sale_list']['code_info'])) { $i=0;?>
+<?php foreach ($output['code_sale_list']['code_info'] as $key => $val) { ?>
+    <?php foreach ($val['goods_list'] as $v) { $i++;if($i>=9) break;?>
+     
+            <li class="<?php if($i%4==1){?>mr0<?php }?>">
+              <a href="<?php echo urlShop('goods','index',array('goods_id'=>$v['goods_id'])); ?>" title="<?php echo $v['goods_name']; ?>" target="_blank" onclick="_tcTraObj._tcTrackEvent('15353temaifirst', 'Pcblock', 'CN首页','30');">
+              <div><i><?php echo round(10 / ($v['market_price'] / $v['goods_price']), 1);?>折</i>
+              <img src="<?php echo strpos($v['goods_pic'],'http')===0 ? $v['goods_pic']:UPLOAD_SITE_URL."/".$v['goods_pic'];?>" alt="<?php echo $v['goods_name']; ?>" /></div>
+              <div class="pro_des">
+              <p><?php echo $v['goods_name']; ?></p>
+              <span><em>¥</em><?php echo $v['goods_price'];?><i>起</i><i class="item_type">周边游</i></span> 
+              </div>  
+              </a>  
+            </li>
+    <?php }?>
+<?php }}?>
+

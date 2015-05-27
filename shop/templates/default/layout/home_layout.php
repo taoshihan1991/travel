@@ -115,11 +115,7 @@ $(function(){
 -->
 </style>
 
-<!-- [旅游网站css,js] -->
-<link rel="stylesheet" type="text/css" href="<?php echo SHOP_TEMPLATES_URL;?>/css/tcIndex.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="<?php echo SHOP_TEMPLATES_URL;?>/css/extend.css"/>
-<script type="text/javascript" src="<?php echo SHOP_TEMPLATES_URL;?>/js/extend.js"></script>
-<!-- [//旅游网站css,js] -->
+
 </head>
 <body>
 <?php require_once template('layout/layout_top');?>
@@ -333,12 +329,12 @@ $(function(){
                 <i></i>
               </a>
               <div data-height="150px">
-                <a rel="nofollow" href="http://member.ly.com/">订单中心</a>
+                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order">订单中心</a>
                 <!-- 需要分割线 -->
                 <i></i>
-                <a rel="nofollow" href="http://member.ly.com/Member/MyFavorites.aspx">我的收藏</a>
-                <a rel="nofollow" href="http://member.ly.com/Member/MemberInfomation.aspx">我的信息</a>
-                <a rel="nofollow" href="http://www.ly.com/vip/rights/">会员专享</a>
+                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_favorites&op=fglist">我的收藏</a>
+                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=home&op=message">我的信息</a>
+                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_points">我的积分</a>
               </div>
             </div>
           </div>

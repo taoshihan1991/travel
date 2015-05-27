@@ -1,4 +1,10 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+<!-- [旅游网站css,js] -->
+<link rel="stylesheet" type="text/css" href="<?php echo SHOP_TEMPLATES_URL;?>/css/tcIndex.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?php echo SHOP_TEMPLATES_URL;?>/css/extend.css"/>
+<script type="text/javascript" src="<?php echo SHOP_TEMPLATES_URL;?>/js/extend.js"></script>
+<!-- [//旅游网站css,js] -->
+
 <div id="append_parent"></div>
 <div id="ajaxwaitid"></div>
 
@@ -6,18 +12,23 @@
 <div id="topNavWrapper">
         <div id="topNavPanel">
           <div id="topLogin">
+            <?php if($_SESSION['is_login'] != '1'){?>
             <span>您好，欢迎使用！</span>
-            <a class="login" rel="nofollow" href="https://passport.ly.com/" onclick="this.href = this.href + '?pageurl=' + encodeURIComponent(window.location)">登录</a>
-            <a class="register" rel="nofollow" href="https://passport.ly.com/register/index/" onclick="this.href = this.href + '?pageurl=' + encodeURIComponent(window.location.href)">注册</a>
+            <a class="login" rel="nofollow" href="<?php echo urlShop('login');?>">登录</a>
+            <a class="register" rel="nofollow" href="<?php echo urlShop('login','register');?>">注册</a>
+            <?php }else{?>
+            <a class="username" href="<?php echo urlShop('member_snsindex');?>"><?php echo $_SESSION['member_name'];?></a><span style="color:#333;">，您好</span>
+            <a class="loginout" rel="nofollow" href="<?php echo urlShop('login','logout');?>" title="退出帐号"><span>退出</span></a>
+            <?php }?>
           </div>
           <ul id="topNav">
             <li id="topMyTc">
-              <a href="http://member.ly.com/">我的旅游</a>
+              <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_snsindex">会员中心</a>
               <div data-height="100px">
-                <a rel="nofollow" href="http://member.ly.com/">订单中心</a>
-                <a rel="nofollow" href="http://member.ly.com/Member/MyFavorites.aspx">我的收藏</a>
-                <a rel="nofollow" href="http://member.ly.com/Member/MemberInfomation.aspx">我的信息</a>
-                <a rel="nofollow" href="http://www.ly.com/vip/rights/">会员专享</a>
+                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order">订单中心</a>
+                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order&state_type=state_new">待付款</a>
+                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order&state_type=state_send">待确认</a>
+                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order&state_type=state_noeval">待评价</a>
               </div>
             </li>
           
@@ -40,17 +51,17 @@
                 <i></i>
               </a>
               <div>               
-                <a target="_blank" href="http://www.ly.com/newhelp/">帮助中心</a>
-                <a target="_blank" href="http://www.ly.com/newhelp/CustomerService.html" onclick="_tcTraObj._tcTrackEvent('customerservice5353', 'Pcnavigation', 'CN首页','30');">在线客服</a>
-                <a target="_blank" href="http://www.ly.com/newhelp/MyAdvice.aspx">人工申诉</a>
+                <a target="_blank" href="<?php echo urlShop('article', 'article', array('ac_id' => 2));?>">帮助中心</a>
+                <a target="_blank" href="<?php echo urlShop('article', 'article', array('ac_id' => 5));?>">售后服务</a>
+                <a target="_blank" href="<?php echo urlShop('article', 'article', array('ac_id' => 6));?>">客服中心</a>
               </div>
               <span></span>
             </li>
                          <li id="topJoinTc">
               <a href="javascript:;">合作中心<i></i></a>
                             <div  data-height="57px">
-                              <a rel="nofollow" target="_blank" href="http://www.ly.com/subject/jiudianjiameng.aspx">联盟合作</a>
-                              <a rel="nofollow" target="_blank" href="http://www.ly.com/zhuanti/lianmingka/">商务合作</a>
+                              <a rel="nofollow" target="_blank" href="">联盟合作</a>
+                              <a rel="nofollow" target="_blank" href="">商务合作</a>
                           </div>
                           <span></span>
                       </li>

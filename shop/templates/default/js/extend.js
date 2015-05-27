@@ -46,4 +46,11 @@ $(function(){
 		$(this).parents('.srpnel').find('.prooutinbound-list').addClass('none');
 		$(this).parents('.srpnel').find('.prooutinbound-list').eq(index).removeClass('none');
 	});
+
+	// 首页banner部分tab
+	$('.notice_tag_top a').hover(function(){
+		var index=$(this).index();
+		$('.notice_tag_top a').removeClass('on').eq(index).addClass('on');
+		$('.notice_tag_con').children().hide().eq(index).show();
+	});
 });
