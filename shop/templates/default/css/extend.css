@@ -12,11 +12,11 @@ a {
 	background: none;
 }
 /*分类导航菜单*/
-#menuNav .all-category {position: absolute; display: block; width: 210px;float: left;left: 0;top: 46px;border: 2px solid #5abb1f;border-top: none;}
-#menuNav .all-category .category { display:none; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#19000000', endColorstr='#19000000'); background:rgba(0,0,0,0.1); width: 210px; padding: 0 1px 1px; margin-left: -1px;}
+#menuNav .all-category {position: absolute; display: none; width: 210px;float: left;left: 0;top: 46px;border: 2px solid #5abb1f;border-top: none;}
+#menuNav .all-category .category {filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#19000000', endColorstr='#19000000'); background:rgba(0,0,0,0.1); width: 210px; padding: 0 1px 1px; margin-left: -1px;}
 #menuNav .all-category:hover .category { display:block;}
 #menuNav .category .menu { background-color: #FFF;}
-#menuNav .category .menu li { background-color: #FAFAFA; width: 210px; height: 43px; *float: left; *clear: left;border-top: 1px solid #dff0d1; position: relative; z-index: 1; zoom:1;}
+#menuNav .category .menu li { background-color: #FAFAFA; width: 210px; height: 58px; *float: left; *clear: left;border-top: 1px solid #dff0d1; position: relative; z-index: 1; zoom:1;}
 #menuNav .category .menu li.hover { z-index: 2;}
 #menuNav .category .class { border-style: solid; border-width: 1px 0 1px 4px; border-color: transparent; display: block; width: 182px; height: 35px; padding: 12px 15px; position: absolute; z-index: 1; top: -1px; left: -2px;}
 #menuNav .category .hover .class {border-left: 2px solid #f60; background-color: #FFF!important;border-top: 1px solid #b2d891;border-bottom: 2px solid #b2d891;z-index: 2;}
@@ -294,19 +294,48 @@ a {
 	height: 110px;
 }
 #menuNavWrapper{
-	background: #49A500;
+	background: #6aa838;
 }
 #menuNav{
-	background: #49A500;
+	background: #6aa838;
+	height: 40px;
+}
+#menuNav li{
+	height: 40px;
+	line-height: 40px;
+	padding: 0;
+}
+#menuNav li>a{
+	height: 40px;
+	line-height: 40px;	
+	font-size: 14px;
 }
 #menuNav .current, #menuNav.current:hover, #menuNav.current:hover>a{
-	background: #3B8600;
+	background: #4b7e37;
 }
 #menuNav li>a:after{
 	background: #3B8600;
+	display: none;
+}
+#menuNav li>a i {
+	top: 18px;
+	right: 4px;
 }
 #menuMyTc{
 	background: #3B8600;
+	height: 40px;
+	line-height: 40px;
+}
+#menuNav li.hover {
+	background: #4b7e37;
+}
+#menuNav li.hover>a {
+	color: #fff;
+}
+.submenu-nav{
+	top: 40px;
+	border: 1px solid #b2d891;
+	box-shadow: 0 6px 5px -6px #868585;
 }
 /*列表*/
 .listPage{
@@ -734,3 +763,7 @@ a {
 	.picBtnTop .bd li .title{ width:420px; height:30px; line-height:30px; left:0; bottom:0;   position:absolute; z-index:2;  }
 	.picBtnTop .bd li .title a{ color:#fff; padding-left:15px;  }
 
+/*footer部分*/
+.tcAboat, .joinTc, .contactTc, .tcWebSite {
+	width: 168px;
+}

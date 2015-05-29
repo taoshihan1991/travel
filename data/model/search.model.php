@@ -268,7 +268,7 @@ class searchModel{
             $child = (!empty($data['child'])) ? explode(',', $data['child']) : array();
             $childchild = (!empty($data['childchild'])) ? explode(',', $data['childchild']) : array();
             $data['gcid_array'] = array_merge(array($param['gc_id']), $child, $childchild);
-            if (!empty($data) && count($data['gcid_array']) == 1) {
+            if (!empty($data)) {
                 // 根据属性查找商品
                 if (is_array($param['attr_id'])) {
                     // 商品id数组

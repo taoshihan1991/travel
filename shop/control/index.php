@@ -15,24 +15,22 @@ class indexControl extends BaseHomeControl{
 		Language::read('home_index_index');
 		Tpl::output('index_sign','index');
 
-		//团购专区
-		Language::read('member_groupbuy');
-        $model_groupbuy = Model('groupbuy');
-        $group_list = $model_groupbuy->getGroupbuyCommendedList(array(), null, '', '*', 4);
-		Tpl::output('group_list', $group_list);
-
-		//限时折扣
-        $model_xianshi_goods = Model('p_xianshi_goods');
-        $xianshi_item = $model_xianshi_goods->getXianshiGoodsCommendList(4);
-		Tpl::output('xianshi_item', $xianshi_item);
-
 		//板块信息
 		$model_web_config = Model('web_config');
 		$web_html = $model_web_config->getWebHtml('index');
 		Tpl::output('web_html',$web_html);
 
+		// 公告部分
+		$condition=array(
+			'ac_id'=>'3',
+		);
+		$indexHomeArticle=Model('article')->getJoinList($condition,10);
+		Tpl::output('indexHomeArticle',$indexHomeArticle);
+	
+
 		// 楼层效果
-        $this->assignFloorData(1);
+		$parentId=intval($_GET['parent_id']);
+        $this->assignFloorData($parentId);
 
 		Model('seo')->type('index')->show();
 		Tpl::showpage('index');
@@ -42,11 +40,11 @@ class indexControl extends BaseHomeControl{
 	* 按楼层分配数据
 	* @return 分配变量
 	*/
-	public function assignFloorData($floor){
+	public function assignFloorData($parentId){
 		$goods_class = H('goods_class');
 		$reault=array();
 		foreach($goods_class as $k=>$v){
-			if($v['gc_parent_id']==0){
+			if($v['gc_parent_id']==$parentId){
 				$reault[]=$this->getGoodsByLevelPid($goods_class,$v['gc_id']);
 			}
 

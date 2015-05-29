@@ -148,183 +148,25 @@ $(function(){
                 <?php require template('layout/home_goods_class_extend');?>
                 </div>
               </li>
+              <?php $i=0;foreach($output['show_goods_class'] as $vals){$i++;if($i>=10) break;?>
               <li>
-                <!-- <p>
-                  <span>行业领先</span>
-                </p> -->
-                <a href="http://www.ly.com/scenery/" onclick="_tcTraObj._tcTrackEvent('scenery5353frist', 'Pcnavigation', 'CN首页','30');">
-                  景点
+              
+                <a href="<?php echo urlShop('search','index',array('cate_id'=> $vals['gc_id']));?>" >
+                  <?php echo $vals['gc_name'];?>
                   <i></i>
                 </a>
                 <div class="submenu-nav">
-                  <a class="scenery-submenu1" href="http://www.ly.com/scenery/" onclick="_tcTraObj._tcTrackEvent('guonei5353scsecond', 'Pcnavigation', 'CN首页','30');">国内景点</a>
-                  <a href="http://www.ly.com/globalscenery/" onclick="_tcTraObj._tcTrackEvent('global5353scsecond', 'Pcnavigation', 'CN首页','30');">国际景点</a>
-                  <a href="http://www.ly.com/globalscenery/gangaotai/" onclick="_tcTraObj._tcTrackEvent('gangaotai5353scsecond', 'Pcnavigation', 'CN首页','30');">港澳台门票</a>
-                  <a href="http://www.ly.com/zizhuyou/" onclick="_tcTraObj._tcTrackEvent('jiuplusjing5353scsecond', 'Pcnavigation', 'CN首页','30');">景点+酒店</a>
-                  <a href="http://www.ly.com/bustour/searchlist.html" onclick="_tcTraObj._tcTrackEvent('busscenery5353scsecond', 'Pcnavigation', 'CN首页','30');">巴士跟团游</a>
-                  <a href="http://www.ly.com/scenery/chwl/" onclick="_tcTraObj._tcTrackEvent('chwl5353scsecond', 'Pcnavigation', 'CN首页','30');">当地玩乐</a>
-                  <a href="http://www.ly.com/scenery/njl/SearchList_0_0_0__0_0.html" onclick="_tcTraObj._tcTrackEvent('njl5353scsecond', 'Pcnavigation', 'CN首页','30');">农家乐</a>
-                  <a href="http://www.ly.com/activity/" onclick="_tcTraObj._tcTrackEvent('activity5353scsecond', 'Pcnavigation', 'CN首页','30');">景点活动</a>
-                  <a class="menuorder" href="http://member.ly.com/Scenery/SceneryMemberOrderList.aspx">
-                    景点订单
-                    <i>&gt;&gt;</i>
-                  </a>
+                  <?php if(!empty($vals['class2'])){foreach($vals['class2'] as $k=>$v){?>
+                  <a <?php if($k==0){?>class="scenery-submenu1"<?php }?> href="<?php echo urlShop('search','index',array('cate_id'=> $v['gc_id']));?>"><?php echo $v['gc_name']?></a>
+                  <?php }}?>
                 </div>
               </li>
-              <li>
-                <a href="http://www.ly.com/hotel/" onclick="_tcTraObj._tcTrackEvent('hotelfirst5353', 'Pcnavigation', 'CN首页','30');">
-                  酒店
-                  <i></i>
-                </a>
-                <div class="submenu-nav">
-                  <a class="hotel-submenu1" href="http://www.ly.com/hotel/" onclick="_tcTraObj._tcTrackEvent('guonei5353hosecond', 'Pcnavigation', 'CN首页','30');">国内酒店</a>
-                  <a href="http://tuan.ly.com/" onclick="_tcTraObj._tcTrackEvent('tuangou5353hosecond', 'Pcnavigation', 'CN首页','30');">团购酒店</a>
-                  <a href="http://www.ly.com/zizhuyou/" onclick="_tcTraObj._tcTrackEvent('jiuplusjing5353hosecond', 'Pcnavigation', 'CN首页','30');">酒店+景点</a>
-                  <a href="http://www.ly.com/gangaohotel/" onclick="_tcTraObj._tcTrackEvent('gangaotai5353hosecond', 'Pcnavigation', 'CN首页','30');">港澳台酒店</a>
-                  <a href="http://globalhotel.ly.com/" onclick="_tcTraObj._tcTrackEvent('international5353hosecond', 'Pcnavigation', 'CN首页','30');">国际酒店</a>
-                  <a href="http://www.ly.com/hotel/kezhan/" style="position: relative;" onclick="_tcTraObj._tcTrackEvent('minsu5353hosecond', 'Pcnavigation', 'CN首页','30');">
-                    民宿客栈
-                    <!-- <span class="scmnew"></span> -->
-                  </a>
-                  <a href="http://www.ly.com/hotel/liansuo/" rel="nofollow" onclick="_tcTraObj._tcTrackEvent('pinpai5353hosecond', 'Pcnavigation', 'CN首页','30');">品牌汇</a>
-                  <a class="menuorder" href="http://member.ly.com/Hotel/HotelMemberOrderList.aspx">
-                    酒店订单
-                    <i>&gt;&gt;</i>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <a href="http://www.ly.com/FlightQuery.aspx" onclick="_tcTraObj._tcTrackEvent('Flightfirst5353', 'Pcnavigation', 'CN首页','30');">
-                  机票
-                  <i></i>
-                </a>
-                <div class="submenu-nav">
-                  <a class="flight-submenu1" href="http://www.ly.com/FlightQuery.aspx" onclick="_tcTraObj._tcTrackEvent('guonei5353flisecond', 'Pcnavigation', 'CN首页','30');">国内机票</a>
-                  <a href="http://www.ly.com/iflight/" onclick="_tcTraObj._tcTrackEvent('guoji5353flisecond', 'Pcnavigation', 'CN首页','30');">国际机票</a>
-                  <a class="menuorder" href="http://member.ly.com/Flight/FlightMemberOrderList.aspx">
-                    机票订单
-                    <i>&gt;&gt;</i>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <a href="http://www.ly.com/huochepiao/train/" onclick="_tcTraObj._tcTrackEvent('huochepiaofirst5353', 'Pcnavigation', 'CN首页','30');">火车</a>
-              </li>
-                            <li>
-                <a href="http://bus.ly.com/" onclick="_tcTraObj._tcTrackEvent('busfirst5353', 'Pcnavigation', 'CN首页','30');">汽车</a>
-              </li>
-              <li>
-              <!--  <p>
-                  <span>酒+景</span>
-                </p> -->
-                <a href="http://www.ly.com/zizhuyou/" onclick="_tcTraObj._tcTrackEvent('Zhoubianyoufirst5353', 'Pcnavigation', 'CN首页','30');">
-                  周边游
-                  <i></i>
-                </a>
-                <div class="submenu-nav">
-                  <a class="zmy-submenu1" href="http://www.ly.com/zizhuyou/" onclick="_tcTraObj._tcTrackEvent('jingplusjiu5353zhousecond', 'Pcnavigation', 'CN首页','30');">景点+酒店</a>
-                  <a href="http://www.ly.com/zizhuyou/temai/" onclick="_tcTraObj._tcTrackEvent('temai5353zhousecond', 'Pcnavigation', 'CN首页','30');">周边特卖</a>
-                  <a href="http://www.ly.com/zizhuyou/qinzi/" onclick="_tcTraObj._tcTrackEvent('qinzi5353zhousecond', 'Pcnavigation', 'CN首页','30');"><em>欢度六一<i></i></em>周边亲子</a>
-                  <a href="http://www.ly.com/zizhuyou/fivestar-pc/" onclick="_tcTraObj._tcTrackEvent('ka5353zhousecond', 'Pcnavigation', 'CN首页','30');">周末卡</a>
-                  <a href="http://www.ly.com/scenery/chwl/" onclick="_tcTraObj._tcTrackEvent('cjwl5353zhousecond', 'Pcnavigation', 'CN首页','30');">当地玩乐</a>
-                  <a href="http://www.ly.com/bustour/searchlist.html" onclick="_tcTraObj._tcTrackEvent('bus5353zhousecond', 'Pcnavigation', 'CN首页','30');">巴士跟团游</a>
-                  <a href="http://www.ly.com/scenery/njl/SearchList_0_0_0__0_0.html" onclick="_tcTraObj._tcTrackEvent('njl5353zhousecond', 'Pcnavigation', 'CN首页','30');">农家乐</a>
-                  <a href="http://www.ly.com/globalscenery/gangaotai/" onclick="_tcTraObj._tcTrackEvent('gangaotai5353zhousecond', 'Pcnavigation', 'CN首页','30');">港澳台门票</a>
-                  <a href="http://www.ly.com/scenery/" onclick="_tcTraObj._tcTrackEvent('scenery5353zhousecond', 'Pcnavigation', 'CN首页','30');">景点</a>
-                  <a class="menuorder" href="http://member.ly.com/zizhuyou/orderlist.aspx">
-                    周边游订单
-                    <i>&gt;&gt;</i>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <a href="http://gny.ly.com/guoneiyou/" onclick="_tcTraObj._tcTrackEvent('Guoneiyoufirst5353', 'Pcnavigation', 'CN首页','30');">国内游</a>
-              </li>
-              <li>
-                <p>
-                                <em style="right:20px">暑期惠<i></i></em>
-                               </p>
-                <a href="http://www.ly.com/dujia/" onclick="_tcTraObj._tcTrackEvent('Dujiafirst5353', 'Pcnavigation', 'CN首页','30');">
-                  出境游
-                  <i></i>
-                </a>
-                <div class="submenu-nav">
-                  <a class="dujia-submenu1" href="http://www.ly.com/dujia/" onclick="_tcTraObj._tcTrackEvent('Dujia5353dusecond', 'Pcnavigation', 'CN首页','30');">出境首页</a>
-                  <a href="http://www.ly.com/dujia/group/" id="group" mname="group" onclick="_tcTraObj._tcTrackEvent('gentuan5353dusecond', 'Pcnavigation', 'CN首页','30');">跟团游</a>
-                  <a href="http://www.ly.com/dujia/freetour/" id="freetour" mname="freetour" onclick="_tcTraObj._tcTrackEvent('ziyouxing5353dusecond', 'Pcnavigation', 'CN首页','30');">自由行</a>
-                  <a href="http://www.ly.com/globalscenery/" onclick="_tcTraObj._tcTrackEvent('globle5353dusecond', 'Pcnavigation', 'CN首页','30');">国际景点</a>
-                  <a href="http://www.ly.com/globalscenery/gangaotai/" onclick="_tcTraObj._tcTrackEvent('gangaotai5353dusecond', 'Pcnavigation', 'CN首页','30');">港澳台门票</a>
-                  <a href="http://www.ly.com/dujia/temai/" onclick="_tcTraObj._tcTrackEvent('temai5353dusecond', 'Pcnavigation', 'CN首页','30');">出境特卖</a>
-                  <a href="http://www.ly.com/dujia/yushou/" onclick="_tcTraObj._tcTrackEvent('yushou5353dusecond', 'Pcnavigation', 'CN首页','30');">出境预售</a>
-                  <a href="http://www.ly.com/dujia/schedule.html" onclick="_tcTraObj._tcTrackEvent('dingzhi5353dusecond', 'Pcnavigation', 'CN首页','30');">出境定制</a>
-                  <a target="_blank" href="http://www.ly.com/zhuanti/chujingbao/" onclick="_tcTraObj._tcTrackEvent('giftcard5353dusecond', 'Pcnavigation', 'CN首页','30');">礼品卡</a>
-                  <a class="menuorder" href="http://member.ly.com/dujia/DujiaOrderList.aspx">
-                    出境游订单
-                    <i>&gt;&gt;</i>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <p>
-                                <em style="right:16px">HOT<i></i></em>
-                               </p>
-                <a href="http://www.ly.com/youlun/" onclick="_tcTraObj._tcTrackEvent('Youlunfirst5353', 'Pcnavigation', 'CN首页','30');">
-                  邮轮
-                  <i></i>
-                </a>
-                <div class="submenu-nav">
-                  <a class="youlun-submenu1" href="http://www.ly.com/youlun/" onclick="_tcTraObj._tcTrackEvent('guoji5353yousecond', 'Pcnavigation', 'CN首页','30');">邮轮首页</a>
-                  <a href="http://www.ly.com/youlun/yuanyang/" mname="yuanyang" onclick="_tcTraObj._tcTrackEvent('yuanyang5353yousecond', 'Pcnavigation', 'CN首页','30');">远洋航线</a>
-                  <a href="http://www.ly.com/youlun/guonei/" mname="youlun/guonei" onclick="_tcTraObj._tcTrackEvent('guonei5353yousecond', 'Pcnavigation', 'CN首页','30');">国内航线</a>
-                  <a href="http://www.ly.com/youlun/baochuan.html" onclick="_tcTraObj._tcTrackEvent('baochuan5353yousecond', 'Pcnavigation', 'CN首页','30');">包船专区</a>
-                  <a href="http://www.ly.com/youlun/temai/" onclick="_tcTraObj._tcTrackEvent('zaoding5353yousecond', 'Pcnavigation', 'CN首页','30');">邮轮特卖</a>
-                  <a href="http://www.ly.com/zhuanti/cruise-shipcard/" target="_blank" onclick="_tcTraObj._tcTrackEvent('giftcard5353yousecond', 'Pcnavigation', 'CN首页','30');">礼品卡</a>
-                  <a href="http://www.ly.com/youlun/parentstour/" onclick="_tcTraObj._tcTrackEvent('bama5353yousecond', 'Pcnavigation', 'CN首页','30');">爸妈游</a>
-                                    <a href="http://www.ly.com/youlun/gonglve/" onclick="_tcTraObj._tcTrackEvent('chuandui5353yousecond', 'Pcnavigation', 'CN首页','30');">船队</a>
-                  <a class="menuorder" href="http://member.ly.com/youlun/YoulunOrderList.aspx">
-                    邮轮订单
-                    <i>&gt;&gt;</i>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <a href="http://www.ly.com/dujia/visa/" onclick="_tcTraObj._tcTrackEvent('Qianzhengfirst5353', 'Pcnavigation', 'CN首页','30');">签证</a>
-              </li>
-              <li>
-                <a href="http://tuan.ly.com/" onclick="_tcTraObj._tcTrackEvent('Tuanfirst5353', 'Pcnavigation', 'CN首页','30');">
-                  团购
-                  <i></i>
-                </a>
-                <div class="submenu-nav">
-                  <a class="tuan-submenu1" href="http://tuan.ly.com/hotel/" onclick="_tcTraObj._tcTrackEvent('jiutuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">酒店团购</a>
-                  <a href="http://tuan.ly.com/scenery/" onclick="_tcTraObj._tcTrackEvent('jingtuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">景点团购</a>
-                  <a href="http://tuan.ly.com/holiday/" onclick="_tcTraObj._tcTrackEvent('chujingtuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">出境游团购</a>
-                  <a href="http://tuan.ly.com/youlun/" onclick="_tcTraObj._tcTrackEvent('youtuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">邮轮团购</a>
-                  <a href="http://tuan.ly.com/visa/" onclick="_tcTraObj._tcTrackEvent('qiantuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">签证团购</a>
-                  <a href="http://www.ly.com/zhuanti/huiyuanri/" target="_blank" onclick="_tcTraObj._tcTrackEvent('membertuan5353tuansecond', 'Pcnavigation', 'CN首页','30');">会员日团购</a>
-                </div>
-              </li>
-              <li>
-                <a href="http://go.ly.com/" onclick="_tcTraObj._tcTrackEvent('Gonglvefirst5353', 'Pcnavigation', 'CN首页','30');">
-                  攻略
-                  <i></i>
-                </a>
-                <div class="submenu-nav">
-                  <a class="gl-submenu1" href="http://go.ly.com/" onclick="_tcTraObj._tcTrackEvent('glsq5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">攻略社区</a>
-                  <a href="http://go.ly.com/gonglve/" onclick="_tcTraObj._tcTrackEvent('gnmdd5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">国内目的地</a>
-                  <a href="http://go.ly.com/abroad/" onclick="_tcTraObj._tcTrackEvent('jwmdd5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">境外目的地</a>
-                  <a href="http://go.ly.com/youji/" onclick="_tcTraObj._tcTrackEvent('yj5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">游记</a>
-                  <a href="http://go.ly.com/user/" onclick="_tcTraObj._tcTrackEvent('grzy5353gonglvesecond', 'Pcnavigation', 'CN首页','30');">个人主页</a>
-                  <a class="menuorder" href="http://go.ly.com/youji/edit/">
-                    写游记
-                    <i>&gt;&gt;</i>
-                  </a>
-                </div>
-              </li>
+              <?php }?>
+             
 
             </ul>
             <div id="menuMyTc">
-              <a href="http://member.ly.com/">
+              <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_snsindex&op=index">
                 我的旅游
                 <i></i>
               </a>

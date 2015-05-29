@@ -13,84 +13,29 @@
         <dd><p>24小时服务热线</p><p>4007-777-777</p></dd>
       </dl>
     </li>
+
+
+    <?php if(is_array($output['article_list']) && !empty($output['article_list'])){ ?>
+    <?php foreach ($output['article_list'] as $k=> $article_class){ ?>
+    <?php if(!empty($article_class)){ ?>
     <!-- 关于同程 -->
     <li>
       <ul class="tcAboat">
         <li>
-          <h3>关于旅游</h3>
+          <h3><?php if(is_array($article_class['class'])) echo $article_class['class']['ac_name'];?></h3>
         </li>
+
+        <?php if(is_array($article_class['list']) && !empty($article_class['list'])){ ?>
+        <?php foreach ($article_class['list'] as $article){ ?>
         <li>
-          <a target="_blank" title="同程简介" href="http://www.ly.com/about/about17u/intro.html" rel="nofollow">同程简介</a>
+          <a target="_blank" title="<?php echo $article['article_title']?>" href="<?php echo urlShop('article', 'article',array('ac_id'=> $article['ac_id']));?>" rel="nofollow"><?php echo $article['article_title']?></a>
         </li>
-        <li>
-          <a target="_blank" title="可信网站" href="https://ss.knet.cn/verifyseal.dll?sn=2010112300100002970&amp;ct=df&amp;pa=036218" rel="nofollow">可信网站</a>
-        </li>
-        <li>
-          <a target="_blank" title="法律声明" href="http://www.17u.com/About17U/law.asp" rel="nofollow">法律声明</a>
-        </li>
-        <li>
-          <a target="_blank" title="网站地图" href="/CnSiteMap.aspx">网站地图</a>
+        <?php }}?>
+ 
         </li>
       </ul>
     </li>
-    <!-- 加盟 -->
-    <li>
-      <ul class="joinTc">
-        <li>
-          <h3>加盟合作</h3>
-        </li>
-        <li>
-          <a target="_blank" title="商务合作" href="/subject/jiudianjiameng.aspx" rel="nofollow">商务合作</a>
-        </li>
-        <li>
-          <a target="_blank" title="网站联盟" href="http://union.ly.com/" rel="nofollow">网站联盟</a>
-        </li>
-        <li>
-          <a target="_blank" title="友情链接" href="/FriendlyLink.aspx">友情链接</a>
-        </li>
-        <li class="bor_non">
-          <a target="_blank" title="旅游度假租车业务资质" href="/subject/zizhi/" rel="nofollow">业务资质</a>
-        </li>
-      </ul>
-    </li>
-    <!-- 联系我们 -->
-    <li>
-      <ul class="contactTc">
-        <li>
-          <h3>联系我们</h3>
-        </li>
-        <li class="contactTcLi">
-          <a target="_blank" title="联系我们" href="/about/about17u/contactus.html" rel="nofollow">联系我们</a>
-        </li>
-        <li class="contactTcLi">
-          <a target="_blank" title="投诉建议" href="/newhelp/MyAdvice.aspx" class="specialList" rel="nofollow">投诉建议</a>
-        </li>
-        <li class="contactTcLi">
-          <a target="_blank" title="诚聘英才" href="http://job.ly.com/social/" rel="nofollow">诚聘英才</a>
-        </li>
-      </ul>
-    </li>
-    <!-- 旗下网站 -->
-    <li>
-      <ul class="tcWebSite">
-        <li>
-          <h3>旗下网站</h3>
-        </li>
-        <li>
-          <a target="_blank" class="tcWebCn" title="同程旅游 www.LY.com" href="/"></a>
-        </li>
-        <li>
-          <a target="_blank" class="tcWebCom" title="一起游 WWW.17U.COM" href="http://www.17u.com/"></a>
-        </li>
-        <li>
-          <a target="_blank" class="tcWebNet" title="旅交汇 WWW.17U.NET" href="http://www.17u.net/"></a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h3>旅游app</h3>
-      <img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ewm1.png" style="margin-top:10px;" />
-    </li>
+    <?php }}}?>
   </ul>
   <div class="friendLink">
       <div class="friendMain clearfix">
@@ -157,32 +102,32 @@
       </div>
   </div>
   <p class="foot_info c9">
-      Copyright © 2002-2015&nbsp;&nbsp;版权所有&nbsp;&nbsp;<a class="c9" href="/about/about17u/intro.html" target="_blank" title="网络科技股份有限公司">科技股份有限公司</a><br>
+      Copyright © 2002-2015&nbsp;&nbsp;版权所有&nbsp;&nbsp;<a class="c9" href="" target="_blank" title="网络科技股份有限公司">科技股份有限公司</a><br>
       <a class="c9" target="_blank" href="<?php echo SHOP_TEMPLATES_URL;?>/images/20141103174615.jpg" title="苏ICP证B2-20100204">苏ICP证B2-20100204</a>&nbsp;&nbsp;[乙测资字32005078]<br>
-      <a class="c9" target="_blank" href="/subject/zizhi/" title="旅行社业务许可证：L-JS-CJ00070">旅行社业务许可证：L-JS-CJ00070</a>
+      <a class="c9" target="_blank" href="" title="旅行社业务许可证：L-JS-CJ00070">旅行社业务许可证：L-JS-CJ00070</a>
   </p>
   <ul class="tcHonour clearfix">
       <li class="expImg">
         <span class="expIco"></span>
-        <a target="_blank" title="首批商务部电商示范企业" href="http://www.mofcom.gov.cn/aarticle/b/c/201108/20110807700444.html" rel="nofollow">
+        <a target="_blank" title="首批商务部电商示范企业" href="" rel="nofollow">
           首批商务部
           <br>电商示范企业</a>
       </li>
       <li class="travelImg">
         <span class="trlIco"></span>
-        <a target="_blank" title="2014中国旅游集团20强" href="http://www.ctaweb.org/html/2014-12/2014-12-11-10-50-88272.html" rel="nofollow">
+        <a target="_blank" title="2014中国旅游集团20强" href="" rel="nofollow">
           2014中国
           <br>旅游集团20强</a>
       </li>
       <li class="wellMark">
         <span class="wekIco"></span>
-        <a ref="nofollow" href="http://www.jsgsj.gov.cn:60101/keyLicense/verifKey.jsp?serial=320000163820140527100000016881&amp;signData=gyBrY2EbFl5alGm7Ey2qD7+aR0sqxPXbaql4PfK0o+FJJlFOYIi2+wV2clLXPXWGOjPYohO8YuBDqWmqrZbOIyOdsoMxM3gSqCTSX92vUEkTVc/o0wJ/7Gz6Wr6LtonAY7pN95JIUDTx0Va5hlKvUNsyPP4UeVsfO2KxPxebW4E=" class="" target="_blank" title="可信网站">
+        <a ref="nofollow" href="" class="" target="_blank" title="可信网站">
           同程旅游
           <br>电子营业执照</a>
       </li>
       <li class="creditImg">
         <span class="crtIco thrbg"></span>
-        <a target="_blank" title="AAA级信用企业" href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1758957666" rel="nofollow">
+        <a target="_blank" title="AAA级信用企业" href="" rel="nofollow">
           AAA级
           <br>信用企业</a>
       </li>

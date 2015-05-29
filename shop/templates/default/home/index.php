@@ -4,7 +4,7 @@
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/ie6.js" charset="utf-8"></script>
 <![endif]-->
 <style type="text/css">
-.category { display: block !important;}
+.all-category { display: block !important;}
 </style>
   <div class="clear"></div>
 
@@ -23,20 +23,35 @@
     </table>
   </div>
   <div class="bannerRight">
-    <div class="login280"><a rel="nofollow" href="http://www.cncn.com/register.php" target="_blank" title="游客注册" onclick="_gaq.push(['_trackEvent', 'page_hits', 'link', 'reg', 1]);" class="y"><i></i>游客注册</a><a rel="nofollow" href="http://www.cncn.net/zs/" target="_blank" title="旅行社入驻" onclick="_gaq.push(['_trackEvent', 'page_hits', 'link', 'lxs_reg', 1]);"><i></i>旅行社入驻</a></div>
+    <div class="login280"><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=login&op=register" target="_blank" title="游客注册" class="y"><i></i>游客注册</a><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=seller_login&op=index" target="_blank"><i></i>旅行社入驻</a></div>
     <div class="notice280">
       <div class="notice_tag_top">
         <a href="http://news.cncn.com" class="">旅游热点</a>
-        <a href="http://news.cncn.com" class="on">旅游资讯</a>
+        <a href="" class="on">通知公告</a>
       </div>
       <div class="notice_tag_con">
-        <div>
-          <div class="first">
-                <a href="http://wan.cncn.com/guide_563.htm"><img src="http://www.cncn.com/images/a/2015/80X52201505.jpg" alt="5月份适合去哪里旅游？" title="5月份适合去哪里旅游？" width="80" height="52"></a>
-                <em><a href="http://wan.cncn.com/guide_563.htm">5月份适合起哪里旅游？</a></em>
-                <p>五月，春夏之交，花木茂盛，温度适宜，是全年最适合旅游的月份。白居易的诗“人间四月芳菲尽”估计说的就是这个时候吧?</p>
-              </div><ul><li><a href="http://wan.cncn.com/guide_8364.htm" target="_blank">6月份适合去哪里旅游？</a></li><li><a href="http://wan.cncn.com/guide_11329.htm" target="_blank">端午带孩子去哪旅游好？</a></li><li><a href="http://wan.cncn.com/guide_11860.htm" target="_blank">2015年高速公路免费时间表</a></li><li><a href="http://wan.cncn.com/guide_629.htm" target="_blank">夏天去哪里玩好？</a></li></ul></div>
-        <div style="display: none;"><ul class="zixun"><li> <em><a href="http://news.cncn.com/guonei/" target="_blank">[国内]</a></em><a href="http://news.cncn.com/212086.html">24小时创意生活之旅 吸引了多少见过世面的人</a></li><li> <em><a href="http://news.cncn.com/guonei/" target="_blank">[国内]</a></em><a href="http://news.cncn.com/212086.html">24小时创意生活之旅 吸引了多少见过世面的人</a></li><li> <em><a href="http://news.cncn.com/jingqu/" target="_blank">[景区]</a></em><a href="http://news.cncn.com/212027.html">中国公布首批1801家“价格信得过景区”名单</a></li><li> <em><a href="http://news.cncn.com/guonei/" target="_blank">[国内]</a></em><a href="http://news.cncn.com/211993.html">不文明旅游“黑名单”将影响个人信贷和出行</a></li><li> <em><a href="http://news.cncn.com/guonei/" target="_blank">[国内]</a></em><a href="http://news.cncn.com/211857.html">北京将开两趟夏季旅游专列 配专业导游</a></li><li> <em><a href="http://news.cncn.com/guonei/" target="_blank">[国内]</a></em><a href="http://news.cncn.com/211872.html">两岸旅游：自贸时代催生合作良机</a></li></ul></div></div></div>
+          <div  style="display: none;">
+            <div class="first">
+                  <a href=""><img src="http://www.cncn.com/images/a/2015/80X52201505.jpg" alt="5月份适合去哪里旅游？" title="5月份适合去哪里旅游？" width="80" height="52"></a>
+                  <em><a href="">5月份适合起哪里旅游？</a></em>
+                  <p>五月，春夏之交，花木茂盛，温度适宜，是全年最适合旅游的月份。白居易的诗“人间四月芳菲尽”估计说的就是这个时候吧?</p>
+                </div><ul>
+            <?php if(!empty($output['indexHomeArticle'])){foreach($output['indexHomeArticle'] as $v){?>
+                <li><a href="<?php echo empty($v['article_url']) ? urlShop('article', 'show',array('article_id'=> $v['article_id'])):$v['article_url'] ;?>" target="_blank"><?php echo $v['article_title']?></a></li>
+            <?php }}?>
+               </ul>
+          </div>
+          <div>
+            <ul class="zixun">
+              <?php if(!empty($output['show_article']['notice']['list'])){foreach($output['show_article']['notice']['list'] as $v){?>
+              <li> 
+                <em><a href="<?php echo urlShop('article', 'article',array('ac_id'=> $v['ac_id']));?>" target="_blank">[<?php echo $v['ac_name']?>]</a></em>
+                <a href="<?php echo empty($v['article_url']) ? urlShop('article', 'show',array('article_id'=> $v['article_id'])):$v['article_url'] ;?>"><?php echo $v['article_title']?></a></li>
+              <?php }}?>
+              </ul>
+          </div>
+        </div>
+      </div>
   </div>
   <div class="clear"></div>
 </div>
@@ -52,7 +67,7 @@
     <div class="infocon">
       <div class="prel">
         <ul>
-          <div id="portal-block-708469721524" class="udiyblock"  type="CommonSource">    
+          <div class="udiyblock"  type="CommonSource">    
             
           <?php echo $output['web_html']['index_sale'];?>
 
