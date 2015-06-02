@@ -24,6 +24,7 @@
   </div>
   <div class="bannerRight">
     <div class="login280"><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=login&op=register" target="_blank" title="游客注册" class="y"><i></i>游客注册</a><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=seller_login&op=index" target="_blank"><i></i>旅行社入驻</a></div>
+    <a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad1.jpg"/></a>
     <div class="notice280">
       <div class="notice_tag_top">
         <a href="http://news.cncn.com" class="">旅游热点</a>

@@ -3,9 +3,9 @@
 <div class="bg-dot"></div>
 <div class="login-layout">
   <div class="top">
-    <h5><?php echo $lang['login_index_title_01'];?><em></em></h5>
+
     <h2><?php echo $lang['login_index_title_02'];?></h2>
-    <h6><?php echo $lang['login_index_title_03'];?></h6>
+
   </div>
   <div class="box">
     <form method="post" id="form_login">
@@ -33,6 +33,6 @@ title="<?php echo $lang['login_index_password_pattern'];?>">
   </div>
 </div>
 <div class="bottom">
-  <h5>Powered by ShopNC</h5>
-  <h6 title="<?php echo $lang['login_index_shopnc'];?>">© 2007-2014 <a href="http://www.shopnc.net/" target="_blank">Tianjin Netcity Networking Inc.</a></h6>
+  <h5>Powered by qixin</h5>
+  <h6 title="<?php echo $lang['login_index_shopnc'];?>">© 2007-2015 <a href="http://www.qixinchina.com/" target="_blank">山东企信.</a></h6>
 </div>
