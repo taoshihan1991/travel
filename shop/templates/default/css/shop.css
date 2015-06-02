@@ -42,7 +42,7 @@ textarea:focus { background-color:#FFF; border-color: #CCC; box-shadow: 1px 1px 
 
 
 
-#content { width: 1000px; margin: 0 auto;}
+#content { width: 1000px!important; margin: 0 auto;min-width:1000px!important;}
 #root { background-color:#FFFFFF; width: 100%;}
 #main-nav { width:1000px;}
 .nc-goods-main { width: 1000px;}

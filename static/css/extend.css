@@ -181,7 +181,11 @@ a {
 .box280 .guide .type_nav{ border-top:1px solid #e6e6e6; font-family:"Microsoft yahei"; font-size:14px; overflow:hidden; zoom:1;}
 .box280 .guide .type_nav a{ display:inline-block; width:138px; float:left; height:40px; line-height:40px; border-right:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; text-align:center; overflow:hidden;}
 .box280 .guide .type_nav a.bd_r0{ width:139px; border-right:0;}
-
+.now_color{ position:relative; margin:0 10px 0 0; padding:0 20px 0 5px; border:1px dashed #5abb1f; border-radius:0; background:#fff;}
+.now_color i{ position:absolute; top:6px; right:5px; width:9px; height:9px; background:url(../images/ico_list.png) no-repeat -47px 0; overflow:hidden;}
+.now_color{ border:1px dashed #5abb1f;}
+.now_color:hover{ border:1px dashed #f70;}
+.now_color:hover i{ background-position:-58px 0;}
 /*详情*/
 .viewPage{
 	width: 1200px;

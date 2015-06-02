@@ -29,7 +29,7 @@ class indexControl extends BaseHomeControl{
 	
 
 		// 楼层效果
-		$parentId=intval($_GET['parent_id']);
+		$parentId=intval($_GET['cate_id']);
         $this->assignFloorData($parentId);
 
 		Model('seo')->type('index')->show();
@@ -64,7 +64,8 @@ class indexControl extends BaseHomeControl{
 			if($v['gc_id']==$pid){
 					$categoryTab[]=array(
 					'child'=>$v['childchild'],
-					'gc_name'=>$v['gc_name']
+					'gc_name'=>$v['gc_name'],
+					'gc_id'=>$v['gc_id']
 					);
 			}
 			if($v['gc_parent_id']==$pid){

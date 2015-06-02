@@ -15,10 +15,10 @@
     <table class="indexAds">
       <tr>
         <td>
-          <a href=""><p>超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购</p></a>
+          <a href=""><p>超万家酒店团购<br>2折起</p></a>
         </td>
-        <td><a href="" class="green"><p>超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购</p></a></td>
-        <td><a href="" class="blue"><p>超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购超万家酒店团购</p></a></td>
+        <td><a href="" class="green"><p>公司旅游，1对1上门定制<br>老板满意，员工省心</p></a></td>
+        <td><a href="" class="blue"><p>积分商城<br>积分抽奖,免费兑奖品</p></a></td>
       </tr>
     </table>
   </div>
@@ -99,12 +99,13 @@
         <h3><?php echo $category[0]['gc_name']?></h3>
         <div class="infocon">
       <div class="slpnel">
-      <div class="udiyblock"  type="CommonSource"> <h4>热门目的地</h4>
+      <div class="udiyblock"  type="CommonSource"> <h4><a href="<?php echo urlShop('search','index',array('cate_id'=>$category[0]['gc_id']));?>" ><?php echo $category[0]['gc_name']?></a></h4>
       <ul>
-        <?if(is_array($category)){foreach($category as $cate){?>
-            <li><a href="" des="<?php echo $cate['gc_name']?>" target="_blank" title="<?php echo $cate['gc_name']?>"><?php echo $cate['gc_name']?></a>
+        <?if(is_array($category)){foreach($category as $k=>$cate){if($k!=0){?>
+
+            <li><a href="<?php echo urlShop('search','index',array('cate_id'=>$cate['gc_id']))?>" des="<?php echo $cate['gc_name']?>" target="_blank" title="<?php echo $cate['gc_name']?>"><?php echo $cate['gc_name']?></a>
             </li>
-        <?php }}?>
+        <?php }}}?>
         </ul>
 <div class="clearfix"></div></div>
       </div>
@@ -116,7 +117,7 @@
                             <li <?php if($k==0){?>class="cur"<?php }?>><a des="<?php echo $cate['gc_name']?>" title="<?php echo $cate['gc_name']?>"><?php echo $cate['gc_name']?></a></li>
                           <?php }}?>
                         </ul>
-                        <a class="m-scenic" href="" >更多<?php echo $category[0]['gc_name']?></a>
+                        <a class="m-scenic" href="<?php echo urlShop('search','index',array('cate_id'=>$category[0]['gc_id']));?>" >更多<?php echo $category[0]['gc_name']?></a>
                         <span class="clearfix"></span>
               </div>
       </div>
@@ -152,7 +153,7 @@
 <div class="cooper_box">
   <div class="cooper_title">
     <h3>旅游局合作</h3>
-    <a href="http://www.ly.com/zhuanti/lyjhz/?from=CNhome" target="_blank" rel="nofollow">
+    <a href="" target="_blank" rel="nofollow">
       更多旅游局
     </a>
   </div>

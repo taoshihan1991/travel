@@ -11,6 +11,48 @@ a {
 #header{
 	background: none;
 }
+#pageheader .logo{
+	width: 130px;
+	float: left;
+	position: static;
+}
+#pageheader .logo img{
+	width: 100%;
+}
+#pageheader .search{
+	width: 525px;
+	margin-left: 150px;
+	margin-top: 23px;
+	float: left;
+}
+#pageheader .search .inp{
+	border: 1px solid #E68406;
+	height: 30px;
+	line-height: 30px;
+	width: 425px;
+	padding: 0;
+}
+#pageheader .search .btn{
+	border: none;
+	background: #E68406;
+	color: #fff;
+	height: 30px;
+	width: 50px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+}
+#pageheader .search .hotSearch{
+	height: 25px;
+	line-height: 25px;
+	color: #444;
+}
+#pageheader .search .hotSearch a{
+	color: #f08300;
+}
+#pageheader .search .hotSearch a:hover{
+	text-decoration: underline;
+}
 /*分类导航菜单*/
 #menuNav .all-category {position: absolute; display: none; width: 210px;float: left;left: 0;top: 46px;border: 2px solid #5abb1f;border-top: none;}
 #menuNav .all-category .category {filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#19000000', endColorstr='#19000000'); background:rgba(0,0,0,0.1); width: 210px; padding: 0 1px 1px; margin-left: -1px;}
@@ -470,7 +512,11 @@ a {
 .box280 .guide .type_nav{ border-top:1px solid #e6e6e6; font-family:"Microsoft yahei"; font-size:14px; overflow:hidden; zoom:1;}
 .box280 .guide .type_nav a{ display:inline-block; width:138px; float:left; height:40px; line-height:40px; border-right:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; text-align:center; overflow:hidden;}
 .box280 .guide .type_nav a.bd_r0{ width:139px; border-right:0;}
-
+.now_color{ position:relative; margin:0 10px 0 0; padding:0 20px 0 5px; border:1px dashed #5abb1f; border-radius:0; background:#fff;}
+.now_color i{ position:absolute; top:6px; right:5px; width:9px; height:9px; background:url(../images/ico_list.png) no-repeat -47px 0; overflow:hidden;}
+.now_color{ border:1px dashed #5abb1f;}
+.now_color:hover{ border:1px dashed #f70;}
+.now_color:hover i{ background-position:-58px 0;}
 /*详情*/
 .viewPage{
 	width: 1200px;

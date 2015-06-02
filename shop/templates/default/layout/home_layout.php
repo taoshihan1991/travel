@@ -6,8 +6,8 @@
 <title><?php echo $output['html_title'];?></title>
 <meta name="keywords" content="<?php echo $output['seo_keywords']; ?>" />
 <meta name="description" content="<?php echo $output['seo_description']; ?>" />
-<meta name="author" content="ShopNC">
-<meta name="copyright" content="ShopNC Inc. All Rights Reserved">
+<meta name="author" content="">
+<meta name="copyright" content="">
 <?php echo html_entity_decode($GLOBALS['setting_config']['qq_appcode'],ENT_QUOTES); ?><?php echo html_entity_decode($GLOBALS['setting_config']['sina_appcode'],ENT_QUOTES); ?><?php echo html_entity_decode($GLOBALS['setting_config']['share_qqzone_appcode'],ENT_QUOTES); ?><?php echo html_entity_decode($GLOBALS['setting_config']['share_sinaweibo_appcode'],ENT_QUOTES); ?>
 <style type="text/css">
 body {
@@ -126,12 +126,20 @@ $(function(){
 
       <div id="headerWrapper">
         <div id="pageheader" class="clearfix">
-          <div class="logo_style">
-                      <img src="<?php echo SHOP_TEMPLATES_URL;?>/images/topnormal.jpg" alt="" srcset="images/mactopnormal.jpg 2x"/>
-            <h1 class="logo" title="旅游">
-              <a href="" title="旅游"></a>
-            </h1>
+          <div class="logo">
+            <img src="<?php echo SHOP_TEMPLATES_URL;?>/images/logo.jpg"/>
           </div>
+          <form class="search" action="<?php echo SHOP_SITE_URL;?>">
+            <input name="act" id="search_act" value="search" type="hidden">
+            <input type="text" name="keyword" class="inp" placeholder="请输入关键字">
+            <input type="submit" value="查询" class="btn">
+            <p class="hotSearch">热门搜索: 
+              <?php if(is_array($output['hot_search']) && !empty($output['hot_search'])) { foreach($output['hot_search'] as $val) { ?>
+              <a href="<?php echo urlShop('search', 'index', array('keyword' => $val));?>"><?php echo $val; ?></a>
+              <?php } }?>
+            </p>
+          </form>
+
           <div>
             <a target="_blank" href="">
               <img src="<?php echo SHOP_TEMPLATES_URL;?>/images/app.png" alt="手机客户端"></a>
