@@ -13,375 +13,262 @@ cursor: url(<?php echo SHOP_TEMPLATES_URL;
 }
 </style>
 
-<div id="content" class="wrapper pr">
-  <div class="ncs-detail"><!-- S 商品举报 -->
-    <?php if(!$output['store_self']) { ?>
-    <div class="ncs-inform"><span><?php echo $lang['goods_index_inform'];?><i></i></span><a href="index.php?act=member_inform&op=inform_submit&goods_id=<?php echo $output['goods']['goods_id'];?>" title="<?php echo $lang['goods_index_goods_inform'];?>"><?php echo $lang['goods_index_goods_inform'];?></a> </div>
-    <?php } ?>
-    <!-- End --> 
-    
-    <!-- S 商品图片 -->
-    <div id="ncs-goods-picture" class="ncs-goods-picture image_zoom"> </div>
-    <!-- S 商品基本信息 -->
-    <div class="ncs-goods-summary">
-      <div class="name">
-        <h1><?php echo $output['goods']['goods_name']; ?></h1>
-        <strong><?php echo $output['goods']['goods_jingle'];?></strong> </div>
-      <div class="ncs-meta"> 
-        <!-- S 商品参考价格 -->
-        <dl>
-          <dt><?php echo $lang['goods_index_goods_cost_price'];?><?php echo $lang['nc_colon'];?></dt>
-          <dd class="cost-price"><strong><?php echo $lang['currency'].$output['goods']['goods_marketprice'];?></strong></dd>
-        </dl>
-        <!-- S 商品发布价格 -->
-        <dl>
-          <dt><?php echo $lang['goods_index_goods_price'];?><?php echo $lang['nc_colon'];?></dt>
-          <dd class="price">
-            <?php if ($output['goods']['promotion_type'] == 'groupbuy') {?>
-            <span class="tag">团购</span><strong><?php echo $lang['currency'].$output['goods']['promotion_price'];?></strong><em>(原售价<?php echo $lang['nc_colon'];?><?php echo $lang['currency'].$output['goods']['goods_price'];?>)</em>
-            <?php } elseif ($output['goods']['promotion_type'] == 'xianshi') {?>
-            <?php if ($output['xianshi_info']['xianshi_title'] != '') {?><span class="tag"><?php echo $output['xianshi_info']['xianshi_title'];?></span><?php }?><strong><?php echo $lang['currency'].$output['goods']['promotion_price'];?></strong><em>(原售价<?php echo $lang['nc_colon'];?><?php echo $lang['currency'].$output['goods']['goods_price'];?>)</em>
-            <?php } else {?>
-            <strong><?php echo $lang['currency'].$output['goods']['goods_price'];?></strong>
-            <?php }?>
-          </dd>
-        </dl>
-        <!-- E 商品发布价格 -->
-        <!-- S 限时优惠 -->
-        <?php if ($output['goods']['promotion_type'] == 'xianshi') {?>
-        <dl>
-          <dt>促销信息：</dt>
-          <dd class="promotion-info">直降：<?php echo $lang['currency'].$output['goods']['down_price'];?>
-          <em>
-          <?php if($output['goods']['lower_limit']) {?>
-          <?php echo sprintf('最低%s件起',$output['goods']['lower_limit']);?>
-          <?php } ?>
-          </em>
-          <span><?php echo $output['xianshi_info']['xianshi_explain'];?></span> </dd>
-        </dl>
-        <?php }?>
-        <!-- E 限时优惠  -->
-        <!-- S 团购-->
-        <?php if ($output['goods']['promotion_type'] == 'groupbuy') {?>
-        <dl>
-          <dt>促销信息：</dt>
-          <dd class="promotion-info">
-          <em>
-          <?php if ($output['goods']['upper_limit']) {?>
-          <?php echo sprintf('最多限购%s件',$output['goods']['upper_limit']);?>
-          <?php } ?>
-          </em>
-          <span><?php echo $output['goods']['remark'];?></span> </dd>
-        </dl>
-        <?php }?>
-        <!-- E 团购 -->
-        <!-- S 描述相符评分及评价数量 -->
-        <dl>
-          <dt><?php echo $lang['goods_index_evaluation'];?><?php echo $lang['nc_colon'];?></dt>
-          <dd><div class="raty" data-score="<?php echo $output['goods_evaluate_info']['good_star'];?>"></div><a href="#ncGoodsRate">(<?php echo $output['goods_evaluate_info']['all'];?><?php echo $lang['goods_index_number_of_consult'];?>)</a></dd>
-        </dl>
-        <!-- E 描述相符评分及评价数量 --> 
-        <!-- S 物流运费 -->
-        <dl class="ncs-freight">
-          <dt>
-            <?php if ($output['goods']['goods_transfee_charge'] == 1){?>
-            <?php echo $lang['goods_index_freight'].$lang['nc_colon'];?>
-            <?php }else{?>
-            <!-- 如果买家承担运费 --> 
-            <!-- 如果使用了运费模板 -->
-            <?php if ($output['goods']['transport_id'] != '0'){?>
-            <?php echo $lang['goods_index_trans_to'];?><a href="javascript:void(0)" id="ncrecive"><?php echo $lang['goods_index_trans_country'];?></a><?php echo $lang['nc_colon'];?>
-            <div class="ncs-freight-box" id="transport_pannel">
-              <?php if (is_array($output['area_list'])){?>
-              <?php foreach($output['area_list'] as $k=>$v){?>
-              <a href="javascript:void(0)" nctype="<?php echo $k;?>"><?php echo $v;?></a>
-              <?php }?>
-              <?php }?>
+
+<!-- [主体部分] -->
+<div class="viewPage">
+  <div class="viewPageLeft">
+    <div class="viewInfo">
+      <div class="viewInfoLeft">
+        <!-- 轮播图 -->
+        <div class="viewSlidePicBox">
+            <img src="<?php echo $output['goods_image'][0];?>" id="bigPic">
+            <div class="viewSlideRight">
+              <a href="jascript:;" class="pre"></a>
+              <div class="smallPic">
+                <?php if(!empty($output['goods_image'])){foreach($output['goods_image'] as $v){?>
+                <a href="javascript:;">
+                  <img src="<?php echo $v;?>" data-src="<?php echo $v;?>" alt=""/>
+                </a>
+                <?php }}?>
+              </div>
+              
+              <a href="jascript:;" class="next"></a>
             </div>
-            <?php }else{?>
-            <?php echo $lang['goods_index_trans_zcountry'];?><?php echo $lang['nc_colon'];?>
-            <?php }?>
-            <?php }?>
-          </dt>
-          <dd id="transport_price">
-            <?php if($output['group']) { ?>
-            <span><?php echo $lang['goods_index_groupbuy_no_shipping_fee'];?></span>
-            <?php } else { ?>
-            <?php if ($output['goods']['goods_freight'] == 0){?>
-            <?php echo $lang['goods_index_trans_for_seller'];?>
-            <?php }else{?>
-            <!-- 如果买家承担运费 --> 
-            <span>运费<?php echo $lang['nc_colon'];?><em id="nc_kd"><?php echo $output['goods']['goods_freight'];?></em><?php echo $lang['goods_index_yuan'];?></span>
-            <?php }?>
-            <?php }?>
-          </dd>
-          <dd style="color:red;display:none" id="loading_price">loading.....</dd>
-        </dl>
-        <!-- E 物流运费 ---> 
-        <!-- S 累计售出数量 -->
-        <dl>
-          <dt><?php echo $lang['goods_index_sold'];?><?php echo $lang['nc_colon'];?></dt>
-          <dd><strong><a href="#ncGoodsTraded"><?php echo $output['goods']['goods_salenum']; ?></a></strong>&nbsp;<?php echo $lang['nc_jian'];?></dd>
-        </dl>
-        <!-- E 累计售出数量 --> 
-        
+
+        </div>
+                          
+                                    
+      <!-- 轮播图 -->
       </div>
-      <?php if($output['goods']['goods_state'] == 1 && $output['goods']['goods_verify'] == 1){?>
-      <div class="ncs-key"> 
-        <!-- S 商品规格值-->
-        <?php if (is_array($output['goods']['spec_name'])) { ?>
-        <?php foreach ($output['goods']['spec_name'] as $key => $val) {?>
-        <dl nctype="nc-spec">
-          <dt><?php echo $val;?><?php echo $lang['nc_colon'];?></dt>
-          <dd>
-            <?php if (is_array($output['goods']['spec_value'][$key]) and !empty($output['goods']['spec_value'][$key])) {?>
-            <ul nctyle="ul_sign">
-              <?php foreach($output['goods']['spec_value'][$key] as $k => $v) {?>
-              <?php if( $key == 1 ){?>
-              <!-- 图片类型规格-->
-              <li class="sp-img"><a href="javascript:void(0);" class="<?php if (isset($output['goods']['goods_spec'][$k])) {echo 'hovered';}?>" data-param="{valid:<?php echo $k;?>}" title="<?php echo $v;?>"><img src="<?php echo $output['spec_image'][$k];?>"/><i></i></a></li>
-              <?php }else{?>
-              <!-- 文字类型规格-->
-              <li class="sp-txt"><a href="javascript:void(0)" class="<?php if (isset($output['goods']['goods_spec'][$k])) { echo 'hovered';} ?>" data-param="{valid:<?php echo $k;?>}"><?php echo $v;?><i></i></a></li>
-              <?php }?>
+      <div class="viewInfoRight">
+        <table>
+          <tbody><tr>
+            <td class="infoName">产品编号：</td>
+            <td>222044</td>
+          </tr>
+          <tr>
+            <td class="infoName">本站价：</td>
+            <td><div class="s_price"><b>¥</b>1199</div></td>
+          </tr>
+          <tr>
+            <td class="infoName">市场价：</td>
+            <td>222044</td>
+          </tr>
+          <tr>
+            <td class="infoName">咨询热线：</td>
+            <td>222044</td>
+          </tr>
+        </tbody></table>
+        <a href="" title="立即预订" class="reserveBtn" attr-url="">立即预订</a>
+      </div>
+    </div>
+
+    <div class="ncs-goods-layout expanded" >
+      <div class="ncs-goods-main" id="main-nav-holder">
+        <div class="ncs-promotion" style="display: none;">
+          <div class="ncs-goods-title-nav">
+            <ul>
+              <li class="current"><a href="javascript:void(0);">优惠套装</a></li>
+            </ul>
+          </div>
+          <div class="ncs-goods-info-content"><!--S 组合销售 -->
+            <div class="ncs-bundling" id="nc-bundling"> </div>
+            <!--E 组合销售 --></div>
+        </div>
+        <nav class="tabbar pngFix" id="main-nav">
+          <div class="ncs-goods-title-nav">
+            <ul id="categorymenu">
+              <li class="current"><a id="tabGoodsIntro" href="#content"><?php echo $lang['goods_index_goods_info'];?></a></li>
+              <li><a id="tabGoodsRate" href="#content"><?php echo $lang['goods_index_evaluation'];?></a></li>
+              <li><a id="tabGoodsTraded" href="#content"><?php echo $lang['goods_index_sold_record'];?></a></li>
+              <li><a id="tabGuestbook" href="#content"><?php echo $lang['goods_index_goods_consult'];?></a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="ncs-intro">
+          <div class="content bd" id="ncGoodsIntro"> 
+            
+            <!--S 满就送 -->
+            <?php if($output['mansong_info']) { ?>
+            <div class="nc-mansong">
+              <div class="nc-mansong-ico"></div>
+              <dl class="nc-mansong-content">
+                <dt><?php echo $output['mansong_info']['mansong_name'];?>
+                  <time>( <?php echo $lang['nc_promotion_time'];?><?php echo $lang['nc_colon'];?><?php echo date('Y/m/d',$output['mansong_info']['start_time']).'--'.date('Y/m/d',$output['mansong_info']['end_time']);?> )</time>
+                </dt>
+                <dd>
+                  <?php foreach($output['mansong_info']['rules'] as $rule) { ?>
+                  <span><?php echo $lang['nc_man'];?><em><?php echo ncPriceFormat($rule['price']);?></em><?php echo $lang['nc_yuan'];?>
+                  <?php if(!empty($rule['discount'])) { ?>
+                  ， <?php echo $lang['nc_reduce'];?><i><?php echo ncPriceFormat($rule['discount']);?></i><?php echo $lang['nc_yuan'];?>
+                  <?php } ?>
+                  <?php if(!empty($rule['goods_id'])) { ?>
+                  ， <?php echo $lang['nc_gift'];?> <a href="<?php echo $rule['goods_url'];?>" title="<?php echo $rule['mansong_goods_name'];?>" target="_blank"> <img src="<?php echo cthumb($rule['goods_image'], 60);?>" alt="<?php echo $rule['mansong_goods_name'];?>"> </a>&nbsp;。
+                  <?php } ?>
+                  </span>
+                  <?php } ?>
+                </dd>
+                <dd class="nc-mansong-remark"><?php echo $output['mansong_info']['remark'];?></dd>
+              </dl>
+            </div>
+            <?php } ?>
+            <!--E 满就送 -->
+            <?php if(is_array($output['goods']['goods_attr']) || isset($output['goods']['brand_name'])){?>
+            <ul class="nc-goods-sort">
+              <li>商家货号：<?php echo $output['goods']['goods_serial'];?></li>
+              <?php if(isset($output['goods']['brand_name'])){echo '<li>'.$lang['goods_index_brand'].$lang['nc_colon'].$output['goods']['brand_name'].'</li>';}?>
+              <?php if(is_array($output['goods']['goods_attr']) && !empty($output['goods']['goods_attr'])){?>
+              <?php foreach ($output['goods']['goods_attr'] as $val){ $val= array_values($val);echo '<li>'.$val[0].$lang['nc_colon'].$val[1].'</li>'; }?>
               <?php }?>
             </ul>
             <?php }?>
-          </dd>
-        </dl>
-        <?php }?>
-        <?php }?>
-        <!-- E 商品规格值--> 
-        <!-- S 购买数量及库存 -->
-        <dl>
-          <dt><?php echo $lang['goods_index_buy_amount'];?><?php echo $lang['nc_colon'];?></dt>
-          <dd class="ncs-figure-input">
-            <input type="text" name="" id="quantity" value="1" size="3" maxlength="6" class="text w30">
-            <a href="javascript:void(0)" class="increase">+</a><a href="javascript:void(0)" class="decrease">-</a> <em>(<?php echo $lang['goods_index_stock'];?><strong nctype="goods_stock"><?php echo $output['goods']['goods_storage']; ?></strong><?php echo $lang['nc_jian'];?>)</em> </dd>
-        </dl>
-        <!-- E 购买数量及库存 --> 
-        
-        <!-- S 购买按钮 -->
-        <div class="ncs-btn"><!-- S 提示已选规格及库存不足无法购买 -->
-          <div nctype="goods_prompt" class="ncs-point">
-            <?php if (!empty($output['goods']['goods_spec'])) {?>
-            <span class="yes"><?php echo $lang['goods_index_you_choose'];?> <strong><?php echo implode($lang['nc_comma'], $output['goods']['goods_spec']);?></strong></span>
-            <?php }?>
-            <?php if ($output['goods']['goods_storage'] <= 0) {?>
-            <span class="no"><i class="icon-exclamation-sign"></i>&nbsp;<?php echo $lang['goods_index_understock_prompt'];?></span>
-            <?php }?>
+            <div class="ncs-goods-info-content">
+              <?php if (isset($output['plate_array'][1])) {?>
+              <div class="top-template"><?php echo $output['plate_array'][1][0]['plate_content']?></div>
+              <?php }?>
+              <div class="default"><?php echo $output['goods']['goods_body']; ?></div>
+              <?php if (isset($output['plate_array'][0])) {?>
+              <div class="bottom-template"><?php echo $output['plate_array'][0][0]['plate_content']?></div>
+              <?php }?>
+            </div>
           </div>
-          <!-- E 提示已选规格及库存不足无法购买 --> 
-          <!-- 立即购买--> 
-          <a href="javascript:void(0);" nctype="buynow_submit" class="buynow <?php if ($output['goods']['goods_storage'] <= 0) {?>no-buynow<?php }?>" title="<?php echo $lang['goods_index_now_buy'];?>"><?php echo $lang['goods_index_now_buy'];?></a> 
-          <?php if ($output['goods']['promotion_type'] != 'groupbuy') {?>
-          <!-- 加入购物车-->
-          <a href="javascript:void(0);" nctype="addcart_submit" class="addcart <?php if ($output['goods']['goods_storage'] <= 0) {?>no-addcart<?php }?>" title="<?php echo $lang['goods_index_add_to_cart'];?>"><i class="icon-shopping-cart"></i><?php echo $lang['goods_index_add_to_cart'];?></a>
-          <?php } ?>
-
-          <!-- S 加入购物车弹出提示框 -->
-          <div class="ncs-cart-popup">
-            <dl>
-              <dt><?php echo $lang['goods_index_cart_success'];?><a title="<?php echo $lang['goods_index_close'];?>" onClick="$('.ncs-cart-popup').css({'display':'none'});">X</a></dt>
-              <dd><?php echo $lang['goods_index_cart_have'];?> <strong id="bold_num"></strong> <?php echo $lang['goods_index_number_of_goods'];?> <?php echo $lang['goods_index_total_price'];?><?php echo $lang['nc_colon'];?><em id="bold_mly" class="saleP"></em></dd>
-              <dd class="btns"><a href="javascript:void(0);" class="ncs-btn-mini ncs-btn-green" onClick="location.href='<?php echo SHOP_SITE_URL.DS?>index.php?act=cart'"><?php echo $lang['goods_index_view_cart'];?></a> <a href="javascript:void(0);" class="ncs-btn-mini" value="" onClick="$('.ncs-cart-popup').css({'display':'none'});"><?php echo $lang['goods_index_continue_shopping'];?></a></dd>
-            </dl>
+        </div>
+        <div class="ncs-comment">
+          <div class="ncs-goods-title-bar hd">
+            <h4><a href="javascript:void(0);"><?php echo $lang['goods_index_evaluation'];?></a></h4>
           </div>
-          <!-- E 加入购物车弹出提示框 -->
-
-        </div>
-        <!-- E 购买按钮 -->
-        <div class="ncs_share"> <a href="javascript:void(0);" nc_type="sharegoods" data-param='{"gid":"<?php echo $output['goods']['goods_id'];?>"}'><i class="icon-share"></i><?php echo $lang['goods_index_snsshare_goods'];?><em nc_type="sharecount_<?php echo $output['goods']['goods_id'];?>"><?php echo intval($output['goods']['sharenum'])>0?intval($output['goods']['sharenum']):0;?></em></a><a href="javascript:collect_goods('<?php echo $output['goods']['goods_id']; ?>','count','goods_collect');"><i class="icon-star-empty"></i><?php echo $lang['goods_index_favorite_goods'];?><em nctype="goods_collect"><?php echo $output['goods']['goods_collect']?></em></a></div>
-      </div>
-      <?php }else{?>
-      <div class="ncs-saleout">
-      <dl>
-        <dt><i class="icon-info-sign"></i><?php echo $lang['goods_index_is_no_show'];?></dt>
-        <dd><?php echo $lang['goods_index_is_no_show_message_one'];?></dd>
-        <dd><?php echo $lang['goods_index_is_no_show_message_two_1'];?>&nbsp;<a href="<?php echo urlShop('show_store', 'index', array('store_id'=>$output['goods']['store_id']), $output['store_info']['store_domain']);?>" class="ncs-btn-mini"><?php echo $lang['goods_index_is_no_show_message_two_2'];?></a>&nbsp;<?php echo $lang['goods_index_is_no_show_message_two_3'];?> </dd>
-      </dl></div>
-      <?php }?>
-      <!--E 商品信息 --> 
-      
-    </div>
-    <!-- E 商品图片及收藏分享 --> 
-    <!--S 店铺信息-->
-    <div class="ncg-info" style=" position: absolute; z-index: 1; top: 60px; right: 0;">
-      <?php include template('store/info');?>
-    </div>
-    <!--E 店铺信息 --> 
-  </div>
-  <div class="ncs-goods-layout expanded" >
-    <div class="ncs-goods-main" id="main-nav-holder">
-      <div class="ncs-promotion" style="display: none;">
-        <div class="ncs-goods-title-nav">
-          <ul>
-            <li class="current"><a href="javascript:void(0);">优惠套装</a></li>
-          </ul>
-        </div>
-        <div class="ncs-goods-info-content"><!--S 组合销售 -->
-          <div class="ncs-bundling" id="nc-bundling"> </div>
-          <!--E 组合销售 --></div>
-      </div>
-      <nav class="tabbar pngFix" id="main-nav">
-        <div class="ncs-goods-title-nav">
-          <ul id="categorymenu">
-            <li class="current"><a id="tabGoodsIntro" href="#content"><?php echo $lang['goods_index_goods_info'];?></a></li>
-            <li><a id="tabGoodsRate" href="#content"><?php echo $lang['goods_index_evaluation'];?></a></li>
-            <li><a id="tabGoodsTraded" href="#content"><?php echo $lang['goods_index_sold_record'];?></a></li>
-            <li><a id="tabGuestbook" href="#content"><?php echo $lang['goods_index_goods_consult'];?></a></li>
-          </ul>
-          <div class="switch-bar"><a href="javascript:void(0)" id="fold">&nbsp;</a></div>
-        </div>
-      </nav>
-      <div class="ncs-intro">
-        <div class="content bd" id="ncGoodsIntro"> 
           
-          <!--S 满就送 -->
-          <?php if($output['mansong_info']) { ?>
-          <div class="nc-mansong">
-            <div class="nc-mansong-ico"></div>
-            <dl class="nc-mansong-content">
-              <dt><?php echo $output['mansong_info']['mansong_name'];?>
-                <time>( <?php echo $lang['nc_promotion_time'];?><?php echo $lang['nc_colon'];?><?php echo date('Y/m/d',$output['mansong_info']['start_time']).'--'.date('Y/m/d',$output['mansong_info']['end_time']);?> )</time>
-              </dt>
-              <dd>
-                <?php foreach($output['mansong_info']['rules'] as $rule) { ?>
-                <span><?php echo $lang['nc_man'];?><em><?php echo ncPriceFormat($rule['price']);?></em><?php echo $lang['nc_yuan'];?>
-                <?php if(!empty($rule['discount'])) { ?>
-                ， <?php echo $lang['nc_reduce'];?><i><?php echo ncPriceFormat($rule['discount']);?></i><?php echo $lang['nc_yuan'];?>
-                <?php } ?>
-                <?php if(!empty($rule['goods_id'])) { ?>
-                ， <?php echo $lang['nc_gift'];?> <a href="<?php echo $rule['goods_url'];?>" title="<?php echo $rule['mansong_goods_name'];?>" target="_blank"> <img src="<?php echo cthumb($rule['goods_image'], 60);?>" alt="<?php echo $rule['mansong_goods_name'];?>"> </a>&nbsp;。
-                <?php } ?>
-                </span>
-                <?php } ?>
-              </dd>
-              <dd class="nc-mansong-remark"><?php echo $output['mansong_info']['remark'];?></dd>
-            </dl>
-          </div>
-          <?php } ?>
-          <!--E 满就送 -->
-          <?php if(is_array($output['goods']['goods_attr']) || isset($output['goods']['brand_name'])){?>
-          <ul class="nc-goods-sort">
-            <li>商家货号：<?php echo $output['goods']['goods_serial'];?></li>
-            <?php if(isset($output['goods']['brand_name'])){echo '<li>'.$lang['goods_index_brand'].$lang['nc_colon'].$output['goods']['brand_name'].'</li>';}?>
-            <?php if(is_array($output['goods']['goods_attr']) && !empty($output['goods']['goods_attr'])){?>
-            <?php foreach ($output['goods']['goods_attr'] as $val){ $val= array_values($val);echo '<li>'.$val[0].$lang['nc_colon'].$val[1].'</li>'; }?>
-            <?php }?>
-          </ul>
-          <?php }?>
-          <div class="ncs-goods-info-content">
-            <?php if (isset($output['plate_array'][1])) {?>
-            <div class="top-template"><?php echo $output['plate_array'][1][0]['plate_content']?></div>
-            <?php }?>
-            <div class="default"><?php echo $output['goods']['goods_body']; ?></div>
-            <?php if (isset($output['plate_array'][0])) {?>
-            <div class="bottom-template"><?php echo $output['plate_array'][0][0]['plate_content']?></div>
-            <?php }?>
+          <div class="ncs-goods-info-content bd" id="ncGoodsRate">
+              <div class="top">
+                  <div class="rate">
+                      <p><strong><?php echo $output['goods_evaluate_info']['good_percent'];?></strong><sub>%</sub>好评</p>
+                <span>共有<?php echo $output['goods_evaluate_info']['all'];?>人参与评分</span></div>
+              <div class="percent">
+                <dl>
+                  <dt>好评<em>(<?php echo $output['goods_evaluate_info']['good_percent'];?>%)</em></dt>
+                  <dd><i style="width: <?php echo $output['goods_evaluate_info']['good_percent'];?>%"></i></dd>
+                </dl>
+                <dl>
+                  <dt>中评<em>(<?php echo $output['goods_evaluate_info']['normal_percent'];?>%)</em></dt>
+                  <dd><i style="width: <?php echo $output['goods_evaluate_info']['normal_percent'];?>%"></i></dd>
+                </dl>
+                <dl>
+                  <dt>差评<em>(<?php echo $output['goods_evaluate_info']['bad_percent'];?>%)</em></dt>
+                  <dd><i style="width: <?php echo $output['goods_evaluate_info']['bad_percent'];?>%"></i></dd>
+                </dl>
+              </div>
+              <div class="btns"><span>您可对已购商品进行评价</span>
+                <p><a href="<?php echo urlShop('member_order', 'index');?>" class="ncs-btn ncs-btn-red" target="_blank"><i class="icon-comment-alt"></i>评价商品</a></p>
+              </div>
+            </div>
+            <div class="ncs-goods-title-nav">
+          <ul id="comment_tab">
+              <li data-type="all" class="current"><a href="javascript:void(0);"><?php echo $lang['goods_index_evaluation'];?>(<?php echo $output['goods_evaluate_info']['all'];?>)</a></li>
+              <li data-type="1"><a href="javascript:void(0);">好评(<?php echo $output['goods_evaluate_info']['good'];?>)</a></li>
+              <li data-type="2"><a href="javascript:void(0);">中评(<?php echo $output['goods_evaluate_info']['normal'];?>)</a></li> 
+              <li data-type="3"><a href="javascript:void(0);">差评(<?php echo $output['goods_evaluate_info']['bad'];?>)</a></li>
+          </ul></div>
+            <!-- 商品评价内容部分 -->
+            <div id="goodseval" class="ncs-commend-main"></div>
           </div>
         </div>
-      </div>
-      <div class="ncs-comment">
-        <div class="ncs-goods-title-bar hd">
-          <h4><a href="javascript:void(0);"><?php echo $lang['goods_index_evaluation'];?></a></h4>
-        </div>
-        
-        <div class="ncs-goods-info-content bd" id="ncGoodsRate">
+        <div class="ncg-salelog">
+          <div class="ncs-goods-title-bar hd">
+           <h4><a href="javascript:void(0);"><?php echo $lang['goods_index_sold_record'];?></a></h4>
+          </div>
+          <div class="ncs-goods-info-content bd" id="ncGoodsTraded">
             <div class="top">
-                <div class="rate">
-                    <p><strong><?php echo $output['goods_evaluate_info']['good_percent'];?></strong><sub>%</sub>好评</p>
-              <span>共有<?php echo $output['goods_evaluate_info']['all'];?>人参与评分</span></div>
-            <div class="percent">
-              <dl>
-                <dt>好评<em>(<?php echo $output['goods_evaluate_info']['good_percent'];?>%)</em></dt>
-                <dd><i style="width: <?php echo $output['goods_evaluate_info']['good_percent'];?>%"></i></dd>
-              </dl>
-              <dl>
-                <dt>中评<em>(<?php echo $output['goods_evaluate_info']['normal_percent'];?>%)</em></dt>
-                <dd><i style="width: <?php echo $output['goods_evaluate_info']['normal_percent'];?>%"></i></dd>
-              </dl>
-              <dl>
-                <dt>差评<em>(<?php echo $output['goods_evaluate_info']['bad_percent'];?>%)</em></dt>
-                <dd><i style="width: <?php echo $output['goods_evaluate_info']['bad_percent'];?>%"></i></dd>
-              </dl>
+              <div class="price"><?php echo $lang['goods_index_goods_price'];?><strong><?php echo $output['goods']['goods_price'];?></strong><?php echo $lang['goods_index_yuan'];?><span><?php echo $lang['goods_index_price_note'];?></span></div>
             </div>
-            <div class="btns"><span>您可对已购商品进行评价</span>
-              <p><a href="<?php echo urlShop('member_order', 'index');?>" class="ncs-btn ncs-btn-red" target="_blank"><i class="icon-comment-alt"></i>评价商品</a></p>
+            <!-- 成交记录内容部分 -->
+            <div id="salelog_demo" class="ncs-loading"> </div>
+          </div>
+        </div>
+        <div class="ncs-consult">
+          <div class="ncs-goods-title-bar hd">
+            <h4><a href="javascript:void(0);"><?php echo $lang['goods_index_goods_consult'];?></a></h4>
+          </div>
+          <div class="ncs-goods-info-content bd" id="ncGuestbook"> 
+            <!-- 咨询留言内容部分 -->
+            <div class="ncs-guestbook">
+              <div id="cosulting_demo" class="ncs-loading"> </div>
             </div>
           </div>
-          <div class="ncs-goods-title-nav">
-        <ul id="comment_tab">
-            <li data-type="all" class="current"><a href="javascript:void(0);"><?php echo $lang['goods_index_evaluation'];?>(<?php echo $output['goods_evaluate_info']['all'];?>)</a></li>
-            <li data-type="1"><a href="javascript:void(0);">好评(<?php echo $output['goods_evaluate_info']['good'];?>)</a></li>
-            <li data-type="2"><a href="javascript:void(0);">中评(<?php echo $output['goods_evaluate_info']['normal'];?>)</a></li> 
-            <li data-type="3"><a href="javascript:void(0);">差评(<?php echo $output['goods_evaluate_info']['bad'];?>)</a></li>
-        </ul></div>
-          <!-- 商品评价内容部分 -->
-          <div id="goodseval" class="ncs-commend-main"></div>
         </div>
-      </div>
-      <div class="ncg-salelog">
-        <div class="ncs-goods-title-bar hd">
-         <h4><a href="javascript:void(0);"><?php echo $lang['goods_index_sold_record'];?></a></h4>
-        </div>
-        <div class="ncs-goods-info-content bd" id="ncGoodsTraded">
-          <div class="top">
-            <div class="price"><?php echo $lang['goods_index_goods_price'];?><strong><?php echo $output['goods']['goods_price'];?></strong><?php echo $lang['goods_index_yuan'];?><span><?php echo $lang['goods_index_price_note'];?></span></div>
+        <?php if(!empty($output['goods_commend']) && is_array($output['goods_commend']) && count($output['goods_commend'])>1){?>
+        <div class="ncs-recommend">
+          <div class="title">
+            <h4><?php echo $lang['goods_index_goods_commend'];?></h4>
           </div>
-          <!-- 成交记录内容部分 -->
-          <div id="salelog_demo" class="ncs-loading"> </div>
-        </div>
-      </div>
-      <div class="ncs-consult">
-        <div class="ncs-goods-title-bar hd">
-          <h4><a href="javascript:void(0);"><?php echo $lang['goods_index_goods_consult'];?></a></h4>
-        </div>
-        <div class="ncs-goods-info-content bd" id="ncGuestbook"> 
-          <!-- 咨询留言内容部分 -->
-          <div class="ncs-guestbook">
-            <div id="cosulting_demo" class="ncs-loading"> </div>
+          <div class="content">
+            <ul>
+              <?php foreach($output['goods_commend'] as $goods_commend){?>
+              <?php if($output['goods']['goods_id'] != $goods_commend['goods_id']){?>
+              <li>
+                <dl>
+                  <dt class="goods-name"><a href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" target="_blank" title="<?php echo $goods_commend['goods_jingle'];?>"><?php echo $goods_commend['goods_name'];?><em><?php echo $goods_commend['goods_jingle'];?></em></a></dt>
+                  <dd class="goods-pic"><a href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" target="_blank" title="<?php echo $goods_commend['goods_jingle'];?>"><img src="<?php echo thumb($goods_commend, 240);?>" alt="<?php echo $goods_commend['goods_name'];?>"/></a></dd>
+                  <dd class="goods-price"><?php echo $lang['currency'];?><?php echo $goods_commend['goods_price'];?></dd>
+                </dl>
+              </li>
+              <?php }?>
+              <?php }?>
+            </ul>
+            <div class="clear"></div>
           </div>
         </div>
+        <?php }?>
       </div>
-      <?php if(!empty($output['goods_commend']) && is_array($output['goods_commend']) && count($output['goods_commend'])>1){?>
-      <div class="ncs-recommend">
-        <div class="title">
-          <h4><?php echo $lang['goods_index_goods_commend'];?></h4>
-        </div>
-        <div class="content">
-          <ul>
-            <?php foreach($output['goods_commend'] as $goods_commend){?>
-            <?php if($output['goods']['goods_id'] != $goods_commend['goods_id']){?>
-            <li>
-              <dl>
-                <dt class="goods-name"><a href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" target="_blank" title="<?php echo $goods_commend['goods_jingle'];?>"><?php echo $goods_commend['goods_name'];?><em><?php echo $goods_commend['goods_jingle'];?></em></a></dt>
-                <dd class="goods-pic"><a href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" target="_blank" title="<?php echo $goods_commend['goods_jingle'];?>"><img src="<?php echo thumb($goods_commend, 240);?>" alt="<?php echo $goods_commend['goods_name'];?>"/></a></dd>
-                <dd class="goods-price"><?php echo $lang['currency'];?><?php echo $goods_commend['goods_price'];?></dd>
-              </dl>
-            </li>
-            <?php }?>
-            <?php }?>
-          </ul>
-          <div class="clear"></div>
-        </div>
-      </div>
-      <?php }?>
     </div>
-    <div class="ncs-sidebar">
-      <div class="nc-s-c-s1">
-        <div class="title">
-          <h4>商品二维码</h4>
-        </div>
-        <div class="content">
-          <div class="ncs-goods-code"><p><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_STORE.DS.$output['goods']['store_id'].DS.$output['goods']['goods_id'].'.png';?>" onerror="this.src='<?php echo UPLOAD_SITE_URL.DS.ATTACH_STORE.DS.'default_qrcode.png';?>'" title="商品原始地址：<?php echo urlShop('goods', 'index', array('goods_id'=>$output['goods']['goods_id']));?>"></p> <span class="ncs-goods-code-note"><i></i>扫描二维码，手机查看分享</span> </div>
-         </div>
-      </div>
-      <?php include template('store/callcenter');?>
-      <?php include template('store/left');?>
-    </div>
+
   </div>
+  <div class="viewPageRight">
+      <div class="selecttc">
+            <p class="selecttc_top">选择旅游的三大理由</p>
+            <div class="reasonbg">
+                <div class="reason_div">
+                    <p class="reason_p1">价格透明</p>
+                    <p class="reason_p2">透明团、无零负团费、低价有保障</p>
+                    <span class="jgtmbg"></span>
+                </div>
+                <div class="reason_div">
+                    <p class="reason_p1">海量线路</p>
+                    <p class="reason_p2">万余条线路，提供跟团/自助/邮轮/签证/等预订服务</p>
+                    <span class="hlxlbg"></span>
+                </div>
+                <div class="reason_div">
+                    <p class="reason_p1">真实体验</p>
+                    <p class="reason_p2">真实点评和原创游记 提供最真实的体验</p>
+                    <span class="zstybg"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="guessBox" class="recommend">
+          <p class="recommend_top">热门产品推荐</p>
+          <div class="l_center">
+            <?php if(!empty($output['goods_commend'])){foreach($output['goods_commend'] as $key=>$v){?>
+            <div class="linebox">
+              <a class="showpic none" href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" target="_blank" title="">
+                <img alt="<?php echo $v['goods_name']?>" src="<?php echo thumb($v, 240);?>">
+                <b class="img_ico1">&nbsp;</b>
+              </a>
+              <a class="lin_a" href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" title="<?php echo $v['goods_name']?>" target="_blank">
+                <b class="ico_nub none"><div><?php echo $key+1?></div></b>
+                <span class="long_name"><?php echo $v['goods_name']?></span>
+              </a>
+              <div class="linrbot">
+                <span class="pri_sp"><b>¥</b><?php echo $v['goods_price']?></span>
+              </div>
+            </div>
+            <?php }}?>
+            </div></div>
+  </div>
+  <div class="clearfix"></div>
 </div>
+<!-- [//主体部分] -->
+
+
 <form id="buynow_form" method="post" action="<?php echo SHOP_SITE_URL;?>/index.php">
   <input id="act" name="act" type="hidden" value="buy" />
   <input id="op" name="op" type="hidden" value="buy_step1" />

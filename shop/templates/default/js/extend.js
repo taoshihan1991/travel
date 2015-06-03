@@ -33,9 +33,13 @@ $(function(){
 	});	
 
 	// 详情推荐
+	$('#guessBox .linebox').eq(0).find('.showpic').removeClass('none');
+	$('#guessBox .linebox').eq(0).find('.ico_nub').removeClass('none');
 	$('#guessBox .linebox').hover(function(){
 		$('#guessBox .linebox .showpic').addClass('none');
+		$('#guessBox .ico_nub').addClass('none');
 		$(this).find('.showpic').removeClass('none');
+		$(this).find('.ico_nub').removeClass('none');
 	});
 
 	// 首页tab
@@ -52,5 +56,46 @@ $(function(){
 		var index=$(this).index();
 		$('.notice_tag_top a').removeClass('on').eq(index).addClass('on');
 		$('.notice_tag_con').children().hide().eq(index).show();
+	});
+
+	//旅游js下拉框
+    $('#choice').hide();
+    $('.select_box').hover(function () {
+            $('#choice').stop().fadeIn();
+    }, function () {
+            $('#choice').stop().fadeOut();
+    });
+    $('#choice span').click(function () {
+            var txt = $(this).text();
+            $('#search_btn').text(txt);
+            $('#search_attr').val($(this).attr('data-cateid'));
+    });
+
+    //首页图片
+    $('img').animate({"opacity":1});
+		$('img').hover(function(){
+			$(this).stop().animate({"opacity":.7})
+			},function(){
+				$(this).stop().animate({"opacity":1})
+	});
+
+	// 详情页图片滚动
+	var move=0;
+	$('.next').click(function(){
+		move=move+100;
+
+		$(this).parents('.viewSlideRight').find('.smallPic').stop().animate({
+			top:move+'px'
+		});
+	});
+	$('.pre').click(function(){
+		move=move-100;
+		$(this).parents('.viewSlideRight').find('.smallPic').stop().animate({
+			top:move+'px'
+		});
+	});
+	$('.smallPic img').click(function(){
+		var pic=$(this).attr('data-src');
+		$('#bigPic').attr('src',pic);
 	});
 });

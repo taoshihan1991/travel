@@ -15,10 +15,10 @@
     <table class="indexAds">
       <tr>
         <td>
-          <a href=""><p>超万家酒店团购<br>2折起</p></a>
+          <a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad2.jpg"/></a>
         </td>
-        <td><a href="" class="green"><p>公司旅游，1对1上门定制<br>老板满意，员工省心</p></a></td>
-        <td><a href="" class="blue"><p>积分商城<br>积分抽奖,免费兑奖品</p></a></td>
+        <td><a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad3.jpg"/></a></td>
+        <td><a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad4.jpg"/></a></td>
       </tr>
     </table>
   </div>
@@ -62,42 +62,16 @@
 
 <!-- [主体内容] -->
 <div class="content_box">
-  <div id="content" class="content_main clearfix">
-      <div id="Preferential">
-    <h3>每日特惠</h3>
-    <div class="infocon">
-      <div class="prel">
-        <ul>
-          <div class="udiyblock"  type="CommonSource">    
-            
-          <?php echo $output['web_html']['index_sale'];?>
 
-        
-    </div>
-        </ul>
-      </div>
-      <div class="prer">
-        <div id="portal-block-750355214634" class="udiyblock"  type="AdModel">              <div class="toplefimg">
-    <img src="http://upload.17u.com/uploadfile/2015/05/20/33/201505201823267829.jpg" alt="二维码2"/>
-    <div><img src="http://upload.17u.com/uploadfile/2015/05/19/33/2015051913593270182.png" alt="二维码2"/></div>
-  </div>  
-  <div class="toplefimg">
-    <img src="http://upload.17u.com/uploadfile/2015/05/21/33/2015052118103641112.jpg" alt="二维码1"/>
-    <div><img src="http://upload.17u.com/uploadfile/2015/05/19/33/2015051913593270182.png" alt="二维码1"/></div>
-  </div>  
-  </div>
-      </div>
-    </div>
 
-    <div class="clearfix"></div>
-  </div>
+
 
 
 
  
-  <?if(is_array($output['categoryTabFloor'])){foreach($output['categoryTabFloor'] as $category){?>
-  <div class="inbound" id="inbound">
-        <h3><?php echo $category[0]['gc_name']?></h3>
+  <?if(is_array($output['categoryTabFloor'])){foreach($output['categoryTabFloor'] as $categoryKey=>$category){?>
+  <div class="inbound theme<?php echo $categoryKey;?>" id="inbound">
+        <h3><?php echo $categoryKey+1;?>. <?php echo $category[0]['gc_name']?></h3>
         <div class="infocon">
       <div class="slpnel">
       <div class="udiyblock"  type="CommonSource"> <h4><a href="<?php echo urlShop('search','index',array('cate_id'=>$category[0]['gc_id']));?>" ><?php echo $category[0]['gc_name']?></a></h4>
@@ -126,13 +100,14 @@
           <div class="prooutinbound-list pnel <?php if($k!=0){?>none<?php }?>">
             <ul><div id="portal-block-692663448760" class="udiyblock"  type="CommonSource">  
                <?if(is_array($cate['goods'])){foreach($cate['goods'] as $goodsKey=>$v){?>
-                  <li  class="<?php if($goodsKey%3==2){?>mr0<?php }?>"><img src="<?php echo $v['pic']?>" alt=""/>
-                  <div>
-                  <p><?php echo $v['goods_name']?></p>
-                  <span>上海出发</span>
-                  <div><i>¥</i><em><?php echo $v['goods_price']?></em><span>起</span></div>
-                  </div>
-                   <a href="" target="_blank" onclick="_tcTraObj._tcTrackEvent('guoneiyou15353tab1', 'Pcblock', 'CN首页','30');"></a>
+                  <li  class="<?php if($goodsKey%5==4){?>mr0<?php }?>">
+                    <a href="<?php echo urlShop('goods','index',array('goods_id'=>$v['goods_id']));?>" target="_blank">
+                    <div class="indexThumb">
+                      <img src="<?php echo $v['pic']?>" alt=""/>
+                    </div>
+                    <p class="goodsName"><?php echo $v['goods_name']?></p>
+                    <p><i>¥</i><em><?php echo $v['goods_price']?></em></p>
+                   </a>
                   </li>
                <?php }}?>
                       </div></ul>

@@ -62,11 +62,20 @@ class indexControl extends BaseHomeControl{
 		$i=0;
 		foreach($goods_class as $k=>$v){
 			if($v['gc_id']==$pid){
-					$categoryTab[]=array(
-					'child'=>$v['childchild'],
-					'gc_name'=>$v['gc_name'],
-					'gc_id'=>$v['gc_id']
-					);
+					
+					if(empty($v['childchild'])){
+						$categoryTab[]=array(
+						'child'=>$v['child'],
+						'gc_name'=>$v['gc_name'],
+						'gc_id'=>$v['gc_id']
+						);
+					}else{
+						$categoryTab[]=array(
+						'child'=>$v['childchild'],
+						'gc_name'=>$v['gc_name'],
+						'gc_id'=>$v['gc_id']
+						);
+					}
 			}
 			if($v['gc_parent_id']==$pid){
 				$i++;

@@ -120,38 +120,43 @@ $(function(){
 <body>
 <?php require_once template('layout/layout_top');?>
 <!-- [导航头部部分] -->
-<div id="header">
-    <div class="commonhead">
-      <span id="bulletin"></span>
-
-      <div id="headerWrapper">
-        <div id="pageheader" class="clearfix">
+<div id="travelHeader">
           <div class="logo">
             <img src="<?php echo SHOP_TEMPLATES_URL;?>/images/logo.jpg"/>
           </div>
-          <form class="search" action="<?php echo SHOP_SITE_URL;?>">
-            <input name="act" id="search_act" value="search" type="hidden">
-            <input type="text" name="keyword" class="inp" placeholder="请输入关键字">
-            <input type="submit" value="查询" class="btn">
-            <p class="hotSearch">热门搜索: 
-              <?php if(is_array($output['hot_search']) && !empty($output['hot_search'])) { foreach($output['hot_search'] as $val) { ?>
-              <a href="<?php echo urlShop('search', 'index', array('keyword' => $val));?>"><?php echo $val; ?></a>
-              <?php } }?>
-            </p>
-          </form>
 
-          <div>
-            <a target="_blank" href="">
-              <img src="<?php echo SHOP_TEMPLATES_URL;?>/images/app.png" alt="手机客户端"></a>
-          </div>
-        </div>
-      </div>
+          <!--旅游搜索框-->
+          <form class="h_search" action="<?php echo SHOP_SITE_URL;?>" method="get">
+              <input name="act" id="search_act" value="search" type="hidden"/>
+              <input name="cate_id" id="search_attr" type="hidden"/>
+              <input type="text" class="text_in" name="keyword">
+              <div class="select_box">
+                  <a id="search_btn">
+                      全部
+                      <span class="img_wrap"><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/slide.gif"/></span>
+                  </a>
+
+                  <div id="choice">
+                    <?php $i=0;foreach($output['show_goods_class'] as $vals){?>
+                      <span data-cateid="<?php echo $vals['gc_id'];?>"><?php echo $vals['gc_name'];?></span>
+                    <?php }?>
+                  </div>
+
+              </div>
+              <input type="submit" class="search" value="搜索">
+              <div class="clearfix"></div>
+          </form>
+          <!--//旅游搜索框结束-->
+</div>
+
+<div id="header">
+    <div class="commonhead">
       <div id="menuNavOuter">
         <div id="menuNavWrapper">
           <div id="menuNavPanel">
             <ul id="menuNav">
               <li class="current">
-                <a href="<?php echo SHOP_SITE_URL;?>">首页</a>
+                <a href="<?php echo SHOP_SITE_URL;?>">综合首页</a>
                 <div class="all-category">
                 <?php require template('layout/home_goods_class_extend');?>
                 </div>
