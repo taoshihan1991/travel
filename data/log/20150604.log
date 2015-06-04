@@ -1,0 +1,33 @@
+[2015-06-04 13:20:33] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:01:34] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:04:52] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:12:58] /travel/admin/index.php?act=goods_class&op=goods_class ( act=goods_class&op=goods_class ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:16:24] /travel/admin/index.php?act=goods_class&op=goods_class ( act=goods_class&op=goods_class ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:20:44] /travel/admin/index.php?act=goods_class&op=goods_class ( act=goods_class&op=goods_class ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:34:25] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:35:27] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:42:22] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:43:42] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-04 15:44:38] /travel/shop/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`

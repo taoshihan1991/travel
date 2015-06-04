@@ -23,7 +23,7 @@ cursor: url(<?php echo SHOP_TEMPLATES_URL;
         <div class="viewSlidePicBox">
             <img src="<?php echo $output['goods_image'][0];?>" id="bigPic">
             <div class="viewSlideRight">
-              <a href="jascript:;" class="pre"></a>
+              <a href="jascript:void(0);" class="pre"></a>
               <div class="smallPic">
                 <?php if(!empty($output['goods_image'])){foreach($output['goods_image'] as $v){?>
                 <a href="javascript:;">
@@ -31,35 +31,146 @@ cursor: url(<?php echo SHOP_TEMPLATES_URL;
                 </a>
                 <?php }}?>
               </div>
-              
-              <a href="jascript:;" class="next"></a>
+              <a href="jascript:void(0);" class="next"></a>
             </div>
-
         </div>
-                          
-                                    
-      <!-- 轮播图 -->
+        <!-- 轮播图 -->
       </div>
+
       <div class="viewInfoRight">
-        <table>
-          <tbody><tr>
-            <td class="infoName">产品编号：</td>
-            <td>222044</td>
-          </tr>
-          <tr>
-            <td class="infoName">本站价：</td>
-            <td><div class="s_price"><b>¥</b>1199</div></td>
-          </tr>
-          <tr>
-            <td class="infoName">市场价：</td>
-            <td>222044</td>
-          </tr>
-          <tr>
-            <td class="infoName">咨询热线：</td>
-            <td>222044</td>
-          </tr>
-        </tbody></table>
-        <a href="" title="立即预订" class="reserveBtn" attr-url="">立即预订</a>
+            <!-- S 商品基本信息 -->
+            <div class="ncs-goods-summary">
+              <div class="name">
+                <h1><?php echo $output['goods']['goods_name']; ?></h1>
+                <strong><?php echo $output['goods']['goods_jingle'];?></strong> </div>
+              <div class="ncs-meta"> 
+                <!-- S 商品参考价格 -->
+                <dl>
+                  <dt><?php echo $lang['goods_index_goods_cost_price'];?><?php echo $lang['nc_colon'];?></dt>
+                  <dd class="cost-price"><strong><?php echo $lang['currency'].$output['goods']['goods_marketprice'];?></strong></dd>
+                </dl>
+                <!-- S 商品发布价格 -->
+                <dl>
+                  <dt><?php echo $lang['goods_index_goods_price'];?><?php echo $lang['nc_colon'];?></dt>
+                  <dd class="price">
+                    <?php if ($output['goods']['promotion_type'] == 'groupbuy') {?>
+                    <span class="tag">团购</span><strong><?php echo $lang['currency'].$output['goods']['promotion_price'];?></strong><em>(原售价<?php echo $lang['nc_colon'];?><?php echo $lang['currency'].$output['goods']['goods_price'];?>)</em>
+                    <?php } elseif ($output['goods']['promotion_type'] == 'xianshi') {?>
+                    <?php if ($output['xianshi_info']['xianshi_title'] != '') {?><span class="tag"><?php echo $output['xianshi_info']['xianshi_title'];?></span><?php }?><strong><?php echo $lang['currency'].$output['goods']['promotion_price'];?></strong><em>(原售价<?php echo $lang['nc_colon'];?><?php echo $lang['currency'].$output['goods']['goods_price'];?>)</em>
+                    <?php } else {?>
+                    <strong><?php echo $lang['currency'].$output['goods']['goods_price'];?></strong>
+                    <?php }?>
+                  </dd>
+                </dl>
+                <!-- E 商品发布价格 -->
+                <!-- S 限时优惠 -->
+                <?php if ($output['goods']['promotion_type'] == 'xianshi') {?>
+                <dl>
+                  <dt>促销信息：</dt>
+                  <dd class="promotion-info">直降：<?php echo $lang['currency'].$output['goods']['down_price'];?>
+                  <em>
+                  <?php if($output['goods']['lower_limit']) {?>
+                  <?php echo sprintf('最低%s件起',$output['goods']['lower_limit']);?>
+                  <?php } ?>
+                  </em>
+                  <span><?php echo $output['xianshi_info']['xianshi_explain'];?></span> </dd>
+                </dl>
+                <?php }?>
+                <!-- E 限时优惠  -->
+                <!-- S 团购-->
+                <?php if ($output['goods']['promotion_type'] == 'groupbuy') {?>
+                <dl>
+                  <dt>促销信息：</dt>
+                  <dd class="promotion-info">
+                  <em>
+                  <?php if ($output['goods']['upper_limit']) {?>
+                  <?php echo sprintf('最多限购%s件',$output['goods']['upper_limit']);?>
+                  <?php } ?>
+                  </em>
+                  <span><?php echo $output['goods']['remark'];?></span> </dd>
+                </dl>
+                <?php }?>
+                <!-- E 团购 -->
+
+           
+      
+                
+              </div>
+              <?php if($output['goods']['goods_state'] == 1 && $output['goods']['goods_verify'] == 1){?>
+              <div class="ncs-key"> 
+                <!-- S 商品规格值-->
+                <?php if (is_array($output['goods']['spec_name'])) { ?>
+                <?php foreach ($output['goods']['spec_name'] as $key => $val) {?>
+                <dl nctype="nc-spec">
+                  <dt><?php echo $val;?><?php echo $lang['nc_colon'];?></dt>
+                  <dd>
+                    <?php if (is_array($output['goods']['spec_value'][$key]) and !empty($output['goods']['spec_value'][$key])) {?>
+                    <ul nctyle="ul_sign">
+                      <?php foreach($output['goods']['spec_value'][$key] as $k => $v) {?>
+                      <?php if( $key == 1 ){?>
+                      <!-- 图片类型规格-->
+                      <li class="sp-img"><a href="javascript:void(0);" class="<?php if (isset($output['goods']['goods_spec'][$k])) {echo 'hovered';}?>" data-param="{valid:<?php echo $k;?>}" title="<?php echo $v;?>"><img src="<?php echo $output['spec_image'][$k];?>"/><i></i></a></li>
+                      <?php }else{?>
+                      <!-- 文字类型规格-->
+                      <li class="sp-txt"><a href="javascript:void(0)" class="<?php if (isset($output['goods']['goods_spec'][$k])) { echo 'hovered';} ?>" data-param="{valid:<?php echo $k;?>}"><?php echo $v;?><i></i></a></li>
+                      <?php }?>
+                      <?php }?>
+                    </ul>
+                    <?php }?>
+                  </dd>
+                </dl>
+                <?php }?>
+                <?php }?>
+                <!-- E 商品规格值--> 
+                <!-- S 购买数量及库存 -->
+                <dl>
+                  <dt><?php echo $lang['goods_index_buy_amount'];?><?php echo $lang['nc_colon'];?></dt>
+                  <dd class="ncs-figure-input">
+                    <input type="text" name="" id="quantity" value="1" size="3" maxlength="6" class="text w30">
+                    <a href="javascript:void(0)" class="increase">+</a><a href="javascript:void(0)" class="decrease">-</a> <em>(<?php echo $lang['goods_index_stock'];?><strong nctype="goods_stock"><?php echo $output['goods']['goods_storage']; ?></strong><?php echo $lang['nc_jian'];?>)</em> </dd>
+                </dl>
+                <!-- E 购买数量及库存 --> 
+                
+                <!-- S 购买按钮 -->
+                <div class="ncs-btn"><!-- S 提示已选规格及库存不足无法购买 -->
+                  <div nctype="goods_prompt" class="ncs-point">
+                    <?php if (!empty($output['goods']['goods_spec'])) {?>
+                    <span class="yes"><?php echo $lang['goods_index_you_choose'];?> <strong><?php echo implode($lang['nc_comma'], $output['goods']['goods_spec']);?></strong></span>
+                    <?php }?>
+                    <?php if ($output['goods']['goods_storage'] <= 0) {?>
+                    <span class="no"><i class="icon-exclamation-sign"></i>&nbsp;<?php echo $lang['goods_index_understock_prompt'];?></span>
+                    <?php }?>
+                  </div>
+                  <!-- E 提示已选规格及库存不足无法购买 --> 
+                  <!-- 立即购买--> 
+                  <a href="javascript:void(0);" nctype="buynow_submit" class="buynow <?php if ($output['goods']['goods_storage'] <= 0) {?>no-buynow<?php }?>" title="<?php echo $lang['goods_index_now_buy'];?>"><?php echo $lang['goods_index_now_buy'];?></a> 
+                  <?php if ($output['goods']['promotion_type'] != 'groupbuy') {?>
+                  <?php } ?>
+
+                  <!-- S 加入购物车弹出提示框 -->
+                  <div class="ncs-cart-popup">
+                    <dl>
+                      <dt><?php echo $lang['goods_index_cart_success'];?><a title="<?php echo $lang['goods_index_close'];?>" onClick="$('.ncs-cart-popup').css({'display':'none'});">X</a></dt>
+                      <dd><?php echo $lang['goods_index_cart_have'];?> <strong id="bold_num"></strong> <?php echo $lang['goods_index_number_of_goods'];?> <?php echo $lang['goods_index_total_price'];?><?php echo $lang['nc_colon'];?><em id="bold_mly" class="saleP"></em></dd>
+                      <dd class="btns"><a href="javascript:void(0);" class="ncs-btn-mini ncs-btn-green" onClick="location.href='<?php echo SHOP_SITE_URL.DS?>index.php?act=cart'"><?php echo $lang['goods_index_view_cart'];?></a> <a href="javascript:void(0);" class="ncs-btn-mini" value="" onClick="$('.ncs-cart-popup').css({'display':'none'});"><?php echo $lang['goods_index_continue_shopping'];?></a></dd>
+                    </dl>
+                  </div>
+                  <!-- E 加入购物车弹出提示框 -->
+
+                </div>
+                <!-- E 购买按钮 -->
+              </div>
+              <?php }else{?>
+              <div class="ncs-saleout">
+              <dl>
+                <dt><i class="icon-info-sign"></i><?php echo $lang['goods_index_is_no_show'];?></dt>
+                <dd><?php echo $lang['goods_index_is_no_show_message_one'];?></dd>
+                <dd><?php echo $lang['goods_index_is_no_show_message_two_1'];?>&nbsp;<a href="<?php echo urlShop('show_store', 'index', array('store_id'=>$output['goods']['store_id']), $output['store_info']['store_domain']);?>" class="ncs-btn-mini"><?php echo $lang['goods_index_is_no_show_message_two_2'];?></a>&nbsp;<?php echo $lang['goods_index_is_no_show_message_two_3'];?> </dd>
+              </dl></div>
+              <?php }?>
+            </div>
+              <!--E 商品信息 --> 
+     
       </div>
     </div>
 
@@ -195,29 +306,7 @@ cursor: url(<?php echo SHOP_TEMPLATES_URL;
             </div>
           </div>
         </div>
-        <?php if(!empty($output['goods_commend']) && is_array($output['goods_commend']) && count($output['goods_commend'])>1){?>
-        <div class="ncs-recommend">
-          <div class="title">
-            <h4><?php echo $lang['goods_index_goods_commend'];?></h4>
-          </div>
-          <div class="content">
-            <ul>
-              <?php foreach($output['goods_commend'] as $goods_commend){?>
-              <?php if($output['goods']['goods_id'] != $goods_commend['goods_id']){?>
-              <li>
-                <dl>
-                  <dt class="goods-name"><a href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" target="_blank" title="<?php echo $goods_commend['goods_jingle'];?>"><?php echo $goods_commend['goods_name'];?><em><?php echo $goods_commend['goods_jingle'];?></em></a></dt>
-                  <dd class="goods-pic"><a href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" target="_blank" title="<?php echo $goods_commend['goods_jingle'];?>"><img src="<?php echo thumb($goods_commend, 240);?>" alt="<?php echo $goods_commend['goods_name'];?>"/></a></dd>
-                  <dd class="goods-price"><?php echo $lang['currency'];?><?php echo $goods_commend['goods_price'];?></dd>
-                </dl>
-              </li>
-              <?php }?>
-              <?php }?>
-            </ul>
-            <div class="clear"></div>
-          </div>
-        </div>
-        <?php }?>
+
       </div>
     </div>
 
@@ -249,11 +338,11 @@ cursor: url(<?php echo SHOP_TEMPLATES_URL;
           <div class="l_center">
             <?php if(!empty($output['goods_commend'])){foreach($output['goods_commend'] as $key=>$v){?>
             <div class="linebox">
-              <a class="showpic none" href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" target="_blank" title="">
+              <a class="showpic none" href="<?php echo urlShop('goods', 'index', array('goods_id' => $v['goods_id']));?>" target="_blank" title="">
                 <img alt="<?php echo $v['goods_name']?>" src="<?php echo thumb($v, 240);?>">
                 <b class="img_ico1">&nbsp;</b>
               </a>
-              <a class="lin_a" href="<?php echo urlShop('goods', 'index', array('goods_id' => $goods_commend['goods_id']));?>" title="<?php echo $v['goods_name']?>" target="_blank">
+              <a class="lin_a" href="<?php echo urlShop('goods', 'index', array('goods_id' => $v['goods_id']));?>" title="<?php echo $v['goods_name']?>" target="_blank">
                 <b class="ico_nub none"><div><?php echo $key+1?></div></b>
                 <span class="long_name"><?php echo $v['goods_name']?></span>
               </a>

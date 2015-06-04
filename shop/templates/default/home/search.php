@@ -16,21 +16,23 @@ _behavior: url(<?php echo SHOP_TEMPLATES_URL;
     <!-- 条件筛选 -->
     <div class="searchAttr">
         <div class="box_change">
+
+          <?php
+              $newCate=Model('goods_class')->where('gc_parent_id='.$_GET['cate_id'])->select();
+          ?>
+          <?php if(!empty($newCate)){?>
           <div class="theme">
             <i style="display: inline;"></i>
-            <?php if(!empty($output['goods_class_array'])){?>
-            <dl req="">
+            <dl>
               <dt>主题分类</dt>
               <dd>
-                <?php foreach ($output['goods_class_array'] as $value) {?>
-                    <?php if(!empty($value['class2'])){foreach($value['class2'] as $v){?>
-                    <a href="<?php echo urlShop('search','index',array('cate_id'=>$v['gc_id']))?>" <?php if($v['gc_id']==$_GET['cate_id']){?>class="on"<?php }?>><?php echo $v['gc_name']?></a>
-                    <?php }}?>
-                <?php }?>
+              <?php foreach($newCate as $v){?>
+                <a href="<?php echo urlShop('search','index',array('cate_id'=>$v['gc_id']))?>" <?php if($v['gc_id']==$_GET['cate_id']){?>class="on"<?php }?>><?php echo $v['gc_name']?></a>
+              <?php }?>
                </dd></dl>
-             </div>
-             <?php }?>
-
+          </div> 
+          <?php }?>
+    
              <?php if(!empty($output['attr_array']) && is_array($output['attr_array'])){foreach($output['attr_array'] as $key=>$v){?>
                
              <dl class="dl-dest" <?php if(is_array($output['checked_attr'])){foreach ($output['checked_attr'] as $attkey=>$val){if($attkey==$key){?>style="display:none;"<?php }}}?>>
@@ -106,10 +108,9 @@ _behavior: url(<?php echo SHOP_TEMPLATES_URL;
       </div>
       <div class="guide">
         <div class="type_nav">
-                <?php foreach ($output['goods_class_array'] as $value) {?><?php if($_GET['cate_id']==$value['gc_id']){?>
-                    <?php if(!empty($value['class2'])){foreach($value['class2'] as $k=>$v){?>
+                <?php if(!empty($newCate)){foreach($newCate as $k=>$v){?>
                     <a <?php if($k%2==1){?>class="bd_r0"<?php }?> href="<?php echo urlShop('search','index',array('cate_id'=>$v['gc_id']))?>" <?php if($v['gc_id']==$_GET['cate_id']){?>class="on"<?php }?>><?php echo $v['gc_name']?></a>
-                <?php }}}}?>
+                <?php }}?>
         </div>
       </div>
     </div>

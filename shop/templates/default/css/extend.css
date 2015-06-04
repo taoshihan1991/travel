@@ -704,7 +704,7 @@ a {
 	float: left;
 }
 .viewPage .viewInfo .viewInfoRight{
-	width: 380px;
+	width: 405px;
 	float: right;
 }
 .viewPage .viewInfo .viewInfoRight tr td{
@@ -746,7 +746,7 @@ a {
 	width: 215px;
 	height: 37px;
 	border-bottom: 1px solid #ddd;
-	border-top: 2px solid #8ab923;
+	border-top: 2px solid #11a8b9;
 	padding-left: 15px;
 	line-height: 40px;
 	font-size: 16px;
@@ -788,7 +788,7 @@ a {
 	width: 230px;
 	position: relative;
 	overflow: hidden;
-	border-top: 2px solid #8ab923;
+	border-top: 2px solid #11a8b9;
 	background-color: #fff;
 	margin-top: 20px;
 }
@@ -1214,7 +1214,9 @@ a {
             display: inline-block;
         }
  .viewPage #bigPic{
- 	width: 435px;
+ 	display: block;
+ 	width: 430px;
+ 	float: left;
  }
 .viewPage .viewSlideRight{
 	float: right;
@@ -1243,7 +1245,7 @@ a {
 	display: block;
 	position: absolute;
 	top: 0;
-	left: 25px;
+	left: 28px;
 	z-index: 2;
 	background: url(../images/icon-product.png) no-repeat 0 -30px;
 }
@@ -1254,10 +1256,10 @@ a {
 	z-index: 2;
 	position: absolute;
 	bottom: 0;
-	left: 25px;
+	left: 28px;
 	background: url(../images/icon-product.png) no-repeat -50px -30px;
 }
-        /*旅游轮番图样式 结束*/
+/*旅游轮番图样式 结束*/
 /*修改默认shopnc*/
 .nc-login-layout{
 	margin-top: 5px;
@@ -1287,6 +1289,15 @@ a {
 .ncs-goods-layout  a.ncs-btn-red{
 	background-color: #f60;
 	border-color: #f60 #f60 #f60 #f60;
+}
+.viewPage .ncs-goods-summary{
+	width: 100%;
+}
+.viewPage .ncs-meta .price strong{
+	color: #f60;
+}
+.viewPage .ncs-goods-summary .name strong{
+	color: #f60;
 }
 /*footer部分*/
 .tcAboat, .joinTc, .contactTc, .tcWebSite {

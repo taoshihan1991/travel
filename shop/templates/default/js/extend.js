@@ -81,15 +81,28 @@ $(function(){
 
 	// 详情页图片滚动
 	var move=0;
+	var step=100;
 	$('.next').click(function(){
-		move=move+100;
-
+		var height=$(this).parents('.viewSlideRight').find('.smallPic').height();
+		var top=parseInt($(this).parents('.viewSlideRight').find('.smallPic').css('top').replace('px',''));
+		if((height+top)<=290){
+			return;
+		}
+		move=move-step;
 		$(this).parents('.viewSlideRight').find('.smallPic').stop().animate({
 			top:move+'px'
 		});
+
 	});
+	
 	$('.pre').click(function(){
-		move=move-100;
+		var top=$(this).parents('.viewSlideRight').find('.smallPic').css('top').replace('px','');
+		if(top>=0){
+			move=0;
+			return;
+		} 
+
+		move=move+step;
 		$(this).parents('.viewSlideRight').find('.smallPic').stop().animate({
 			top:move+'px'
 		});
