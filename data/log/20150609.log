@@ -1,0 +1,38 @@
+[2015-06-09 08:39:08] /travel/shop/?act=search&cate_id=&keyword= ( act=search&op=index ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1000' at line 1
+SELECT * FROM `travel`.`tr_goods_class` WHERE gc_parent_id= LIMIT 1000  
+[2015-06-09 08:42:10] /travel/shop/?act=search&cate_id=&keyword= ( act=search&op=index ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1000' at line 1
+SELECT * FROM `travel`.`tr_goods_class` WHERE gc_parent_id= LIMIT 1000  
+[2015-06-09 10:27:23] /travel/shop/index.php?act=store_goods_online&op=edit_save_goods&inajax=1 ( act=store_goods_online&op=edit_save_goods ) 
+ERR: Db Error: Unknown column 'goods_goldcoin' in 'field list'
+UPDATE `travel`.`tr_goods_common` SET goods_name='【云南】『印象王朝』A-昆·大·丽·版四飞八日（挂五）',goods_jingle='第二天：白族风味餐/大理古城/纳西王府宴',gc_id='6',gc_name='旅游超市 &gt;存话费送旅游',brand_id='0',brand_name='',type_id='37',goods_image='2_04868129109102808.png',goods_price='3450',goods_marketprice='3450',goods_costprice='3450',goods_discount='100',goods_serial='',goods_attr='a:2:{i:221;a:2:{s:4:\"name\";s:9:\"目的地\";i:3181;s:9:\"红叶谷\";}i:222;a:2:{s:4:\"name\";s:12:\"行程天数\";i:3184;s:7:\"1日游\";}}',goods_body='<p style=\"font-family:SimSun;color:#333333;background-color:#FFFFFF;\">
+	第一天：------
+</p>
+<p style=\"font-family:SimSun;color:#333333;background-color:#FFFFFF;\">
+	第二天：白族风味餐/大理古城/纳西王府宴
+</p>
+<p style=\"font-family:SimSun;color:#333333;background-color:#FFFFFF;\">
+	第三天：玉龙雪山风景区/冰川大索道/印象丽江/白水河/蓝月谷/玉水寨/黑龙潭/螺旋藻配送中心/丽江古城/四方街
+</p>
+<p style=\"font-family:SimSun;color:#333333;background-color:#FFFFFF;\">
+	第四天：双廊/洱海东方号大游船/三道茶/白子人家/大理崇圣寺三塔/彝乡恋歌/长街宴
+</p>
+<p style=\"font-family:SimSun;color:#333333;background-color:#FFFFFF;\">
+	第五天：99世界园艺博览会会址/石林
+</p>
+<p style=\"font-family:SimSun;color:#333333;background-color:#FFFFFF;\">
+	第六天：野象谷/傣楼
+</p>
+<p style=\"font-family:SimSun;color:#333333;background-color:#FFFFFF;\">
+	第七天：原始森林公园
+</p>
+<p style=\"font-family:SimSun;color:#333333;background-color:#FFFFFF;\">
+	第八天：花市
+</p>',goods_commend='1',goods_state='1',goods_selltime='0',goods_verify='1',spec_name='N;',spec_value='N;',goods_vat='0',areaid_1='0',areaid_2='0',transport_id='0',transport_title='',goods_freight='0',goods_stcids=',0,',plateid_top='',plateid_bottom='',goods_goldcoin='200' WHERE ( goods_commonid = '100089' ) AND ( store_id = '2' )
+[2015-06-09 11:08:28] /travel/shop/index.php?act=index&op=index&cate_id=1 ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-09 11:11:48] /travel/shop/?act=search&cate_id=&keyword=lvyou ( act=search&op=index ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1000' at line 1
+SELECT * FROM `travel`.`tr_goods_class` WHERE gc_parent_id= LIMIT 1000  

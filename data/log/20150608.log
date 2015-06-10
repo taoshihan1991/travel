@@ -1,0 +1,132 @@
+[2015-06-08 10:27:19] /travel/shop/index.php?act=index&op=index&cate_id=662 ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-08 11:11:43] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-08 11:13:23] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-08 11:18:34] /travel/mobile//index.php?act=member_buy&op=buy_step1 ( act=member_buy&op=buy_step1 ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-08 11:18:39] /travel/mobile//index.php?act=member_cart&op=cart_add ( act=member_cart&op=cart_add ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-08 11:19:23] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-08 11:19:34] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-08 11:19:48] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-08 11:23:04] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:11] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:13] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:13] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:14] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:15] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:16] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:30] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:32] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:33] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'f1289a564ce9aa7dfd4ca9d9378cb52c' ) LIMIT 1  
+[2015-06-08 11:23:45] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:23:54] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:23:55] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:24:14] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:24:15] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:25:09] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:25:10] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:25:11] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:25:35] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:25:46] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:25:47] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:07] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:07] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:08] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:11] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:21] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:38] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:49] /travel/mobile//index.php?act=member_address&op=address_list ( act=member_address&op=address_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:50] /travel/mobile//index.php?act=member_address&op=address_list ( act=member_address&op=address_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:26:59] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = '5568b24a0306d06b2aeb119ab236f3ce' ) LIMIT 1  
+[2015-06-08 11:40:17] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-08 11:40:50] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-08 11:43:31] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-08 11:44:29] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-08 11:45:43] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-08 11:48:05] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id

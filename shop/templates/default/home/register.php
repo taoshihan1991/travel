@@ -77,16 +77,7 @@
     <div class="nc-login-bottom"></div>
   </div>
   <div class="nc-login-left">
-    <h3><?php echo $lang['login_register_after_regist'];?></h3>
-    <ol>
-      <li class="ico05"><i></i><?php echo $lang['login_register_buy_info'];?></li>
-      <li class="ico01"><i></i><?php echo $lang['login_register_openstore_info'];?></li>
-      <li class="ico03"><i></i><?php echo $lang['login_register_sns_info'];?></li>
-      <li class="ico02"><i></i><?php echo $lang['login_register_collect_info'];?></li>
-      <li class="ico06"><i></i><?php echo $lang['login_register_talk_info'];?></li>
-      <li class="ico04"><i></i><?php echo $lang['login_register_honest_info'];?></li>
-      <div class="clear"></div>
-    </ol>
+    <img src="<?php echo UPLOAD_SITE_URL;?>/shop/login/3.jpg"  border="0">
     <h3 class="mt20"><?php echo $lang['login_register_already_have_account'];?></h3>
     <div class="nc-login-now mt10"><span class="ml20"><?php echo $lang['login_register_login_now_1'];?><a href="index.php?act=login&ref_url=<?php echo urlencode($output['ref_url']); ?>" title="<?php echo $lang['login_register_login_now'];?>" class="register"><?php echo $lang['login_register_login_now_2'];?></a></span><span><?php echo $lang['login_register_login_now_3'];?><a class="forget" href="index.php?act=login&op=forget_password"><?php echo $lang['login_register_login_forget'];?></a></span></div>
   </div>

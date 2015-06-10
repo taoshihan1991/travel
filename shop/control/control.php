@@ -318,7 +318,7 @@ class BaseMemberControl extends Control {
 	public function __construct(){
 
 		if(!C('site_status')) halt(C('closed_reason'));
-
+		$this->article();//文章输出
 		Language::read('common,member_layout');
 
 		if ($_GET['column'] && strtoupper(CHARSET) == 'GBK'){
@@ -756,7 +756,7 @@ class BaseSellerControl extends Control {
         Tpl::setDir('seller');
         Tpl::setLayout('seller_layout');
         Tpl::output('nav_list',($nav = H('nav'))? $nav :H('nav',true));
-
+        $this->article();//文章输出
         if ($_GET['act'] !== 'seller_login') {
 
             if(empty($_SESSION['seller_id'])) {

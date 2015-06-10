@@ -192,10 +192,46 @@ class searchControl extends BaseHomeControl {
         $viewed_goods = $model_goods->getViewedGoodsList();
         Tpl::output('viewed_goods',$viewed_goods);
 
+        // 获取订单动态
+        $orderList=$this->getOrderData(10);
+        Tpl::output('orderList',$orderList);
+
+        // // 获取评价动态
+        // $evalList=$this->getEvaluaterData(10);print_r($evalList);
+        // Tpl::output('evalList',$evalList);
+
         Tpl::showpage('search');
 
     }
+    /**
+    * 获取订单最新动态
+    * @return array
+    */
+    public function getOrderData($limit='10'){
+        $order_model=Model('order');
+        $order="add_time desc";
+        $list=array();
+        $list=$order_model->getOrderList('',$limit);
+        foreach($list as $k=>$v){
+            $list[$k]['url']=urlShop('show_store', 'index', array('store_id' => $v['store_id']));
+        }
+        return $list;
+    }
 
+    /**
+    * 获取评价动态
+    * @return array
+    */
+    public function getEvaluaterData($limit='10'){
+        $evaluate_model=Model('evaluate_goods');
+        $order="geval_addtime desc";
+        $list=array();
+        $list=$evaluate_model->limit($limit)->select();
+        foreach($list as $k=>$v){
+            $list[$k]['url']=urlShop('goods', 'index', array('goods_id' => $v['geval_goodsid']));
+        }
+        return $list;
+    }
     /**
      * 全文搜索
      * @return array 商品主键，搜索结果总数

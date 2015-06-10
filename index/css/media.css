@@ -1,0 +1,2035 @@
+@charset "UTF-8";
+/*
+ *	Author		：CaiYing
+ *	Time		：2014.12.09
+ *	Abstract	：IPOW CSS Media
+ *
+ */
+/* 1601-1860 */
+@media screen and (min-width: 1601px) and (max-width: 1860px) {
+  .contanier {
+    padding: 0 150px; }
+
+  .thirdNav {
+    width: 1300px; }
+
+  .caseList {
+    width: 1300px; }
+    .caseList .item {
+      width: 325px;
+      height: 212px; }
+      .caseList .item:first-of-type {
+        width: 650px;
+        height: 424px; } }
+/* 1401-1600 */
+@media screen and (min-width: 1401px) and (max-width: 1600px) {
+  .contanier {
+    padding: 0 100px; }
+
+  .thirdNav {
+    width: 1200px; }
+
+  .caseList {
+    width: 1200px; }
+    .caseList .item {
+      width: 300px;
+      height: 195px; }
+      .caseList .item:first-of-type {
+        width: 600px;
+        height: 390px; } }
+/* 1001--1400 */
+@media screen and (min-width: 1001px) and (max-width: 1400px) {
+  .contanier {
+    padding: 0px; }
+
+  .bannerN_02 img {
+    width: 110%; }
+  .bannerN_02 .text {
+    position: absolute;
+    left: 8%;
+    top: 4%;
+    height: 400px;
+    color: #fff;
+    font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .bannerN_02 .text h2 {
+      font: normal 30px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .bannerN_02 .text .border02 {
+      width: 35px;
+      background: #fff;
+      margin-bottom: 15px; }
+    .bannerN_02 .text img {
+      display: block;
+      width: 150px;
+      height: auto;
+      margin-top: 5px; }
+
+  .buildItemList {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0; }
+    .buildItemList li {
+      float: left;
+      width: 45%;
+      padding: 40px 0; }
+      .buildItemList li img {
+        display: block;
+        max-width: 400px;
+        width: 70%;
+        height: auto;
+        margin: 0 auto; }
+      .buildItemList li .text {
+        margin-top: 20px;
+        color: #666666;
+        font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .buildItemList li .text p {
+          padding: 10px 0; }
+      .buildItemList li:nth-of-type(2n) {
+        float: right;
+        margin-left: 0; }
+
+  .buildPoint dt {
+    font: normal 40px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+    padding-bottom: 60px;
+    color: #fff; }
+  .buildPoint dd {
+    width: 45%; }
+    .buildPoint dd div {
+      padding: 80px 20px 80px 200px;
+      font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #000; }
+      .buildPoint dd div h4 {
+        font: normal 36px/40px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        padding-bottom: 10px; }
+
+  .operateItemList {
+    width: 90%;
+    margin: 0 auto; }
+    .operateItemList li {
+      padding-top: 80px; }
+      .operateItemList li img {
+        float: left;
+        width: 40%;
+        height: auto; }
+      .operateItemList li .text {
+        float: right;
+        margin-top: 70px;
+        width: 45%;
+        color: #666666;
+        font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .operateItemList li .text h2 {
+          color: #000000;
+          font: normal 30px/50px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          padding-bottom: 20px; }
+          .operateItemList li .text h2 em {
+            color: #ec7432;
+            font: bold 60px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            padding-right: 25px; }
+      .operateItemList li:nth-of-type(2n+1) img {
+        float: right; }
+      .operateItemList li:nth-of-type(2n+1) .text {
+        float: left; }
+
+  .ipowInfo {
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 80%;
+    text-align: center;
+    color: #666666;
+    font: normal 18px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .ipowInfo img {
+      display: block;
+      margin: 20px auto; }
+    .ipowInfo h2 {
+      font: normal 36px/80px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+
+  .thirdNav {
+    width: 1000px; }
+
+  .caseList {
+    width: 1000px; }
+    .caseList .item {
+      width: 250px;
+      height: 163px; }
+      .caseList .item:first-of-type {
+        width: 500px;
+        height: 326px; } }
+@media screen and (max-width: 1160px) {
+  .siteCon {
+    width: 100%; } }
+/* Max-1000 */
+@media screen and (max-width: 1000px) {
+  .contanier {
+    padding: 0px; }
+
+  .iMidNav {
+    padding-top: 40px;
+    margin-bottom: 30px; }
+
+  #footer .sp1 {
+    display: none; } }
+/* 768--1000 */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  #header #logo {
+    margin-left: 10px; }
+  #header #nav {
+    margin-left: 0px;
+    width: 570px; }
+    #header #nav li {
+      width: 95px; }
+  #header .wwLink {
+    display: none; }
+
+  #logo {
+    margin-left: 20px; }
+
+  .iCaseList {
+    width: 100%; }
+    .iCaseList .item {
+      width: 50%; }
+      .iCaseList .item:nth-of-type(5) {
+        display: none; }
+    .iCaseList .nItem {
+      float: left;
+      width: 50%;
+      height: auto; }
+
+  .iClientList {
+    width: 100%; }
+    .iClientList .item {
+      float: left;
+      position: relative;
+      width: 25%;
+      height: auto;
+      background: #fff;
+      overflow: hidden;
+      border-bottom: 1px #e0e0e0 solid; }
+      .iClientList .item img {
+        display: block;
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0; }
+
+  .bannerN_01 img {
+    display: block;
+    width: 120%;
+    height: auto; }
+
+  .bannerN_02 img {
+    display: block;
+    width: 130%;
+    height: auto; }
+  .bannerN_02 .text {
+    position: absolute;
+    left: 8%;
+    top: 5%;
+    height: 400px;
+    color: #fff;
+    font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .bannerN_02 .text h2 {
+      font: normal 20px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .bannerN_02 .text .border02 {
+      width: 35px;
+      background: #fff;
+      margin-bottom: 15px; }
+    .bannerN_02 .text img {
+      display: block;
+      width: 180px;
+      height: auto;
+      margin-top: 5px; }
+
+  .bannerN_03 {
+    height: auto;
+    overflow: hidden;
+    position: relative; }
+    .bannerN_03 img.size {
+      display: block;
+      width: 100%;
+      min-height: 300px;
+      height: auto; }
+    .bannerN_03 #dituContent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      border: none; }
+
+  @-webkit-keyframes bannerNPic {
+    0% {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+    100% {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2); } }
+  /* About Us */
+  .aboutIpowCon {
+    padding: 15px; }
+    .aboutIpowCon .text {
+      font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #5a5a5a; }
+      .aboutIpowCon .text h2 {
+        font: normal 32px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        color: #5a5a5a; }
+      .aboutIpowCon .text h4 {
+        font: normal 18px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        padding-bottom: 15px;
+        color: #7e7e7e; }
+
+  .engineerList {
+    background: #fff;
+    padding: 0px;
+    margin-top: 0px; }
+    .engineerList dt {
+      height: 80px;
+      font: bold 30px/80px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #353535;
+      text-indent: 18px; }
+    .engineerList dd {
+      float: left;
+      width: 33%;
+      padding: 20px 0;
+      border-top: solid #dfdfdf 1px;
+      border-left: solid #dfdfdf 1px; }
+      .engineerList dd img {
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+        height: auto; }
+      .engineerList dd h4 {
+        text-align: center;
+        font: bold 20px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        padding-top: 10px;
+        color: #555555; }
+      .engineerList dd:nth-of-type(1), .engineerList dd:nth-of-type(4) {
+        border-left: none; }
+
+  .aboutUsPic {
+    position: relative;
+    margin-top: 25px; }
+    .aboutUsPic h2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      height: 158px;
+      font: bold 30px/80px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #fff;
+      text-indent: 18px; }
+    .aboutUsPic .item, .aboutUsPic .nItem {
+      float: left;
+      width: 50%;
+      width: 24.5% \9;
+      overflow: hidden; }
+      .aboutUsPic .item img, .aboutUsPic .nItem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        -webkit-transition: all 5s ease;
+        -moz-transition: all 5s ease;
+        -ms-transition: all 5s ease;
+        -o-transition: all 5s ease;
+        transition: all 5s ease; }
+      .aboutUsPic .item:hover img, .aboutUsPic .nItem:hover img {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2); }
+    .aboutUsPic .item:nth-of-type(n+8) {
+      display: none; }
+
+  .clientList {
+    padding: 40px 0; }
+    .clientList .item {
+      float: left;
+      position: relative;
+      width: 24.555%;
+      height: auto;
+      background: #fff;
+      overflow: hidden;
+      border-bottom: 1px #cfcfcf solid;
+      border-right: 1px #cfcfcf solid; }
+      .clientList .item:nth-of-type(6n) {
+        border-right: 1px #cfcfcf solid; }
+      .clientList .item:nth-of-type(n+19) {
+        border-bottom: 1px #cfcfcf solid; }
+      .clientList .item:nth-of-type(4n) {
+        border-right: none; }
+      .clientList .item:nth-last-of-type(1), .clientList .item:nth-last-of-type(2), .clientList .item:nth-last-of-type(3) {
+        border-bottom: none; }
+
+  /* Service */
+  .buildItemList {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0; }
+    .buildItemList li {
+      float: none;
+      width: 95%;
+      padding: 40px 0;
+      min-height: 300px;
+      margin: 0 auto;
+      position: relative; }
+      .buildItemList li img {
+        display: block;
+        position: absolute;
+        top: 30;
+        left: 0;
+        width: 300px;
+        height: auto;
+        margin: 0 auto; }
+      .buildItemList li .text {
+        float: none;
+        margin-top: 0px;
+        padding-left: 350px;
+        margin-left: 0px;
+        color: #666666;
+        font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .buildItemList li .text p {
+          padding: 5px 0; }
+      .buildItemList li:nth-of-type(2n) {
+        margin-left: auto; }
+
+  .buildPoint {
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    background: url(/Service/images/buildBg.jpg) repeat center center;
+    text-align: center; }
+    .buildPoint dt {
+      font: normal 26px/50px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      padding: 20px;
+      color: #fff;
+      text-align: center; }
+    .buildPoint dd {
+      display: block;
+      width: 90%;
+      background: #fff;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      text-align: left;
+      position: relative; }
+      .buildPoint dd span {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 80px;
+        height: 80px;
+        background: url(/Service/images/buildIcon.png) no-repeat 0px 0px;
+        background-size: 80px auto; }
+        .buildPoint dd span.sp2 {
+          background-position: 0px -80px; }
+        .buildPoint dd span.sp3 {
+          background-position: 0px -160px; }
+        .buildPoint dd span.sp4 {
+          background-position: 0px -240px; }
+      .buildPoint dd div {
+        padding: 20px 10px 20px 90px;
+        font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        color: #000; }
+        .buildPoint dd div h4 {
+          font: normal 20px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          padding-bottom: 10px; }
+
+  .buildStep {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0; }
+    .buildStep dt {
+      font: bold 30px/50px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      padding-bottom: 20px;
+      text-align: center;
+      color: #333; }
+    .buildStep dd {
+      float: left;
+      font: normal 18px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #000;
+      width: 25%;
+      border-bottom: 1px solid #cdcdcd;
+      position: relative; }
+      .buildStep dd div {
+        padding: 26px 0 26px 30px; }
+      .buildStep dd span {
+        display: block;
+        font: normal 30px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        color: #e47d31;
+        width: 100%; }
+
+  .appItemList {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0; }
+    .appItemList li {
+      float: none;
+      width: 95%;
+      padding: 40px 0;
+      min-height: 300px;
+      margin: 0 auto;
+      position: relative; }
+      .appItemList li img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: auto;
+        margin: 0 auto; }
+      .appItemList li .text {
+        float: none;
+        margin-top: 0px;
+        padding-left: 350px;
+        margin-left: 0px;
+        width: auto;
+        color: #666666;
+        font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .appItemList li .text p {
+          padding: 5px 0; }
+
+  .operateItemList {
+    width: 100%;
+    margin: 0 auto; }
+    .operateItemList li {
+      padding-top: 80px;
+      width: 95%;
+      margin: 0 auto;
+      position: relative; }
+      .operateItemList li img {
+        display: block;
+        position: absolute;
+        top: 30;
+        left: 0;
+        width: 300px;
+        height: auto;
+        margin: 0 auto; }
+      .operateItemList li .text {
+        float: none;
+        margin-top: 0px;
+        padding-left: 350px;
+        margin-left: 0px;
+        width: auto;
+        color: #666666;
+        font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .operateItemList li .text h2 {
+          color: #000000;
+          font: normal 26px/50px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          padding-bottom: 20px; }
+          .operateItemList li .text h2 em {
+            color: #ec7432;
+            font: bold 50px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            padding-right: 15px; }
+        .operateItemList li .text p {
+          padding: 5px 0; }
+      .operateItemList li:nth-of-type(2n+1) img {
+        float: none; }
+      .operateItemList li:nth-of-type(2n+1) .text {
+        float: none; }
+
+  .ipowInfo {
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 90%;
+    text-align: center;
+    color: #666666;
+    font: normal 18px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .ipowInfo img {
+      display: block;
+      margin: 20px auto; }
+    .ipowInfo h2 {
+      font: normal 36px/80px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+
+  .thirdNav {
+    width: 760px; }
+
+  .caseList {
+    width: 760px; }
+    .caseList .item {
+      width: 360px;
+      height: 234px; }
+      .caseList .item:first-of-type {
+        width: 360px;
+        height: 234px; } }
+/* Max-767 */
+@media screen and (max-width: 767px) {
+  /*RESET*/
+  body, html, div, p, table, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0; }
+
+  ul, ol, li, dl, dt, dd {
+    list-style: none; }
+
+  img, a {
+    border: none; }
+
+  em {
+    font-style: normal; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal; }
+
+  a {
+    outline: none;
+    text-decoration: none; }
+
+  a:active {
+    star: expression(this.onFocus=this.blur()); }
+
+  /*Base*/
+  body {
+    behavior: url(/Js/csshover.htc);
+    font: normal 12px/22px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+    color: #263949; }
+
+  body {
+    background-attachment: fixed;
+    background-image: url(about:blank);
+    padding-top: 52px; }
+
+  .clear {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+    overflow: hidden; }
+
+  .clearfloat:after, .clientList:after, .buildPoint:after, .buildStep:after, .appItemList li:after, .operateItemList li:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0; }
+
+  .clearfloat, .clientList, .buildPoint, .buildStep, .appItemList li, .operateItemList li {
+    zoom: 1; }
+
+  .wrap1000 {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px; }
+
+  .wrap1200 {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px; }
+
+  .wrap1920 {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px; }
+
+  .wrap817 {
+    width: 817px;
+    margin: 20px auto;
+    overflow: hidden; }
+
+  .height20 {
+    height: 20px; }
+
+  .height25 {
+    height: 25px; }
+
+  .height40 {
+    height: 40px; }
+
+  .orange {
+    color: #e5673b; }
+
+  .border01 {
+    display: block;
+    height: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    background: #c8c8c8; }
+
+  .border02 {
+    display: block;
+    height: 2px;
+    line-height: 2px;
+    overflow: hidden;
+    background: #c8c8c8; }
+
+  .border03 {
+    display: block;
+    height: 3px;
+    line-height: 3px;
+    overflow: hidden;
+    background: #c8c8c8; }
+
+  .lookMore {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 60px auto;
+    width: 140px;
+    height: 40px;
+    border: solid #919191 2px;
+    color: #5f5f5f;
+    font: normal 18px/40px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .lookMore div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .lookMore div em, .lookMore div span {
+        display: block;
+        width: 100%;
+        height: 50%; }
+      .lookMore div span {
+        color: #ff6c00; }
+    .lookMore:hover {
+      border-color: #ff6c00; }
+      .lookMore:hover div {
+        top: -100%; }
+
+  /*header*/
+  #header {
+    padding: 5px 0;
+    height: 42px;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    #header #logo {
+      float: left;
+      margin-left: 10px;
+      width: 150px;
+      height: 41px;
+      text-indent: -999px;
+      overflow: hidden; }
+    #header #nav {
+      display: none; }
+    #header #showNav {
+      display: block; }
+    #header .wwLink {
+      display: none; }
+
+  /*footer*/
+  #footer {
+    border-top: 4px solid #d2d2d2;
+    height: 30px;
+    padding: 10px 0;
+    font: normal 14px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+    color: #656565;
+    text-align: center; }
+    #footer .copyright {
+      margin-left: 0;
+      width: 100%;
+      text-align: center; }
+    #footer .wwLink {
+      display: none; }
+
+  #slideTop {
+    display: none; }
+
+  /*
+   * Index
+   */
+  /* Banner */
+  .sizeBanner {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+  #banner .prev, #banner .next {
+    display: none; }
+
+  /* Content */
+  #iCon {
+    position: relative;
+    z-index: 30; }
+
+  .contanier {
+    padding: 0px; }
+
+  .iMidNav {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding-top: 20px; }
+    .iMidNav li {
+      width: 33.3333%;
+      padding: 0;
+      height: 50px; }
+      .iMidNav li:nth-of-type(2), .iMidNav li:nth-of-type(3) {
+        border-left: none; }
+      .iMidNav li .over {
+        position: relative;
+        width: 75px;
+        margin: 0 auto;
+        height: 50px;
+        overflow: hidden; }
+      .iMidNav li a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 200%;
+        color: #444444;
+        text-align: center;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+        .iMidNav li a em {
+          display: block;
+          height: 50%;
+          font: normal 15px/25px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          text-align: center; }
+          .iMidNav li a em i {
+            font: normal 15px/25px MyriadPro, Arial, "微软雅黑";
+            text-align: center; }
+        .iMidNav li a span {
+          display: block;
+          height: 50%;
+          background: url(/Images/icon_01.png) no-repeat 14px -95px;
+          background-size: 250px auto; }
+        .iMidNav li a:hover {
+          top: -100%; }
+    .iMidNav li:nth-of-type(2) a span {
+      background-position: 14px -175px; }
+    .iMidNav li:nth-of-type(3) a span {
+      background-position: 14px -250px; }
+
+  .iCaseList {
+    width: 100%; }
+    .iCaseList .item {
+      float: left;
+      position: relative;
+      width: 100%; }
+      .iCaseList .item img {
+        display: block;
+        width: 100%;
+        height: auto; }
+      .iCaseList .item .caseShadow {
+        display: table;
+        border: none;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        color: #fff;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+        .iCaseList .item .caseShadow .caseInfo {
+          display: table-cell;
+          height: 100%;
+          text-align: center;
+          color: #fff;
+          vertical-align: middle;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          -webkit-transform: translateY(-20%);
+          -moz-transform: translateY(-20%);
+          -ms-transform: translateY(-20%);
+          -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+          -webkit-transition: all 0.7s ease;
+          -moz-transition: all 0.7s ease;
+          -ms-transition: all 0.7s ease;
+          -o-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
+          .iCaseList .item .caseShadow .caseInfo h4 {
+            font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+          .iCaseList .item .caseShadow .caseInfo h2 {
+            font: normal 24px/40px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            -webkit-transform: translateY(-120%);
+            -moz-transform: translateY(-120%);
+            -ms-transform: translateY(-120%);
+            -o-transform: translateY(-120%);
+            transform: translateY(-120%); }
+          .iCaseList .item .caseShadow .caseInfo .sp1 {
+            display: block;
+            height: 2px;
+            line-height: 2px;
+            overflow: hidden;
+            width: 20px;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            background: #ffa229;
+            -webkit-transition: all 0.7s ease;
+            -moz-transition: all 0.7s ease;
+            -ms-transition: all 0.7s ease;
+            -o-transition: all 0.7s ease;
+            transition: all 0.7s ease; }
+          .iCaseList .item .caseShadow .caseInfo .sp2 {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 30px;
+            border: solid #ffa229 2px;
+            color: #ffa229;
+            font: normal 14px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            text-align: center;
+            -webkit-transform: translateY(-120%);
+            -moz-transform: translateY(-120%);
+            -ms-transform: translateY(-120%);
+            -o-transform: translateY(-120%);
+            transform: translateY(-120%);
+            -webkit-transition: all 0.7s ease;
+            -moz-transition: all 0.7s ease;
+            -ms-transition: all 0.7s ease;
+            -o-transition: all 0.7s ease;
+            transition: all 0.7s ease; }
+            .iCaseList .item .caseShadow .caseInfo .sp2:hover {
+              color: #fff;
+              background: #ffa229; }
+      .iCaseList .item:first-of-type, .iCaseList .item:nth-of-type(7) {
+        width: 100%; }
+        .iCaseList .item:first-of-type .caseInfo, .iCaseList .item:nth-of-type(7) .caseInfo {
+          display: table-cell;
+          height: 100%;
+          text-align: center;
+          color: #fff;
+          vertical-align: middle; }
+          .iCaseList .item:first-of-type .caseInfo h4, .iCaseList .item:nth-of-type(7) .caseInfo h4 {
+            font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+          .iCaseList .item:first-of-type .caseInfo h2, .iCaseList .item:nth-of-type(7) .caseInfo h2 {
+            font: normal 24px/40px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            -webkit-transform: translateY(-120%);
+            -moz-transform: translateY(-120%);
+            -ms-transform: translateY(-120%);
+            -o-transform: translateY(-120%);
+            transform: translateY(-120%); }
+          .iCaseList .item:first-of-type .caseInfo .sp1, .iCaseList .item:nth-of-type(7) .caseInfo .sp1 {
+            display: block;
+            height: 2px;
+            line-height: 2px;
+            overflow: hidden;
+            width: 20px;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            background: #ffa229;
+            -webkit-transition: all 0.7s ease;
+            -moz-transition: all 0.7s ease;
+            -ms-transition: all 0.7s ease;
+            -o-transition: all 0.7s ease;
+            transition: all 0.7s ease; }
+          .iCaseList .item:first-of-type .caseInfo .sp2, .iCaseList .item:nth-of-type(7) .caseInfo .sp2 {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 30px;
+            border: solid #ffa229 2px;
+            color: #ffa229;
+            font: normal 14px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            text-align: center;
+            -webkit-transform: translateY(-120%);
+            -moz-transform: translateY(-120%);
+            -ms-transform: translateY(-120%);
+            -o-transform: translateY(-120%);
+            transform: translateY(-120%);
+            -webkit-transition: all 0.7s ease;
+            -moz-transition: all 0.7s ease;
+            -ms-transition: all 0.7s ease;
+            -o-transition: all 0.7s ease;
+            transition: all 0.7s ease; }
+            .iCaseList .item:first-of-type .caseInfo .sp2:hover, .iCaseList .item:nth-of-type(7) .caseInfo .sp2:hover {
+              color: #fff;
+              background: #ffa229; }
+    .iCaseList .nItem {
+      float: left;
+      width: 100%;
+      height: auto; }
+      .iCaseList .nItem img {
+        display: block;
+        width: 100%;
+        height: auto; }
+    .iCaseList .lookMore {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      margin: 0;
+      margin-left: -70px; }
+
+  .iCaseList01 .item {
+    float: left;
+    position: relative;
+    width: 100%; }
+    .iCaseList01 .item:first-of-type {
+      width: 100%; }
+      .iCaseList01 .item:first-of-type .caseInfo {
+        display: table-cell;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        vertical-align: middle; }
+        .iCaseList01 .item:first-of-type .caseInfo h4 {
+          font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .iCaseList01 .item:first-of-type .caseInfo h2 {
+          font: normal 24px/40px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          -webkit-transform: translateY(-120%);
+          -moz-transform: translateY(-120%);
+          -ms-transform: translateY(-120%);
+          -o-transform: translateY(-120%);
+          transform: translateY(-120%); }
+        .iCaseList01 .item:first-of-type .caseInfo .sp1 {
+          display: block;
+          height: 2px;
+          line-height: 2px;
+          overflow: hidden;
+          width: 20px;
+          margin: 0 auto;
+          margin-top: 10px;
+          margin-bottom: 15px;
+          background: #ffa229;
+          -webkit-transition: all 0.7s ease;
+          -moz-transition: all 0.7s ease;
+          -ms-transition: all 0.7s ease;
+          -o-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
+        .iCaseList01 .item:first-of-type .caseInfo .sp2 {
+          display: block;
+          margin: 0 auto;
+          width: 100px;
+          height: 30px;
+          border: solid #ffa229 2px;
+          color: #ffa229;
+          font: normal 14px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          text-align: center;
+          -webkit-transform: translateY(-120%);
+          -moz-transform: translateY(-120%);
+          -ms-transform: translateY(-120%);
+          -o-transform: translateY(-120%);
+          transform: translateY(-120%);
+          -webkit-transition: all 0.7s ease;
+          -moz-transition: all 0.7s ease;
+          -ms-transition: all 0.7s ease;
+          -o-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
+          .iCaseList01 .item:first-of-type .caseInfo .sp2:hover {
+            color: #fff;
+            background: #ffa229; }
+    .iCaseList01 .item:nth-of-type(6) {
+      display: none; }
+
+  .iCaseList02 .item {
+    float: left;
+    position: relative;
+    width: 100%; }
+    .iCaseList02 .item:nth-of-type(4) {
+      width: 100%; }
+      .iCaseList02 .item:nth-of-type(4) .caseInfo {
+        display: table-cell;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        vertical-align: middle; }
+        .iCaseList02 .item:nth-of-type(4) .caseInfo h4 {
+          font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .iCaseList02 .item:nth-of-type(4) .caseInfo h2 {
+          font: normal 24px/40px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          -webkit-transform: translateY(-120%);
+          -moz-transform: translateY(-120%);
+          -ms-transform: translateY(-120%);
+          -o-transform: translateY(-120%);
+          transform: translateY(-120%); }
+        .iCaseList02 .item:nth-of-type(4) .caseInfo .sp1 {
+          display: block;
+          height: 2px;
+          line-height: 2px;
+          overflow: hidden;
+          width: 20px;
+          margin: 0 auto;
+          margin-top: 10px;
+          margin-bottom: 15px;
+          background: #ffa229;
+          -webkit-transition: all 0.7s ease;
+          -moz-transition: all 0.7s ease;
+          -ms-transition: all 0.7s ease;
+          -o-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
+        .iCaseList02 .item:nth-of-type(4) .caseInfo .sp2 {
+          display: block;
+          margin: 0 auto;
+          width: 100px;
+          height: 30px;
+          border: solid #ffa229 2px;
+          color: #ffa229;
+          font: normal 14px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          text-align: center;
+          -webkit-transform: translateY(-120%);
+          -moz-transform: translateY(-120%);
+          -ms-transform: translateY(-120%);
+          -o-transform: translateY(-120%);
+          transform: translateY(-120%);
+          -webkit-transition: all 0.7s ease;
+          -moz-transition: all 0.7s ease;
+          -ms-transition: all 0.7s ease;
+          -o-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
+          .iCaseList02 .item:nth-of-type(4) .caseInfo .sp2:hover {
+            color: #fff;
+            background: #ffa229; }
+    .iCaseList02 .item:nth-of-type(6), .iCaseList02 .item:nth-of-type(4) {
+      display: none; }
+
+  .iClientList {
+    width: 100%; }
+    .iClientList .item {
+      float: left;
+      position: relative;
+      width: 50%;
+      height: auto;
+      background: #fff;
+      overflow: hidden;
+      border-bottom: 1px #e0e0e0 solid; }
+      .iClientList .item:nth-of-type(2n) {
+        display: none; }
+      .iClientList .item img {
+        display: block;
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0; }
+
+  /*
+   * inside page
+   */
+  .subNav {
+    height: 50px; }
+    .subNav a {
+      font: normal 16px/50px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+
+  .thirdNav {
+    padding: 10px;
+    height: 40px; }
+    .thirdNav a {
+      display: inline-block;
+      position: relative;
+      height: 40px;
+      margin-right: 10px;
+      font: normal 16px/26px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #2d2d2d; }
+      .thirdNav a span {
+        display: block;
+        width: 0%;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        height: 1px;
+        line-height: 1px;
+        overflow: hidden;
+        background: #e84c2d;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+      .thirdNav a:hover, .thirdNav a.active {
+        color: #e84c2d; }
+        .thirdNav a:hover span, .thirdNav a.active span {
+          width: 100%;
+          opacity: 1;
+          filter: alpha(opacity=100); }
+
+  .bannerN_01 img {
+    display: block;
+    width: 200%;
+    height: auto; }
+
+  .bannerN_02 img {
+    display: block;
+    width: 300%;
+    max-width: 1300px;
+    height: auto;
+    -webkit-animation: bannerNPic02 20s linear infinite;
+    -moz-animation: bannerNPic02 20s linear infinite;
+    -ms-animation: bannerNPic02 20s linear infinite;
+    -o-animation: bannerNPic02 20s linear infinite;
+    animation: bannerNPic02 20s linear infinite; }
+  .bannerN_02 .text {
+    position: absolute;
+    left: 8%;
+    top: 5%;
+    height: 400px;
+    color: #fff;
+    font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .bannerN_02 .text h2 {
+      font: normal 20px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .bannerN_02 .text .border02 {
+      width: 35px;
+      background: #fff;
+      margin-bottom: 15px; }
+    .bannerN_02 .text img {
+      display: block;
+      width: 120px;
+      height: auto;
+      margin-top: 5px; }
+
+  .bannerN_03 {
+    height: auto;
+    overflow: hidden;
+    position: relative; }
+    .bannerN_03 img.size {
+      display: block;
+      width: 100%;
+      height: 300px; }
+    .bannerN_03 #dituContent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      border: none; }
+
+  @-webkit-keyframes bannerNPic {
+    0% {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+    100% {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2); } }
+  /* About Us */
+  .aboutIpowCon {
+    padding: 15px; }
+    .aboutIpowCon .ipowLogo {
+      float: left;
+      width: 100%;
+      margin-top: 0px;
+      margin-left: 0;
+      height: auto; }
+      .aboutIpowCon .ipowLogo img {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto; }
+    .aboutIpowCon .text {
+      float: right;
+      width: 100%;
+      margin-top: 10px;
+      font: normal 12px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #5a5a5a; }
+      .aboutIpowCon .text h2 {
+        font: normal 24px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        color: #5a5a5a; }
+      .aboutIpowCon .text h4 {
+        font: normal 14px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        padding-bottom: 10px;
+        color: #7e7e7e; }
+      .aboutIpowCon .text .border02 {
+        background: #5a5a5a;
+        width: 40px;
+        margin-bottom: 20px; }
+      .aboutIpowCon .text p {
+        padding: 10px 0; }
+
+  .engineerList {
+    background: #fff;
+    padding: 0px;
+    margin-top: 0px; }
+    .engineerList dt {
+      height: 60px;
+      font: bold 27px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #353535;
+      text-indent: 18px; }
+    .engineerList dd {
+      float: left;
+      width: 33%;
+      padding: 15px 0;
+      border-top: solid #dfdfdf 1px;
+      border-left: solid #dfdfdf 1px; }
+      .engineerList dd img {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        height: auto; }
+      .engineerList dd h4 {
+        text-align: center;
+        font: bold 14px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        padding-top: 10px;
+        color: #555555; }
+      .engineerList dd:nth-of-type(1), .engineerList dd:nth-of-type(4) {
+        border-left: none; }
+
+  .aboutUsPic {
+    position: relative;
+    margin-top: 25px; }
+    .aboutUsPic h2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      height: 158px;
+      font: bold 26px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #fff;
+      text-indent: 18px; }
+    .aboutUsPic .item, .aboutUsPic .nItem {
+      float: left;
+      width: 50%;
+      width: 24.5% \9;
+      overflow: hidden; }
+      .aboutUsPic .item img, .aboutUsPic .nItem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        -webkit-transition: all 5s ease;
+        -moz-transition: all 5s ease;
+        -ms-transition: all 5s ease;
+        -o-transition: all 5s ease;
+        transition: all 5s ease; }
+      .aboutUsPic .item:hover img, .aboutUsPic .nItem:hover img {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2); }
+    .aboutUsPic .item:nth-of-type(n+10) {
+      display: none; }
+
+  /* Case */
+  .thirdNav {
+    width: 90%; }
+
+  .caseList {
+    width: 90%;
+    padding-bottom: 0px;
+    margin-top: 0px; }
+    .caseList .item {
+      float: left;
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden; }
+      .caseList .item img {
+        display: block;
+        width: 100%;
+        height: auto; }
+      .caseList .item .caseShadowWrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 10px; }
+      .caseList .item .caseShadow {
+        display: table;
+        border: none;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        color: #fff;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+        .caseList .item .caseShadow .caseInfo {
+          display: table-cell;
+          height: 100%;
+          text-align: center;
+          color: #fff;
+          vertical-align: middle;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          -webkit-transform: translateY(-20%);
+          -moz-transform: translateY(-20%);
+          -ms-transform: translateY(-20%);
+          -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+          -webkit-transition: all 0.7s ease;
+          -moz-transition: all 0.7s ease;
+          -ms-transition: all 0.7s ease;
+          -o-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
+          .caseList .item .caseShadow .caseInfo h4 {
+            font: normal 14px/26px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+          .caseList .item .caseShadow .caseInfo h2 {
+            font: normal 24px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            -webkit-transform: translateY(-120%);
+            -moz-transform: translateY(-120%);
+            -ms-transform: translateY(-120%);
+            -o-transform: translateY(-120%);
+            transform: translateY(-120%); }
+          .caseList .item .caseShadow .caseInfo .sp1 {
+            display: block;
+            height: 2px;
+            line-height: 2px;
+            overflow: hidden;
+            width: 20px;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            background: #ffa229;
+            -webkit-transition: all 0.7s ease;
+            -moz-transition: all 0.7s ease;
+            -ms-transition: all 0.7s ease;
+            -o-transition: all 0.7s ease;
+            transition: all 0.7s ease; }
+          .caseList .item .caseShadow .caseInfo .sp2 {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 30px;
+            border: solid #ffa229 2px;
+            color: #ffa229;
+            font: normal 14px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            text-align: center;
+            -webkit-transform: translateY(-120%);
+            -moz-transform: translateY(-120%);
+            -ms-transform: translateY(-120%);
+            -o-transform: translateY(-120%);
+            transform: translateY(-120%);
+            -webkit-transition: all 0.7s ease;
+            -moz-transition: all 0.7s ease;
+            -ms-transition: all 0.7s ease;
+            -o-transition: all 0.7s ease;
+            transition: all 0.7s ease; }
+            .caseList .item .caseShadow .caseInfo .sp2:hover {
+              color: #fff;
+              background: #ffa229; }
+      .caseList .item:first-of-type {
+        width: 100%;
+        height: auto; }
+        .caseList .item:first-of-type .caseInfo {
+          display: table-cell;
+          height: 100%;
+          text-align: center;
+          color: #fff;
+          vertical-align: middle;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          -webkit-transform: translateY(-20%);
+          -moz-transform: translateY(-20%);
+          -ms-transform: translateY(-20%);
+          -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+          -webkit-transition: all 0.7s ease;
+          -moz-transition: all 0.7s ease;
+          -ms-transition: all 0.7s ease;
+          -o-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
+          .caseList .item:first-of-type .caseInfo h4 {
+            font: normal 14px/26px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+          .caseList .item:first-of-type .caseInfo h2 {
+            font: normal 24px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            -webkit-transform: translateY(-120%);
+            -moz-transform: translateY(-120%);
+            -ms-transform: translateY(-120%);
+            -o-transform: translateY(-120%);
+            transform: translateY(-120%); }
+          .caseList .item:first-of-type .caseInfo .sp1 {
+            display: block;
+            height: 2px;
+            line-height: 2px;
+            overflow: hidden;
+            width: 20px;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            background: #ffa229;
+            -webkit-transition: all 0.7s ease;
+            -moz-transition: all 0.7s ease;
+            -ms-transition: all 0.7s ease;
+            -o-transition: all 0.7s ease;
+            transition: all 0.7s ease; }
+          .caseList .item:first-of-type .caseInfo .sp2 {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 30px;
+            border: solid #ffa229 2px;
+            color: #ffa229;
+            font: normal 14px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            text-align: center;
+            -webkit-transform: translateY(-120%);
+            -moz-transform: translateY(-120%);
+            -ms-transform: translateY(-120%);
+            -o-transform: translateY(-120%);
+            transform: translateY(-120%);
+            -webkit-transition: all 0.7s ease;
+            -moz-transition: all 0.7s ease;
+            -ms-transition: all 0.7s ease;
+            -o-transition: all 0.7s ease;
+            transition: all 0.7s ease; }
+            .caseList .item:first-of-type .caseInfo .sp2:hover {
+              color: #fff;
+              background: #ffa229; }
+    .caseList .nItem {
+      float: left;
+      width: 100%;
+      height: auto; }
+      .caseList .nItem img {
+        display: block;
+        width: 100%;
+        height: auto; }
+    .caseList .lookMore {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      margin: 0;
+      margin-left: -70px; }
+
+  .clientList {
+    width: 100%;
+    padding: 40px 0; }
+    .clientList .item {
+      float: left;
+      position: relative;
+      width: 33%;
+      height: auto;
+      background: #fff;
+      overflow: hidden;
+      border-bottom: 1px #cfcfcf solid;
+      border-right: 1px #cfcfcf solid; }
+      .clientList .item:nth-of-type(6n) {
+        border-right: 1px #cfcfcf solid; }
+      .clientList .item:nth-of-type(n+19) {
+        border-bottom: 1px #cfcfcf solid; }
+      .clientList .item:nth-of-type(3n) {
+        border-right: none; }
+      .clientList .item:nth-last-of-type(1), .clientList .item:nth-last-of-type(2) {
+        border-bottom: none; }
+
+  #site {
+    background: #eaeaea; }
+
+  .siteCon {
+    padding: 50px 0; }
+    .siteCon h2 {
+      font: normal 30px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .siteCon img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 20px auto; }
+    .siteCon p {
+      padding: 10px; }
+
+  .siteUrl {
+    background: #e1943a;
+    padding: 20px 0; }
+    .siteUrl h2 {
+      font: normal 30px/50px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      padding-bottom: 20px;
+      color: #fff; }
+
+  .siteBg img {
+    width: 90%;
+    margin: 0 auto; }
+
+  .siteFx .fxPic {
+    margin: 50px 0 40px 0; }
+    .siteFx .fxPic img {
+      display: inline-block;
+      width: 40%;
+      margin: 8px 10px; }
+  .siteFx .fxText li {
+    float: left;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left; }
+    .siteFx .fxText li h4 {
+      padding: 20px 0 0px 10px;
+      font: normal 24px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+
+  .siteID h2 {
+    padding-top: 100px;
+    background: url(/Case/site/2014zhchimelonghotel/images/gzchimelong_08.jpg) no-repeat center top; }
+  .siteID .t2 {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    background: none;
+    padding-top: 0px; }
+  .siteID .ID1 {
+    max-width: 720px;
+    margin: 50px auto; }
+  .siteID .fxText li {
+    float: left;
+    width: 30%;
+    margin: 0 1.5%;
+    text-align: left; }
+    .siteID .fxText li h4 {
+      padding: 0 0 20px 10px;
+      font: normal 24px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .siteID .fxText li p {
+      color: #b4b4b4; }
+
+  .siteOnline {
+    background: #6d5f93; }
+    .siteOnline h2 {
+      color: #fff; }
+    .siteOnline .border03 {
+      background: #fff;
+      margin-bottom: 60px; }
+    .siteOnline img {
+      width: 90%;
+      display: block;
+      margin: 40px auto; }
+
+  .backList, .gotoWeb {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 140px;
+    height: 40px;
+    border: solid #fff 2px;
+    color: #fff;
+    font: normal 18px/40px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .backList div, .gotoWeb div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .backList div em, .backList div span, .gotoWeb div em, .gotoWeb div span {
+        display: block;
+        width: 100%;
+        height: 50%; }
+      .backList div span, .gotoWeb div span {
+        color: #333; }
+    .backList:hover, .gotoWeb:hover {
+      border-color: #333; }
+      .backList:hover div, .gotoWeb:hover div {
+        top: -100%; }
+
+  .pageChange, .pageChangeACT {
+    display: none; }
+
+  #app .appMain {
+    padding-top: 40px;
+    background: url(/Case/site/2014cdapp/images/mainBg.jpg) no-repeat center center; }
+    #app .appMain img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 760px !important; }
+  #app .appCon {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto; }
+    #app .appCon img {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 570px; }
+    #app .appCon .wx {
+      display: none;
+      width: 158px;
+      height: 156px;
+      margin-top: 40px; }
+    #app .appCon .lookMore {
+      display: block; }
+  #app .appOp {
+    background: #eaeaea;
+    padding: 80px 0; }
+    #app .appOp ul li {
+      float: none;
+      width: auto;
+      font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      margin: 0px auto;
+      margin-bottom: 60px;
+      min-height: 130px;
+      padding-left: 120px;
+      background: url(/Case/site/2014cdapp/images/icon_01.gif) no-repeat 10px 0px;
+      background-size: 100px auto; }
+      #app .appOp ul li h4 {
+        font: normal 25px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        padding-bottom: 10px; }
+      #app .appOp ul li.fr {
+        margin-right: 0px; }
+      #app .appOp ul li:nth-of-type(2) {
+        background-image: url(/Case/site/2014cdapp/images/icon_02.gif); }
+      #app .appOp ul li:nth-of-type(3) {
+        background-image: url(/Case/site/2014cdapp/images/icon_03.gif); }
+      #app .appOp ul li:nth-of-type(4) {
+        background-image: url(/Case/site/2014cdapp/images/icon_04.gif); }
+  #app .appView {
+    padding: 50px 0; }
+    #app .appView h2 {
+      text-align: center;
+      font: normal 38px/60px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      padding-bottom: 20px;
+      margin-bottom: 80px;
+      color: #fff;
+      background: url(/Case/site/2014cdapp/images/boder.jpg) no-repeat center bottom; }
+  #app .appView01 {
+    background: #e9eaec url(/Case/site/2014cdapp/images/appViewBg_01.jpg) no-repeat center center; }
+  #app .appView02, #app .appView04 {
+    background: #dfe0e2; }
+  #app .appView01, #app .appView03 {
+    background-color: #e9eaec; }
+
+  /* Service */
+  .buildItemList {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0; }
+    .buildItemList li {
+      float: none;
+      width: 100%;
+      padding: 10px 0; }
+      .buildItemList li img {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto; }
+      .buildItemList li .text {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .buildItemList li .text h2 {
+          color: #000000;
+          font: normal 18px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          padding-bottom: 10px; }
+          .buildItemList li .text h2 em {
+            color: #ec7432;
+            font: bold 22px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            padding-right: 10px; }
+      .buildItemList li:nth-of-type(2n) {
+        margin-left: 0px; }
+
+  .buildPoint {
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    background: url(/Service/images/buildBg.jpg) repeat center center;
+    text-align: center; }
+    .buildPoint dt {
+      font: normal 20px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      padding: 20px;
+      color: #fff;
+      text-align: left; }
+    .buildPoint dd {
+      display: block;
+      width: 90%;
+      background: #fff;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      text-align: left;
+      position: relative; }
+      .buildPoint dd span {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        width: 80px;
+        height: 80px;
+        background: url(/Service/images/buildIcon.png) no-repeat 0px 0px;
+        background-size: 80px auto; }
+        .buildPoint dd span.sp2 {
+          background-position: 0px -80px; }
+        .buildPoint dd span.sp3 {
+          background-position: 0px -160px; }
+        .buildPoint dd span.sp4 {
+          background-position: 0px -240px; }
+      .buildPoint dd div {
+        padding: 20px 10px 20px 90px;
+        font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        color: #000; }
+        .buildPoint dd div h4 {
+          font: normal 20px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          padding-bottom: 10px; }
+
+  .buildStep {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0; }
+    .buildStep dt {
+      font: bold 20px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      padding-bottom: 20px;
+      text-align: center;
+      color: #333; }
+    .buildStep dd {
+      float: left;
+      font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #000;
+      width: 33.3333%;
+      border-bottom: 1px solid #cdcdcd;
+      position: relative; }
+      .buildStep dd div {
+        padding: 18px 0 18px 10px; }
+      .buildStep dd span {
+        display: block;
+        font: normal 24px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        color: #e47d31;
+        width: 100%; }
+
+  .appItemList {
+    width: 100%;
+    margin: 0 auto; }
+    .appItemList li {
+      padding-top: 0px; }
+      .appItemList li img {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        height: auto; }
+      .appItemList li .text {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .appItemList li .text h2 {
+          color: #000000;
+          font: normal 18px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          padding-bottom: 10px; }
+          .appItemList li .text h2 em {
+            color: #ec7432;
+            font: bold 22px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            padding-right: 10px; }
+
+  .operateItemList {
+    width: 100%;
+    margin: 0 auto; }
+    .operateItemList li {
+      padding-top: 10px; }
+      .operateItemList li img {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto; }
+      .operateItemList li .text {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        color: #666666;
+        font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .operateItemList li .text h2 {
+          color: #000000;
+          font: normal 18px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          padding-bottom: 10px; }
+          .operateItemList li .text h2 em {
+            color: #ec7432;
+            font: bold 22px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+            padding-right: 10px; }
+      .operateItemList li:nth-of-type(2n+1) img {
+        float: none; }
+      .operateItemList li:nth-of-type(2n+1) .text {
+        float: none; }
+
+  .ipowInfo {
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 90%;
+    text-align: left;
+    color: #666666;
+    font: normal 14px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+    .ipowInfo img {
+      display: block;
+      margin: 20px auto; }
+    .ipowInfo h2 {
+      font: normal 20px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      padding-top: 10px; }
+
+  /*NewsList*/
+  .newsList {
+    padding-top: 36px;
+    width: 100%; }
+    .newsList .item {
+      display: block;
+      position: relative;
+      height: auto;
+      min-height: 100px;
+      padding: 20px;
+      background: #fff;
+      margin-bottom: 25px; }
+      .newsList .item img {
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: auto; }
+      .newsList .item .textInfo {
+        padding-top: 10px;
+        margin-left: 0px;
+        color: #737373;
+        font: normal 12px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+        .newsList .item .textInfo .time {
+          color: #8e8e8e;
+          font: normal 14px/20px MyriadPro, Arial, "微软雅黑"; }
+        .newsList .item .textInfo h2 {
+          font: normal 16px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          color: #525252;
+          padding: 5px 0;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -ms-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
+      .newsList .item:hover h2 {
+        color: #f36635; }
+
+  /*Article*/
+  .articleWrap {
+    width: 100%;
+    background: #fff;
+    padding-bottom: 70px;
+    padding-top: 10px; }
+    .articleWrap .articleCon {
+      width: 100%;
+      margin: 0 auto; }
+      .articleWrap .articleCon .artInfo {
+        color: #8e8e8e;
+        padding: 20px;
+        font: normal 18px/26px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        text-align: center; }
+        .articleWrap .articleCon .artInfo .time {
+          font: normal 14px/20px MyriadPro, Arial, "微软雅黑"; }
+        .articleWrap .articleCon .artInfo h2 {
+          font: normal 18px/26px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+          color: #434343;
+          padding: 10px 0 10px 0; }
+      .articleWrap .articleCon .wwShare {
+        height: 54px;
+        position: relative; }
+        .articleWrap .articleCon .wwShare .border01 {
+          position: absolute;
+          top: 27px;
+          left: 0;
+          width: 100%; }
+        .articleWrap .articleCon .wwShare .bdsharebuttonbox {
+          position: relative;
+          z-index: 20;
+          width: 160px;
+          height: 54px;
+          background: #fff;
+          margin: 0 auto; }
+          .articleWrap .articleCon .wwShare .bdsharebuttonbox a {
+            width: 54px;
+            height: 54px;
+            background: url(/Images/icon_01.png) no-repeat 0px -756px;
+            margin: 0;
+            margin-left: 17px; }
+            .articleWrap .articleCon .wwShare .bdsharebuttonbox a:nth-of-type(2) {
+              background-position: -77px -756px; }
+      .articleWrap .articleCon .article {
+        padding: 20px 0;
+        width: 90%;
+        margin: 0 auto;
+        font: normal 14px/26px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        color: #696969; }
+        .articleWrap .articleCon .article img {
+          display: block;
+          width: auto;
+          height: auto !important;
+          margin: 10px auto; }
+        .articleWrap .articleCon .article p {
+          padding: 10px 0; }
+
+  /* Contact Us */
+  .contactCon {
+    color: #414141;
+    padding: 20px 0; }
+    .contactCon dt {
+      text-align: center;
+      padding-bottom: 0px; }
+      .contactCon dt h2 {
+        font: bold 30px/40px MyriadPro, Arial, "微软雅黑";
+        padding-bottom: 15px; }
+      .contactCon dt .contactBtn {
+        height: 40px;
+        display: none; }
+        .contactCon dt .contactBtn a {
+          display: inline-block;
+          margin: 0 15px; }
+    .contactCon dd {
+      float: none;
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 90%;
+      font: normal 14px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+      .contactCon dd h4 {
+        font: normal 18px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        vertical-align: middle; }
+      .contactCon dd:nth-of-type(3) {
+        width: 90%; }
+      .contactCon dd .location {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+        width: 30px;
+        height: 30px;
+        background: url(/Images/icon_01.png) no-repeat -159px -420px;
+        background-size: 250px auto; }
+
+  .jobCon {
+    width: 100%; }
+    .jobCon .jobMenu {
+      padding: 10px;
+      font: normal 16px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体"; }
+      .jobCon .jobMenu a {
+        display: inline-block;
+        margin-right: 20px;
+        color: #2d2d2d; }
+        .jobCon .jobMenu a:hover, .jobCon .jobMenu a.active {
+          color: #e84c2d;
+          border-bottom: solid 1px #e84c2d; }
+    .jobCon .jobItemWrap {
+      background: #fff;
+      padding: 20px 10px;
+      margin-bottom: 15px; }
+    .jobCon .jobItem {
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+      font: normal 12px/24px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+      color: #4e4e4e; }
+      .jobCon .jobItem h2 {
+        font: normal 18px/30px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        color: #000000;
+        text-align: center; }
+      .jobCon .jobItem h4 {
+        font: normal 16px/20px Arial, "Microsoft Yahei", Helvetica, sans-serif, "宋体";
+        padding-bottom: 10px;
+        text-align: center; }
+      .jobCon .jobItem dl {
+        padding-bottom: 30px; } }
+
+/*# sourceMappingURL=media.css.map */

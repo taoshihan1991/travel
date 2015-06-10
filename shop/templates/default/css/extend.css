@@ -19,6 +19,17 @@ a {
 #topNavWrapper{
 	border-bottom: 1px solid #e5e5e5;
 }
+#topNav li div{
+	top: 38px;
+}
+#topNav li.open>a{
+	border-bottom:none;
+	text-decoration: none;
+}
+#topMyTc.open>span, #topJoinTc.open>span, #topNav #mobileTc.open>span, #weixinTc.open>span, #servicePhone.open>span, #tcPhone.open>span{background: none;}
+#weixinTc div{
+	background: url(../images/mobile.png) no-repeat;
+}
 #header{
 	background: none;
 }
@@ -165,7 +176,7 @@ a {
 }
 .indexBannerBox .bannerCenter img{
 	width: 705px;
-
+	height: 324px;
 }
 .indexBannerBox .bannerCenter .indexAds{
 	height: 144px;
@@ -414,7 +425,7 @@ a {
 	height: 160px;
 }
 .prooutinbound-list .goodsName{
-	font-size: 14px;
+	font-size: 12px;
 	color: #666;
 	margin-top: 5px;
 }
@@ -439,6 +450,13 @@ a {
 #menuNav .current, #menuNav.current:hover, #menuNav.current:hover>a{
 	background: #FFC33A;
 }
+#menuNav .cur a{
+	background: #FFC33A;
+	color: #fff;
+}
+#menuNav .current .submenu-nav{
+	display: none;
+}
 #menuNav li>a:after{
 	background: #3B8600;
 	display: none;
@@ -455,6 +473,13 @@ a {
 	background: #FFC33A;
 	height: 55px;
 	line-height: 55px;
+	width: 140px;
+}
+#menuMyTc div{
+	width: 140px;
+}
+#menuMyTc>a {
+	padding-left: 50px;
 }
 #menuMyTc>a,#menuMyTc.open>a{
 	height: 55px;
@@ -480,8 +505,9 @@ a {
 	padding: 4px 5px;
 }
 .prooutinbound-list li{
-	width: 182px;
+	width: 185px;
 	height: 200px;
+	margin: 0 16px 19px 0;
 }
 .content_box #inbound h3{background: none;padding-left: 0;}
 .content_box .theme0 h3{color: #4b2115;background: none;}
@@ -1298,6 +1324,38 @@ a {
 }
 .viewPage .ncs-goods-summary .name strong{
 	color: #f60;
+}
+.viewPage .ncs-meta .price .goldArea{
+	color: #fff;
+	background: #f60;
+	text-decoration: none;
+	padding: 1px 4px;
+	border-radius: 2px;
+}
+/*积分中心*/
+body .nc-layout-all{
+	width: 1200px;
+}
+.nc-layout-all .nc-layout-right{
+	width: 980px;
+}
+.nc-layout-all .giftWare{
+	width: 970px;
+}
+.nc-layout-all .giftWare .title, .wareIntro .userMenu{
+	width: 970px;
+}
+.nc-layout-all .giftWare .wareText{
+	width: 627px;
+}
+.nc-layout-all .giftWare .wareIntro{
+	width: 970px;
+}
+.nc-layout-all .giftWare .title,.nc-layout-all .wareIntro .userMenu{
+	width: 970px;
+}
+.nc-layout-all .wareIntro .con{
+	width: 970px;
 }
 /*footer部分*/
 .tcAboat, .joinTc, .contactTc, .tcWebSite {

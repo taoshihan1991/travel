@@ -35,6 +35,8 @@ class loginControl extends mobileHomeControl {
 
         if(!empty($member_info)) {
             $token = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
+            // $token = md5($member_info['member_name'] . strval(TIMESTAMP) . strval(rand(0,999999)));
+
             if($token) {
                 output_data(array('username' => $member_info['member_name'], 'key' => $token));
             } else {
@@ -68,7 +70,7 @@ class loginControl extends mobileHomeControl {
         $mb_user_token_info['client_type'] = $_POST['client'];
 
         $result = $model_mb_user_token->addMbUserToken($mb_user_token_info);
-
+        
         if($result) {
             return $token;
         } else {

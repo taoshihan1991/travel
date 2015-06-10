@@ -13,7 +13,7 @@ $config['resource_site_url']	= 'http://192.168.1.201/travel/data/resource';
 $config['version'] 		= '201401162490';
 $config['setup_date'] 	= '2015-05-26 10:39:29';
 $config['gip'] 			= 0;
-$config['dbdriver'] 	= 'mysqli';
+$config['dbdriver'] 	= 'mysql';
 $config['tablepre']		= 'tr_';
 $config['db'][1]['dbhost']  	= '192.168.1.201';
 $config['db'][1]['dbport']		= '3306';
@@ -41,7 +41,7 @@ $config['cache']['type'] 			= 'file';
 //$config['fullindexer']['open']      = false;
 //$config['fullindexer']['appname']   = 'shopnc';
 $config['debug'] 			= false;
-$config['default_store_id'] = '1';
+$config['default_store_id'] = '2';
 // 是否开启伪静态
 $config['url_model'] = false;
 // 二级域名后缀

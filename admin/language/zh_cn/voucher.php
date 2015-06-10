@@ -1,6 +1,6 @@
 <?php
 defined('InShopNC') or exit('Access Invalid!');
-$lang['admin_voucher_unavailable']    = '需开启 代金券、积分，正在跳转到设置页面 。。。';
+$lang['admin_voucher_unavailable']    = '需开启 代金券、金币，正在跳转到设置页面 。。。';
 $lang['admin_voucher_jb_unavailable']    = '需开启金币，正在跳转至设置页面 。。。';
 $lang['admin_voucher_applystate_new']    = '待审核';
 $lang['admin_voucher_applystate_verify']    = '已审核';
@@ -42,12 +42,12 @@ $lang['admin_voucher_setting_buyertimes_tip']	= '买家最多只能拥有同一�
 $lang['admin_voucher_price_error']   		= '代金券面额应为大于0的整数';
 $lang['admin_voucher_price_describe_error'] = '描述不能为空';
 $lang['admin_voucher_price_describe_lengtherror'] = '代金券描述不能为空且不能大于255个字符';
-$lang['admin_voucher_price_points_error']   = '默认兑换积分数应为大于0的整数';
+$lang['admin_voucher_price_points_error']   = '默认兑换金币数应为大于0的整数';
 $lang['admin_voucher_price_exist']    		= '该代金券面额已经存在';
 $lang['admin_voucher_price_title']    		= '代金券面额';
 $lang['admin_voucher_price_describe']    	= '描述';
-$lang['admin_voucher_price_points']    		= '默认兑换积分数';
-$lang['admin_voucher_price_points_tip']    	= '当卖家发布代金券活动时，代金券活动默认消耗的积分数';
+$lang['admin_voucher_price_points']    		= '默认兑换金币数';
+$lang['admin_voucher_price_points_tip']    	= '当卖家发布代金券活动时，代金券活动默认消耗的金币数';
 $lang['admin_voucher_price_tip1']    	= '管理员规定代金券面额，店铺发放代金券时面额从规定的面额中选择';
 /**
  * 代金券套餐申请
@@ -60,7 +60,7 @@ $lang['admin_voucher_apply_verifyfail']    	= '申请审核失败';
 $lang['admin_voucher_apply_cancelsucc']    	= '申请取消成功';
 $lang['admin_voucher_apply_cancelfail']    	= '申请取消失败';
 $lang['admin_voucher_apply_list_tip1']    	= '对卖家的套餐申请进行审核，审核后系统会使用站内信通知卖家';
-$lang['admin_voucher_apply_list_tip2']    	= '当卖家金币不足时审核会失败，卖家发布成功的代金券会出现在积分中心，买家可凭积分进行兑换';
+$lang['admin_voucher_apply_list_tip2']    	= '当卖家金币不足时审核会失败，卖家发布成功的代金券会出现在金币中心，买家可凭金币进行兑换';
 $lang['admin_voucher_apply_num']    		= '申请数量';
 $lang['admin_voucher_apply_date']    		= '申请日期';
 /**
@@ -78,7 +78,7 @@ $lang['admin_voucher_quota_residuetimes']    	= '剩余活动次数';
 /**
  * 代金券
  */
-$lang['admin_voucher_template_points_error']	= '兑换所需积分数应为大于0的整数';
+$lang['admin_voucher_template_points_error']	= '兑换所需金币数应为大于0的整数';
 $lang['admin_voucher_template_title']			= '代金券名称';
 $lang['admin_voucher_template_enddate']			= '有效期';
 $lang['admin_voucher_template_price']			= '面额';
@@ -88,7 +88,7 @@ $lang['admin_voucher_template_orderpricelimit']	= '消费金额';
 $lang['admin_voucher_template_describe']		= '代金券描述';
 $lang['admin_voucher_template_styleimg']		= '选择代金券皮肤';
 $lang['admin_voucher_template_image']			= '代金券图片';
-$lang['admin_voucher_template_points']			= '兑换所需积分数';
+$lang['admin_voucher_template_points']			= '兑换所需金币数';
 $lang['admin_voucher_template_adddate']			= '添加时间';
 $lang['admin_voucher_template_list_tip']		= '手工设置代金券失效后,用户将不能领取该代金券,但是已经领取的代金券仍然可以使用';
 $lang['admin_voucher_template_giveoutnum']		= '已领取';

@@ -31,27 +31,36 @@ class indexControl extends mobileHomeControl{
             $adv['keyword'] = $value['link_keyword'];
             $adv_list[] = $adv;
         }
-        $datas['adv_list'] = $adv_list;
+        
 
         //首页
         $home_type1_list = array();
         $home_type2_list = array();
-        $mb_home_list = $model_mb_home->getMbHomeList(array(), null, 'h_sort asc');
+        //$mb_home_list = $model_mb_home->getMbHomeList(array(), null, 'h_sort asc');
+
+        // @tsh
+        $advList=array();
+        $list=Model('adv')->getList(array('ap_id'=>373));
+        foreach($list as $v){
+            $advContent=unserialize($v['adv_content']);
+            $advContent['keyword']=$v['adv_title'];
+            $advContent['image']=UPLOAD_SITE_URL.'/shop/adv/'.$advContent['adv_pic'];
+            $advList[]=$advContent;
+        }
+        $datas['adv_list'] = $advList;
+
+        $mb_home_list=Model('goods')->select();
         foreach ($mb_home_list as $value) {
             $home = array();
-            $home['image'] = $value['h_img_url'];
-            $home['title'] = $value['h_title'];
-            $home['desc'] = $value['h_desc'];
-            $home['keyword'] = $value['h_keyword'];
-            if($value['h_type'] == 'type1') {
-                $home['keyword1'] = $value['h_multi_keyword'];
-                $home_type1_list[] = $home;
-            } else {
-                $home_type2_list[] = $home;
-            }
+            $home['image'] = thumb($value,160);
+            $home['title'] = $value['goods_name'];
+            $home['desc'] = $value['goods_jingle'];
+            $home['keyword1'] = '';
+            $home_type1_list[] = $home;
         }
+
         $datas['home1'] = $home_type1_list;
-        $datas['home2'] = $home_type2_list;
+        $datas['home2'] = $home_type1_list;
 
         output_data($datas);
 	}

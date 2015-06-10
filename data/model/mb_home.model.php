@@ -29,7 +29,6 @@ class mb_homeModel extends Model{
 	 */
 	public function getMbHomeList($condition, $page = null, $order = 'h_type asc', $field = '*') {
         $h_list = $this->field($field)->where($condition)->page($page)->order($order)->select();
-
 		//整理图片链接
 		if (is_array($h_list)){
 			foreach ($h_list as $k => $v){

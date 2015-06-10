@@ -60,10 +60,10 @@ $lang['pointsregistdesc']			=	'注册会员';
 $lang['pointscommentsdesc']			=	'评论商品';
 $lang['pointsorderdesc']			=	'购物消费';
 $lang['pointsorderdesc_1'] 			=	'订单';
-$lang['points_pointorderdesc']		=	'消耗积分';
+$lang['points_pointorderdesc']		=	'消耗金币';
 $lang['points_pointorderdesc_1'] 	=	'兑换礼品信息';
 $lang['points_unit'] = '分';
-$lang['points_pointorderdesc_app'] 	= 'UC应用的积分兑入';
+$lang['points_pointorderdesc_app'] 	= 'UC应用的金币兑入';
 $lang['credit_unit'] = '分';
 
 $lang['nc_buying_goods']			= "已买到的商品";

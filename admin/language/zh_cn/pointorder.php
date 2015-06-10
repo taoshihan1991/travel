@@ -3,7 +3,7 @@ defined('InShopNC') or exit('Access Invalid!');
 /**
  * 兑换订单功能公用
  */
-$lang['admin_pointorder_unavailable']	 		= '系统未开启积分或者积分兑换功能';
+$lang['admin_pointorder_unavailable']	 		= '系统未开启金币或者金币兑换功能';
 $lang['admin_pointorder_parameter_error']		= '参数错误';
 $lang['admin_pointorderd_record_error']			= '记录信息错误';
 $lang['admin_pointorder_userrecord_error']		= '用户信息错误';
@@ -15,7 +15,7 @@ $lang['admin_pointorder_ordersn']				= '兑换单号';
 $lang['admin_pointorder_membername']			= '会员名称';
 $lang['admin_pointorder_payment']				= '支付方式';
 $lang['admin_pointorder_orderstate']			= '状态';
-$lang['admin_pointorder_exchangepoints']		= '兑换积分';
+$lang['admin_pointorder_exchangepoints']		= '兑换金币';
 $lang['admin_pointorder_shippingfee']			= '运费';
 $lang['admin_pointorder_addtime']				= '兑换时间';
 $lang['admin_pointorder_shipping_code']			= '物流单号';
@@ -44,7 +44,7 @@ $lang['admin_pointorder_changefee_success']			= '调整运费成功';
 $lang['admin_pointorder_changefee_freightpricenull']= '请添加运费';
 $lang['admin_pointorder_changefee_freightprice_error']= '运费价格必须为数字且大于等于0';
 $lang['admin_pointorder_cancel_tip1']				= '取消兑换礼品信息';
-$lang['admin_pointorder_cancel_tip2']				= '增加积分';
+$lang['admin_pointorder_cancel_tip2']				= '增加金币';
 $lang['admin_pointorder_cancel_title']				= '取消兑换';
 $lang['admin_pointorder_cancel_confirmtip']			= '确认取消兑换信息?';
 $lang['admin_pointorder_cancel_success']			= '取消成功';

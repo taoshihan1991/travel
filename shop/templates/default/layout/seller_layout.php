@@ -42,6 +42,11 @@ catch(e){}
 // ]]>
 </script>
 <![endif]-->
+<!-- [旅游网站css,js] -->
+<link rel="stylesheet" type="text/css" href="<?php echo SHOP_TEMPLATES_URL;?>/css/tcIndex.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?php echo SHOP_TEMPLATES_URL;?>/css/extend.css"/>
+<script type="text/javascript" src="<?php echo SHOP_TEMPLATES_URL;?>/js/extend.js"></script>
+<!-- [//旅游网站css,js] -->
 
 </head>
 

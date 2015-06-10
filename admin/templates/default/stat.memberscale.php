@@ -79,8 +79,8 @@
         <th class="align-center"><a nc_type="orderitem" data-param='{"orderby":"orderamount"}' class="<?php echo (!$output['search_arr']['orderby'] || $output['search_arr']['orderby']=='orderamount desc')?'selected desc':''; echo $output['search_arr']['orderby']=='orderamount asc'?'selected asc':''; ?>">下单金额<i></i></a></th>
         <th class="align-center"><a nc_type="orderitem" data-param='{"orderby":"predincrease"}' class="<?php echo ($output['search_arr']['orderby']=='predincrease desc')?'selected desc':''; echo $output['search_arr']['orderby']=='predincrease asc'?'selected asc':''; ?>">增预存款<i></i></a></th>
         <th class="align-center"><a nc_type="orderitem" data-param='{"orderby":"predreduce"}' class="<?php echo ($output['search_arr']['orderby']=='predreduce desc')?'selected desc':''; echo $output['search_arr']['orderby']=='predreduce asc'?'selected asc':''; ?>">减预存款<i></i></a></th>
-        <th class="align-center"><a nc_type="orderitem" data-param='{"orderby":"pointsincrease"}' class="<?php echo ($output['search_arr']['orderby']=='pointsincrease desc')?'selected desc':''; echo $output['search_arr']['orderby']=='pointsincrease asc'?'selected asc':''; ?>">增积分<i></i></a></th>
-        <th class="align-center"><a nc_type="orderitem" data-param='{"orderby":"pointsreduce"}' class="<?php echo ($output['search_arr']['orderby']=='pointsreduce desc')?'selected desc':''; echo $output['search_arr']['orderby']=='pointsreduce asc'?'selected asc':''; ?>">减积分<i></i></a></th>
+        <th class="align-center"><a nc_type="orderitem" data-param='{"orderby":"pointsincrease"}' class="<?php echo ($output['search_arr']['orderby']=='pointsincrease desc')?'selected desc':''; echo $output['search_arr']['orderby']=='pointsincrease asc'?'selected asc':''; ?>">增金币<i></i></a></th>
+        <th class="align-center"><a nc_type="orderitem" data-param='{"orderby":"pointsreduce"}' class="<?php echo ($output['search_arr']['orderby']=='pointsreduce desc')?'selected desc':''; echo $output['search_arr']['orderby']=='pointsreduce asc'?'selected asc':''; ?>">减金币<i></i></a></th>
       </tr>
     </thead>
     <tbody id="datatable">

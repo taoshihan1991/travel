@@ -23,6 +23,12 @@
           </div>
           <ul id="topNav">
             <li id="topMyTc">
+              <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=cart">购物车</a>
+            </li>
+            <li id="topMyTc">
+              <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=pointprod&op=index">金币直购专区</a>
+            </li>
+            <li id="topMyTc">
               <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_snsindex">会员中心</a>
               <div data-height="100px">
                 <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order">订单中心</a>
@@ -33,15 +39,15 @@
             </li>
           
             <li id="weixinTc">
-              <a href="javascript:void(0);">微信<i></i></a>
+              <a href="javascript:void(0);">手机<i></i></a>
               <div></div>
               <span></span>
             </li>
             <li id="tcPhone">
               <a href="javascript:void(0);">电话<i></i></a>
               <div>
-                <p>国内电话：4007-777-777</p>
-                <p>海外电话：+86-512-8220-9000</p>
+                <p>国内电话：1234-8888-8888</p>
+                <p>海外电话：+86-888-8888-8888</p>
               </div>
               <span></span>
             </li> 

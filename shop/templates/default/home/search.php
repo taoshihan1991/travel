@@ -127,11 +127,13 @@ _behavior: url(<?php echo SHOP_TEMPLATES_URL;
         <strong>最新预订</strong>
       </div>
       <div class="txt_order">
+        <?php if(!empty($output['orderList'])){foreach($output['orderList'] as $v){?>
         <dl>
           <i class="i1"></i>
-          <dt><span class="time">1小时前</span><em>张**</em><span>预订了</span></dt>
-          <dd clss="title"><a href="/xianlu/697131629826" target="_blank">【北京到白洋淀狼牙山旅游多少钱】白洋淀狼牙山二日|红色旅游团</a></dd>
+          <dt><span class="time"><?php echo timeFormat($v['add_time']);?></span><em><?php echo $v['buyer_name']?></em> <span>预定一张订单</span></dt>
+          <dd clss="title"><a href="<?php echo $v['url']?>" target="_blank"><?php echo $v['store_name']?></a></dd>
         </dl>
+        <?php }}?>
       </div>
     </div>
 

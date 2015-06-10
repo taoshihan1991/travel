@@ -44,14 +44,10 @@ cursor: url(<?php echo SHOP_TEMPLATES_URL;
                 <h1><?php echo $output['goods']['goods_name']; ?></h1>
                 <strong><?php echo $output['goods']['goods_jingle'];?></strong> </div>
               <div class="ncs-meta"> 
-                <!-- S 商品参考价格 -->
-                <dl>
-                  <dt><?php echo $lang['goods_index_goods_cost_price'];?><?php echo $lang['nc_colon'];?></dt>
-                  <dd class="cost-price"><strong><?php echo $lang['currency'].$output['goods']['goods_marketprice'];?></strong></dd>
-                </dl>
+       
                 <!-- S 商品发布价格 -->
                 <dl>
-                  <dt><?php echo $lang['goods_index_goods_price'];?><?php echo $lang['nc_colon'];?></dt>
+                  <dt>本 站 价<?php echo $lang['nc_colon'];?></dt>
                   <dd class="price">
                     <?php if ($output['goods']['promotion_type'] == 'groupbuy') {?>
                     <span class="tag">团购</span><strong><?php echo $lang['currency'].$output['goods']['promotion_price'];?></strong><em>(原售价<?php echo $lang['nc_colon'];?><?php echo $lang['currency'].$output['goods']['goods_price'];?>)</em>
@@ -60,6 +56,17 @@ cursor: url(<?php echo SHOP_TEMPLATES_URL;
                     <?php } else {?>
                     <strong><?php echo $lang['currency'].$output['goods']['goods_price'];?></strong>
                     <?php }?>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>可用金币<?php echo $lang['nc_colon'];?></dt>
+                  <dd class="price">
+                    <?php if($output['goods']['goods_goldcoin']){?>
+                      <strong><?php echo $output['goods']['goods_goldcoin'];?></strong>
+                      <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=pointprod&op=index" class="goldArea">金币直购专区</a>
+                      <?php }else{?>
+                      <strong><?php echo $output['goods']['goods_price'];?></strong>
+                      <?php }?>
                   </dd>
                 </dl>
                 <!-- E 商品发布价格 -->

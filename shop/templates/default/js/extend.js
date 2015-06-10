@@ -80,35 +80,59 @@ $(function(){
 	});
 
 	// 详情页图片滚动
-	var move=0;
-	var step=100;
-	$('.next').click(function(){
-		var height=$(this).parents('.viewSlideRight').find('.smallPic').height();
-		var top=parseInt($(this).parents('.viewSlideRight').find('.smallPic').css('top').replace('px',''));
-		if((height+top)<=290){
-			return;
-		}
-		move=move-step;
-		$(this).parents('.viewSlideRight').find('.smallPic').stop().animate({
-			top:move+'px'
-		});
+	// var move=0;
+	// var step=100;
+	// $('.next').click(function(){
+	// 	var height=$(this).parents('.viewSlideRight').find('.smallPic').height();
+	// 	var top=parseInt($(this).parents('.viewSlideRight').find('.smallPic').css('top').replace('px',''));
+	// 	if((height+top)<=290){
+	// 		return;
+	// 	}
+	// 	move=move-step;
+	// 	$(this).parents('.viewSlideRight').find('.smallPic').stop(true,false).animate({
+	// 		top:move+'px'
+	// 	});
 
-	});
+	// });
 	
-	$('.pre').click(function(){
-		var top=$(this).parents('.viewSlideRight').find('.smallPic').css('top').replace('px','');
-		if(top>=0){
-			move=0;
-			return;
-		} 
 
-		move=move+step;
-		$(this).parents('.viewSlideRight').find('.smallPic').stop().animate({
-			top:move+'px'
-		});
-	});
+	// $('.pre').click(function(){
+	// 	var top=$(this).parents('.viewSlideRight').find('.smallPic').css('top').replace('px','');
+	// 	if(top>=0){
+	// 		move=0;
+	// 		return;
+	// 	} 
+
+	// 	move=move+step;
+	// 	$(this).parents('.viewSlideRight').find('.smallPic').stop(true,false).animate({
+	// 		top:move+'px'
+	// 	},function(){
+	// 		preSwitch=true;
+	// 	});
+
+	// });
+	var iNow=0;
+	var oLi_Heidth=$('.smallPic a').height()+10;
+	$('.next').click(function(){
+			iNow++;
+			if(iNow==3){
+				iNow=0;
+			}
+			$('.smallPic').stop().animate({top:(-oLi_Heidth*iNow)+'px'});
+	})
+	$('.pre').click(function(){
+			iNow--;
+			if(iNow==-1){
+				iNow=2;
+			}
+			$('.smallPic').stop().animate({top:(-oLi_Heidth*iNow)+'px'})
+	})
+
+
 	$('.smallPic img').click(function(){
 		var pic=$(this).attr('data-src');
 		$('#bigPic').attr('src',pic);
 	});
+
+	
 });

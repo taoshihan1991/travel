@@ -1,0 +1,564 @@
+[2015-06-05 09:23:36] /travel/shop/?act=search&cate_id=&keyword=ttt+ ( act=search&op=index ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1000' at line 1
+SELECT * FROM `travel`.`tr_goods_class` WHERE gc_parent_id= LIMIT 1000  
+[2015-06-05 10:06:19] /travel/shop/index.php?act=goods&op=index&goods_id=100002 ( act=goods&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
+[2015-06-05 11:56:01] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:56:01] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 11:56:05] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:56:05] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 11:57:38] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:57:38] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 11:58:50] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:58:50] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 11:58:52] /travel/mobile/index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-05 11:58:55] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:58:55] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 11:58:58] /travel/mobile/index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-05 11:59:00] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:59:00] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 11:59:15] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','b65ef507034832775aa005f4fdf8803f','1433476755','wap')
+[2015-06-05 11:59:24] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:59:24] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 11:59:40] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:59:40] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 11:59:51] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 11:59:51] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 12:00:10] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 12:00:10] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:16:30] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:16:30] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:16:33] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:16:33] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:16:33] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:16:33] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:16:34] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:16:34] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:16:34] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:16:34] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:16:40] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:16:40] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:16:56] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:16:56] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:16:57] /travel/mobile/index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-05 14:16:59] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:16:59] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:18:02] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:18:02] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:23:58] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:23:58] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:25:47] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:25:47] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 14:34:31] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','77145bc27163e67c0d8312e661da37bd','1433486071','wap')
+[2015-06-05 14:35:39] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','fb32a28855fe1070cdd1b8d25c33a464','1433486139','wap')
+[2015-06-05 14:36:35] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','9ec1ae226eadbf13790da24ad6b6ecf9','1433486195','wap')
+[2015-06-05 14:38:09] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','0a48003848cd4a1a246ca91c0c247d1e','1433486289','wap')
+[2015-06-05 14:38:26] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','a1d4f5a5f779f5468cc63f8e5d9d32ba','1433486306','wap')
+[2015-06-05 14:39:18] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','4b7ce81705137169e752433204a424b7','1433486358','wap')
+[2015-06-05 14:39:55] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','d77fef325e50296a409c1b3e941a39fe','1433486395','wap')
+[2015-06-05 14:40:53] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','1bc346c6d73cdbc4778f2b4274b6eb8f','1433486453','wap')
+[2015-06-05 14:41:35] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','556f1a349de88f6c2076df0a696e37f8','1433486495','wap')
+[2015-06-05 14:41:52] /travel/mobile/index.php?act=login ( act=login&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+INSERT  INTO `travel`.`tr_mb_user_token` (member_id,member_name,token,login_time,client_type) VALUES ('2','test','3724ede81659411047df09f900639e57','1433486512','wap')
+[2015-06-05 14:43:11] /travel/mobile/index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 14:44:20] /travel/mobile/index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-05 14:44:22] /travel/mobile/index.php?act=member_cart&op=cart_list ( act=member_cart&op=cart_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 14:44:25] /travel/mobile/index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 14:44:26] /travel/mobile/index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 14:44:32] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 14:44:32] /travel/mobile/index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:16:45] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:16:45] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:16:46] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:16:46] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:18:58] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:20:11] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:20:13] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:20:15] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:20:16] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:20:25] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:20:57] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:21:05] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:21:05] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:22:50] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:22:50] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:22:56] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:22:56] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:23:00] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:23:00] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:23:02] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:23:02] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:23:06] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:23:06] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:24:45] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:24:45] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:24:46] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:24:46] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:24:47] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:24:47] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:24:47] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:24:47] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_home' doesn't exist
+SELECT * FROM `travel`.`tr_mb_home` ORDER BY h_sort asc LIMIT 30  
+[2015-06-05 15:24:57] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:24:59] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:25:00] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:25:06] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:25:36] /travel/mobile//index.php?act=member_buy&op=buy_step1 ( act=member_buy&op=buy_step1 ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:25:39] /travel/mobile//index.php?act=member_cart&op=cart_add ( act=member_cart&op=cart_add ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:25:54] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:32:32] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:32:43] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:32:54] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:33:01] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:33:03] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-05 15:33:06] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:33:19] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:33:38] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:33:48] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:34:03] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:34:13] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:34:25] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-05 15:34:26] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:34:28] /travel/mobile//index.php?act=member_cart&op=cart_list ( act=member_cart&op=cart_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:34:29] /travel/mobile//index.php?act=member_cart&op=cart_list ( act=member_cart&op=cart_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:34:30] /travel/mobile//index.php?act=member_cart&op=cart_list ( act=member_cart&op=cart_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:34:31] /travel/mobile//index.php?act=member_cart&op=cart_list ( act=member_cart&op=cart_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:34:32] /travel/mobile//index.php?act=member_cart&op=cart_list ( act=member_cart&op=cart_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:34:33] /travel/mobile//index.php?act=member_cart&op=cart_list ( act=member_cart&op=cart_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:34:33] /travel/mobile//index.php?act=member_cart&op=cart_list ( act=member_cart&op=cart_list ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:34:37] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:39:21] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:40:29] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:40:50] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:43:02] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:43:20] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:43:35] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:02] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:03] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:03] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:04] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:04] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:04] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:04] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:04] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:13] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:19] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:44:54] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:45:12] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:45:17] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:45:17] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:51:03] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:51:13] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:51:18] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:51:25] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:52:08] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-05 15:52:09] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:52:11] /travel/mobile//index.php?act=member_index ( act=member_index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_user_token' doesn't exist
+SELECT * FROM `travel`.`tr_mb_user_token` WHERE ( token = 'null' ) LIMIT 1  
+[2015-06-05 15:52:15] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:52:32] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:52:40] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:52:50] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:52:58] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 15:54:45] /travel/mobile//index.php?act=goods_class&callback=jsonp1 ( act=goods_class&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_category' doesn't exist
+SELECT * FROM `travel`.`tr_mb_category` as `mb_category`   order by gc_id
+[2015-06-05 15:54:46] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:00:26] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:01:13] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:01:57] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:02:40] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:02:43] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:03:45] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:03:46] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:03:46] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:03:46] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:03:48] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:04:06] /travel/mobile/ ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:04:08] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:04:08] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:04:09] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:04:09] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:05:33] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:05:41] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:05:49] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:06:37] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:06:39] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:06:52] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:07:21] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:07:54] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:08:10] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:08:10] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:08:22] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:08:28] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:12:18] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:12:51] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  
+[2015-06-05 16:13:20] /travel/mobile//index.php?act=index ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_mb_ad' doesn't exist
+SELECT * FROM `travel`.`tr_mb_ad` ORDER BY link_sort asc LIMIT 30  

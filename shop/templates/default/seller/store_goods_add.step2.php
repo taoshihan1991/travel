@@ -91,6 +91,13 @@
           <p class="hint">根据销售价与市场价比例自动生成，不需要编辑。</p>
         </dd>
       </dl>
+      <dl>
+        <dt>可用金币<?php echo $lang['nc_colon'];?></dt>
+        <dd>
+          <input name="g_goldcoin" value="<?php echo $output['goods']['goods_goldcoin']; ?>" type="text" class="text w60" />
+          <p class="hint">如果没有金币直购活动请留空。</p>
+        </dd>
+      </dl>
       <?php if(is_array($output['spec_list']) && !empty($output['spec_list'])){?>
       <?php $i = '0';?>
       <?php foreach ($output['spec_list'] as $k=>$val){?>

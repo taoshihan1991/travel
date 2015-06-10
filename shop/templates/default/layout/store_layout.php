@@ -49,6 +49,7 @@ catch(e){}
 </script>
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/IE6_MAXMIX.js"></script>
 <![endif]-->
+
 </head>
 <body>
 <?php require_once template('layout/layout_top');?>

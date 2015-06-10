@@ -226,6 +226,7 @@ class store_goods_addControl extends BaseSellerControl {
                         $goods['goods_vat']         = $common_array['goods_vat'];
                         $goods['goods_commend']     = $common_array['goods_commend'];
                         $goods['goods_stcids']      = $common_array['goods_stcids'];
+                        $goods['goods_goldcoin']    = intval($_POST['g_goldcoin']);//@tsh 2015年6月9日 10:29:06
                         $goods_id = $model_goods->addGoods($goods);
                         $model_type->addGoodsType($goods_id, $common_id, array('cate_id' => $_POST['cate_id'], 'type_id' => $_POST['type_id'], 'attr' => $_POST['attr']));
 
@@ -261,6 +262,7 @@ class store_goods_addControl extends BaseSellerControl {
                     $goods['goods_vat']         = $common_array['goods_vat'];
                     $goods['goods_commend']     = $common_array['goods_commend'];
                     $goods['goods_stcids']      = $common_array['goods_stcids'];
+                    $goods['goods_goldcoin']    = intval($_POST['g_goldcoin']);//@tsh 2015年6月9日 10:29:06
                     $goods_id = $model_goods->addGoods($goods);
                     $model_type->addGoodsType($goods_id, $common_id, array('cate_id' => $_POST['cate_id'], 'type_id' => $_POST['type_id'], 'attr' => $_POST['attr']));
 

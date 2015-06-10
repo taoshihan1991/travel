@@ -155,16 +155,16 @@ $(function(){
         <div id="menuNavWrapper">
           <div id="menuNavPanel">
             <ul id="menuNav">
-              <li class="current">
-                <a href="<?php echo SHOP_SITE_URL;?>">综合首页</a>
+              <li <?php if(!$_GET['cate_id']){?>class="current"<?php }?>>
+                <a href="../index.html">综合首页</a>
                 <div class="all-category">
                 <?php require template('layout/home_goods_class_extend');?>
                 </div>
               </li>
-              <?php $i=0;foreach($output['show_goods_class'] as $vals){$i++;if($i>=10) break;?>
-              <li>
+              <?php $i=0;foreach($output['show_goods_class'] as $vals){$i++;if($i>=11) break;?>
+              <li <?php if($vals['gc_id']==$_GET['cate_id']){?>class="current"<?php }?>>
               
-                <a href="<?php echo urlShop('search','index',array('cate_id'=> $vals['gc_id']));?>" >
+                <a href="<?php echo urlShop('index','index',array('cate_id'=> $vals['gc_id']));?>" >
                   <?php echo $vals['gc_name'];?>
                   <i></i>
                 </a>

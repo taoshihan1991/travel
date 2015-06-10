@@ -34,7 +34,7 @@ class goods_classControl extends mobileHomeControl{
         $goods_class_array = ($nav = F('goods_class'))? $nav :H('goods_class',true,'file');
 
 		$class_list = $model_goods_class->getClassList(array('gc_parent_id' => 0), 'gc_id,gc_name');
-        $mb_categroy = $model_mb_category->getLinkList(array());
+        //$mb_categroy = $model_mb_category->getLinkList(array());
         $mb_categroy = array_under_reset($mb_categroy, 'gc_id');
         foreach ($class_list as $key => $value) {
             if(!empty($mb_categroy[$value['gc_id']])) {

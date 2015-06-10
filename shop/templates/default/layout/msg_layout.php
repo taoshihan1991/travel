@@ -1,4 +1,141 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>跳转提示</title> 
+<body>
+<!-- 弹窗 -->
+<style type="text/css">
+.alertBoxBg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 999;
+}
+.alertBoxContainer{
+    position: fixed;
+    width: 380px;
+    height: 160px;
+    left: 50%;
+    top: 40%;
+    margin-left: -190px;
+    margin-top: -80px;
+    background: #fff;
+    color: #444;
+    border-radius: 5px;
+    border:6px solid #707070;
+    z-index: 9999;
+}
+.alertBoxContainer .alertBoxTitle{
+    font-size: 14px;
+    font-weight: 700;
+    color: #369;
+    height: 38px;
+    line-height: 38px;
+    overflow: hidden;
+}
+.alertBoxContainer .alertBoxTitle span{
+    padding-left: 10px;
+}
+.alertBoxContainer .alertBoxTitle .ico{
+    display: block;
+    float: right;
+    padding:2px 4px;
+    background: #ddd;
+    font-style: normal;
+    line-height: 12px;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 1px;
+
+}
+.alertBoxContainer .alertBoxTitle .ico:hover{
+    background: #369;
+    color: #fff;
+}
+.alertBoxContainer .alertBoxInfo{
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+    text-align: center;
+    color: #444;
+    font-size: 16px;
+    padding-top: 10px;
+    font-weight: bold;
+
+}
+.icon-ok-sign,.icon-info-sign{
+	font-size: 20px;
+	font-weight: bold;
+}
+.alertBoxContainer .alertBoxBtn{
+	display: block;
+    background:#0b60a1;
+    padding: 5px 7px;
+    color: #fff;
+    border-bottom: 1px solid #095188;
+    border-radius: 1px;
+    font-size: 12px;
+    text-decoration: none;
+}
+.alertBoxContainer .alertBoxBtn:hover{
+}
+.alertBoxContainer .alertBoxBottom{
+    position: relative;
+}
+.alertBoxContainer .alertBoxBottom .alertBoxBtn{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+</style>
+<div class="alertBoxBg"></div>
+<div class="alertBoxContainer">
+    <div class="alertBoxTitle">
+        <span>提示信息</span>
+        <a class="ico" href="<?php echo $output['url'];?>">x</a>
+    </div>
+    <div class="alertBoxInfo">
+        <div class="msg">
+	      	<?php if($output['msg_type'] == 'error'){ ?>
+	     	 <i class="icon-info-sign" style="color: #D93600;">X</i>
+	        <?php }else { ?>
+	      	<i class="icon-ok-sign" style=" color: #27AE61;">√</i>
+	        <?php } ?>
+	        <?php require_once($tpl_file);?>
+		</div>
+    </div>
+    <div class="alertBoxBottom">
+        <a href="<?php echo $output['url'];?>" class="alertBoxBtn">确定</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+<?php if (!empty($output['url'])){
+?>
+	window.setTimeout("javascript:location.href='<?php echo $output['url'];?>'", <?php echo $time;?>);
+<?php
+}else{
+?>
+	window.setTimeout("javascript:history.back()", <?php echo $time;?>);
+<?php
+}?>
+</script>
+</body> 
+</html> 
+<?php die;?>
+
+
+
 <!doctype html>
 <html>
 <head>
@@ -57,11 +194,11 @@ $(function(){
 <script type="text/javascript">
 <?php if (!empty($output['url'])){
 ?>
-	window.setTimeout("javascript:location.href='<?php echo $output['url'];?>'", <?php echo $time;?>);
+	//window.setTimeout("javascript:location.href='<?php echo $output['url'];?>'", <?php echo $time;?>);
 <?php
 }else{
 ?>
-	window.setTimeout("javascript:history.back()", <?php echo $time;?>);
+	//window.setTimeout("javascript:history.back()", <?php echo $time;?>);
 <?php
 }?>
 </script>

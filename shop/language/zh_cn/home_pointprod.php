@@ -1,38 +1,38 @@
 <?php
 defined('InShopNC') or exit('Access Invalid!');
 /**
- * 积分礼品功能公用
+ * 金币礼品功能公用
  */
-$lang['pointshop_unavailable']	 		= '系统未开启积分中心或者积分功能';
-$lang['pointprod_unavailable']	 		= '系统未开启积分兑换功能';
+$lang['pointshop_unavailable']	 		= '系统未开启金币中心或者金币功能';
+$lang['pointprod_unavailable']	 		= '系统未开启金币兑换功能';
 $lang['pointprod_parameter_error']		= '参数错误';
 $lang['pointprod_record_error']			= '记录信息错误';
 $lang['pointprod_userrecord_error']		= '用户信息错误';
 $lang['pointprod_goodsrecord_error']	= '礼品信息错误';
-$lang['pointprod_list_title']	 		= '积分礼品';
+$lang['pointprod_list_title']	 		= '金币礼品';
 $lang['pointprod_goodsprice']	 		= '市场价格';
 $lang['pointprod_willbe']	 			= '即将开始';
 $lang['pointprod_exchange']	 			= '我要兑换';
 $lang['pointprod_exchange_end']	 		= '兑换结束';
-$lang['pointprod_exchange_point']	 	= '兑换积分';
+$lang['pointprod_exchange_point']	 	= '兑换金币';
 $lang['pointprod_pointprod_unit']	 	= '个';
 $lang['pointprod_salenum']	 	        = '兑换数量';
-$lang['pointprod_pointslog']	 	    = '积分获得明细';
+$lang['pointprod_pointslog']	 	    = '金币获得明细';
 
 $lang['pointprod_ad_text1']	 	    = '超值换购';
-$lang['pointprod_ad_text2']	 	    = '商城礼品惊喜多<br/>会员积分免费换';
+$lang['pointprod_ad_text2']	 	    = '商城礼品惊喜多<br/>会员金币免费换';
 
-$lang['pointprod_pointsname']	 	    = '积分';
+$lang['pointprod_pointsname']	 	    = '金币';
 /**
- * 积分列表
+ * 金币列表
  */
 $lang['pointprod_list_hello_tip1']	 		= '欢迎您';
-$lang['pointprod_list_hello_tip2']	 		= '您的积分是';
+$lang['pointprod_list_hello_tip2']	 		= '您的金币是';
 $lang['pointprod_list_hello_tip3']	 		= '已选择兑换礼品';
-$lang['pointprod_list_hello_tip5']	 		= '登录显示积分情况';
+$lang['pointprod_list_hello_tip5']	 		= '登录显示金币情况';
 $lang['pointprod_list_hello_login']	 		= '会员登录';
-$lang['pointprod_list_hello_pointrule']	 	= '积分细则';
-$lang['pointprod_list_hello_pointexrule']	= '积分兑换说明';
+$lang['pointprod_list_hello_pointrule']	 	= '金币细则';
+$lang['pointprod_list_hello_pointexrule']	= '金币兑换说明';
 //$lang['pointprod_list_recommendprod']	 	= '推荐热卖礼品';
 $lang['pointprod_list_newprod']	 			= '最新兑换礼品';
 $lang['pointprod_list_allprod']	 			= '全部兑换礼品';
@@ -40,10 +40,10 @@ $lang['pointprod_list_more']	 	        = '更多兑换';
 $lang['pointprod_list_top3']	 	        = '兑换排行榜';
 $lang['pointprod_list_null']				= '暂无礼品';
 /**
- * 积分详细
+ * 金币详细
  */
 $lang['pointprod_info_needpoint']	 			= '兑换所需';
-$lang['pointprod_info_mypoint']	 				= '我的积分';
+$lang['pointprod_info_mypoint']	 				= '我的金币';
 $lang['pointprod_info_goods_serial']			= '礼品编号';
 $lang['pointprod_info_goods_limittime']			= '兑换时间';
 $lang['pointprod_info_goods_limittime_to']			= '至';

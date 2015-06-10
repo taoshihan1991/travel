@@ -222,7 +222,6 @@ class store_goods_onlineControl extends BaseSellerControl {
         }
         
         $model_goods = Model ( 'goods' );
-
         $update_common = array();
         $update_common['goods_name']         = $_POST['g_name'];
         $update_common['goods_jingle']       = $_POST['g_jingle'];
@@ -254,6 +253,7 @@ class store_goods_onlineControl extends BaseSellerControl {
         $update_common['goods_stcids']       = ',' . implode(',', array_unique($_POST['sgcate_id'])) . ',';    // 首尾需要加,
         $update_common['plateid_top']        = intval($_POST['plate_top']) > 0 ? intval($_POST['plate_top']) : '';
         $update_common['plateid_bottom']     = intval($_POST['plate_bottom']) > 0 ? intval($_POST['plate_bottom']) : '';
+        $update_common['goods_goldcoin']     = intval($_POST['g_goldcoin']);//@tsh 2015年6月9日 10:29:06
         
         $return = $model_goods->editGoodsCommon($update_common, array('goods_commonid' => $common_id, 'store_id' => $_SESSION['store_id']));
         if ($return) {
@@ -298,6 +298,7 @@ class store_goods_onlineControl extends BaseSellerControl {
                         $update['goods_vat']         = $update_common['goods_vat'];
                         $update['goods_commend']     = $update_common['goods_commend'];
                         $update['goods_stcids']      = $update_common['goods_stcids'];
+                        $update['goods_goldcoin']    = $update_common['goods_goldcoin'];//@tsh 2015年6月9日 10:29:06
                         $model_goods->editGoods($update, array('goods_id' => $goods_id));
                         // 生成商品二维码
                         $PhpQRCode->set('date',urlShop('goods', 'index', array('goods_id'=>$goods_id)));
@@ -330,6 +331,7 @@ class store_goods_onlineControl extends BaseSellerControl {
                         $insert['goods_vat']         = $update_common['goods_vat'];
                         $insert['goods_commend']     = $update_common['goods_commend'];
                         $insert['goods_stcids']      = $update_common['goods_stcids'];
+                        $insert['goods_goldcoin']    = $update_common['goods_goldcoin'];//@tsh 2015年6月9日 10:29:06
                         $goods_id = $model_goods->addGoods($insert);
                         
                         // 生成商品二维码
@@ -369,6 +371,7 @@ class store_goods_onlineControl extends BaseSellerControl {
                     $update['goods_vat']         = $update_common['goods_vat'];
                     $update['goods_commend']     = $update_common['goods_commend'];
                     $update['goods_stcids']      = $update_common['goods_stcids'];
+                    $update['goods_goldcoin']    = $update_common['goods_goldcoin'];//@tsh 2015年6月9日 10:29:06
                     $model_goods->editGoods($update, array('goods_id' => $goods_id));
                     // 生成商品二维码
                     $PhpQRCode->set('date',urlShop('goods', 'index', array('goods_id'=>$goods_id)));
@@ -401,6 +404,7 @@ class store_goods_onlineControl extends BaseSellerControl {
                     $insert['goods_vat']         = $update_common['goods_vat'];
                     $insert['goods_commend']     = $update_common['goods_commend'];
                     $insert['goods_stcids']      = $update_common['goods_stcids'];
+                    $insert['goods_goldcoin']    = intval($_POST['g_goldcoin']);//@tsh 2015年6月9日 10:29:06
                     $goods_id = $model_goods->addGoods($insert);
                     
                     // 生成商品二维码

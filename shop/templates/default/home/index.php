@@ -11,14 +11,14 @@
 <!-- [banner部分] -->
 <div class="indexBannerBox">
   <div class="bannerCenter">
-    <img src="<?php echo SHOP_TEMPLATES_URL;?>/images/banner1.jpg"/>
+    <img src="<?php echo $output['indexBanner']['pic']?>"/>
     <table class="indexAds">
       <tr>
+      <?php if(!empty($output['advList'])){foreach($output['advList'] as $v){?>
         <td>
-          <a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad2.jpg"/></a>
+          <a href="<?php echo $v['url']?>"><img src="<?php echo $v['pic']?>"/></a>
         </td>
-        <td><a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad3.jpg"/></a></td>
-        <td><a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad4.jpg"/></a></td>
+      <?php }}?>
       </tr>
     </table>
   </div>
@@ -27,18 +27,16 @@
     <a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad1.jpg"/></a>
     <div class="notice280">
       <div class="notice_tag_top">
-        <a href="http://news.cncn.com" class="">旅游热点</a>
+        <a href="" class="">旅游热点</a>
         <a href="" class="on">通知公告</a>
       </div>
       <div class="notice_tag_con">
           <div  style="display: none;">
-            <div class="first">
-                  <a href=""><img src="http://www.cncn.com/images/a/2015/80X52201505.jpg" alt="5月份适合去哪里旅游？" title="5月份适合去哪里旅游？" width="80" height="52"></a>
-                  <em><a href="">5月份适合起哪里旅游？</a></em>
-                  <p>五月，春夏之交，花木茂盛，温度适宜，是全年最适合旅游的月份。白居易的诗“人间四月芳菲尽”估计说的就是这个时候吧?</p>
-                </div><ul>
+            <ul class="zixun">
             <?php if(!empty($output['indexHomeArticle'])){foreach($output['indexHomeArticle'] as $v){?>
-                <li><a href="<?php echo empty($v['article_url']) ? urlShop('article', 'show',array('article_id'=> $v['article_id'])):$v['article_url'] ;?>" target="_blank"><?php echo $v['article_title']?></a></li>
+                <li>
+                  <em><a href="<?php echo urlShop('article', 'article',array('ac_id'=> $v['ac_id']));?>" target="_blank">[<?php echo $v['ac_name']?>]</a></em>
+                  <a href="<?php echo empty($v['article_url']) ? urlShop('article', 'show',array('article_id'=> $v['article_id'])):$v['article_url'] ;?>" target="_blank"><?php echo $v['article_title']?></a></li>
             <?php }}?>
                </ul>
           </div>
@@ -106,7 +104,8 @@
                       <img src="<?php echo $v['pic']?>" alt=""/>
                     </div>
                     <p class="goodsName"><?php echo $v['goods_name']?></p>
-                    <p><i>¥</i><em><?php echo $v['goods_price']?></em></p>
+                    <p><i>¥</i><em><?php echo $v['goods_price']?></em>
+                      <span class="goldcoin">金币:<?php if($v['goods_goldcoin']){echo $v['goods_goldcoin'];}else{echo $v['goods_price'];}?></span></p>
                    </a>
                   </li>
                <?php }}?>

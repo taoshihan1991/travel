@@ -26,14 +26,112 @@ class indexControl extends BaseHomeControl{
 		);
 		$indexHomeArticle=Model('article')->getJoinList($condition,10);
 		Tpl::output('indexHomeArticle',$indexHomeArticle);
-	
 
 		// 楼层效果
-		$parentId=intval($_GET['cate_id']);
-        $this->assignFloorData($parentId);
+		$cate_id=intval($_GET['cate_id']) ? intval($_GET['cate_id']) : 1;
+        $this->assignFloorData($cate_id);
+
+        //banner部分
+        $this->assignBanner($cate_id);
+
+
 
 		Model('seo')->type('index')->show();
 		Tpl::showpage('index');
+	}
+
+	/**
+	* 按楼层分配数据
+	* @return 分配变量
+	*/
+	public function assignBanner($cate_id){
+		// banner下方小广告位
+		switch ($cate_id) {
+			case 1:
+				$advid=374;
+				$bannerId=20;
+				break;
+			case 2:
+				$advid=376;
+				$bannerId=21;
+				break;
+			case 3:
+				$advid=377;
+				$bannerId=22;
+				break;
+			case 256:
+				$advid=378;
+				$bannerId=23;
+				break;
+			case 308:
+				$advid=379;
+				$bannerId=24;
+				break;
+			case 470:
+				$advid=380;
+				$bannerId=25;
+				break;
+			case 530:
+				$advid=381;
+				$bannerId=26;
+				break;
+			case 593:
+				$advid=381;
+				$bannerId=26;
+				break;
+			case 662:
+				$advid=382;
+				$bannerId=27;
+				break;
+			case 730:
+				$advid=383;
+				$bannerId=28;
+				break;
+			default:
+				$advid=374;
+				$bannerId=20;
+				break;
+		}
+		$advList=$this->getAdvByAdvId($advid);
+		$this->assign('advList',$advList);
+
+		$bannerList=$this->getAdvByAdvId(375);
+		foreach($bannerList as $v){
+			if($v['id']==$bannerId){
+				$indexBanner=$v;
+			}
+		}
+
+		$this->assign('indexBanner',$indexBanner);
+	}
+	/**
+	* 根据广告位id获取广告
+	* @return array()
+	*/
+	public function getAdvByAdvId($advid){
+		$condition=array(
+			'ap_id'=>$advid,
+			'field'=>'adv_content,adv_id'
+		);
+		$adv_model=Model('adv');
+		$list=$adv_model->getList($condition);
+		$advList=array();
+		foreach($list as $k=>$v){
+			$content=unserialize($v['adv_content']);
+			$temp=array();
+			$temp['pic']=UPLOAD_SITE_URL.'/shop/adv/'.$content['adv_pic'];
+			$temp['url']=$content['adv_pic_url'];
+			$temp['id']=$v['adv_id'];
+			$advList[]=$temp;
+		}
+		return $advList;
+	}
+	/**
+	* 分配变量
+	* @return 分配变量
+	*/
+	public function assign($key,$value){
+		Tpl::output($key,$value);
 	}
 
 	/**
@@ -86,9 +184,9 @@ class indexControl extends BaseHomeControl{
 		
 		foreach($categoryTab as $k=>$v){
 			if(isset($v['gc_id'])){
-				$list=$this->getDataByCate($v['child'].','.$v['gc_id'],9,360);
+				$list=$this->getDataByCate($v['child'].','.$v['gc_id'],10,360);
 			}else{
-				$list=$this->getDataByCate($v['child'],9,360);
+				$list=$this->getDataByCate($v['child'],10,360);
 			}
 			
 			$categoryTab[$k]['goods']=$list;

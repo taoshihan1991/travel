@@ -52,7 +52,7 @@ $lang['exp_st_close']		= '关闭';
 //会员
 $lang['exp_member']			= '会员';
 $lang['exp_mb_name']		= '真实姓名';
-$lang['exp_mb_jf']			= '积分';
+$lang['exp_mb_jf']			= '金币';
 $lang['exp_mb_yck']			= '预存款';
 $lang['exp_mb_jbs']			= '金币数';
 $lang['exp_mb_sex']			= '性别';
@@ -67,11 +67,11 @@ $lang['exp_mb_nv']			= '女';
 //积分明细
 $lang['exp_pi_member']		= '会员';
 $lang['exp_pi_system']		= '管理员';
-$lang['exp_pi_point']		= '积分值';
+$lang['exp_pi_point']		= '金币值';
 $lang['exp_pi_time']		= '发生时间';
 $lang['exp_pi_jd']			= '操作阶段';
 $lang['exp_pi_ms']			= '描述';
-$lang['exp_pi_jfmx']		= '积分明细';
+$lang['exp_pi_jfmx']		= '金币明细';
 
 //预存款充值
 $lang['exp_yc_no']			= '充值编号';

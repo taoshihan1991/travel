@@ -48,7 +48,7 @@ $lang['admin_set_clear_cache']			= '清空缓存';
 $lang['admin_set_operation']			= '运营管理';
 $lang['admin_set_operation_ztc_class']	= '直通车管理';
 $lang['admin_set_operation_gold_buy']	= '金币购买管理';
-$lang['admin_set_operation_pointprod']	= '积分兑换管理';
+$lang['admin_set_operation_pointprod']	= '金币兑换管理';
 /**
  * 管理员修改
  */

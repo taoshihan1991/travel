@@ -129,7 +129,7 @@ $(document).ready(function() {
       <input type="submit" class="login-submit" value="商家登录">
     </div>
   </form>
-  <div class="copyright">Powered by ShopNC2014 © 2007-2014 <a href="http://www.shopnc.net/" target="_blank">shopnc.net</a> </div>
+  <div class="copyright">Powered by qixinchina2015 © 2007-2015 <a href="http://www.qixinchina.com/" target="_blank">qixinchina.com</a> </div>
 </div>
 </body>
 </html>
