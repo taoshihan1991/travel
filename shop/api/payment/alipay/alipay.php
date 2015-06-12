@@ -210,7 +210,7 @@ class alipay{
 		while (list ($key, $val) = each ($sort_array)) {
 			$arg.=$key."=".urlencode($val)."&";
 		}
-		$url.= $arg."sign=" .$this->parameter['sign'] ."&sign_type=".$this->parameter['sign_type'];
+		$url.= $arg."sign=" .$this->parameter['sign'] ."&sign_type=".$this->parameter['sign_type'];print_r($url);die;
 		return $url;
 	}
 

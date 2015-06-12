@@ -1,3 +1,6 @@
 [2015-06-10 09:03:40] /travel/shop/?act=search&cate_id=&keyword= ( act=search&op=index ) 
 ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1000' at line 1
 SELECT * FROM `travel`.`tr_goods_class` WHERE gc_parent_id= LIMIT 1000  
+[2015-06-10 13:21:02] /travel/shop/?act=search&cate_id=&keyword=lvyou ( act=search&op=index ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1000' at line 1
+SELECT * FROM `travel`.`tr_goods_class` WHERE gc_parent_id= LIMIT 1000  

@@ -24,8 +24,16 @@ class indexControl extends BaseHomeControl{
 		$condition=array(
 			'ac_id'=>'3',
 		);
-		$indexHomeArticle=Model('article')->getJoinList($condition,10);
+		$indexHomeArticle=Model('article')->getJoinList($condition,9);
 		Tpl::output('indexHomeArticle',$indexHomeArticle);
+
+		// 通知公告
+		$condition=array(
+			'ac_id'=>'1',
+			'order'=>'article_id desc'
+		);
+		$list=Model('article')->getJoinList($condition,9);
+		Tpl::output('show_article',$list);
 
 		// 楼层效果
 		$cate_id=intval($_GET['cate_id']) ? intval($_GET['cate_id']) : 1;
@@ -103,36 +111,11 @@ class indexControl extends BaseHomeControl{
 		}
 
 		$this->assign('indexBanner',$indexBanner);
+
+		$bannerRightAd=$this->getAdvByAdvId(9);
+		$this->assign('bannerRightAd',$bannerRightAd);
 	}
-	/**
-	* 根据广告位id获取广告
-	* @return array()
-	*/
-	public function getAdvByAdvId($advid){
-		$condition=array(
-			'ap_id'=>$advid,
-			'field'=>'adv_content,adv_id'
-		);
-		$adv_model=Model('adv');
-		$list=$adv_model->getList($condition);
-		$advList=array();
-		foreach($list as $k=>$v){
-			$content=unserialize($v['adv_content']);
-			$temp=array();
-			$temp['pic']=UPLOAD_SITE_URL.'/shop/adv/'.$content['adv_pic'];
-			$temp['url']=$content['adv_pic_url'];
-			$temp['id']=$v['adv_id'];
-			$advList[]=$temp;
-		}
-		return $advList;
-	}
-	/**
-	* 分配变量
-	* @return 分配变量
-	*/
-	public function assign($key,$value){
-		Tpl::output($key,$value);
-	}
+
 
 	/**
 	* 按楼层分配数据

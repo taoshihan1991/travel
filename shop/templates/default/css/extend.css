@@ -33,6 +33,11 @@ a {
 #header{
 	background: none;
 }
+.logo{
+	width: auto;
+	height: auto;
+	position: static;
+}
 #travelHeader{
 	width: 1190px;
 	height: 100px;
@@ -301,7 +306,7 @@ a {
 }
 .notice280 .notice_tag_con {
 	clear:both;
-	height:211px;
+	height:215px;
 	padding: 5px;
 }
 .notice280 .notice_tag_con .first {
@@ -430,10 +435,10 @@ a {
 	margin-top: 5px;
 }
 #menuNavWrapper{
-	background: #11a8b9;
+	background: #229eba;
 }
 #menuNav{
-	background: #11a8b9;
+	background: #229eba;
 	height: 55px;
 }
 #menuNav li{
@@ -674,7 +679,7 @@ a {
 .now_color:hover i{ background-position:-58px 0;}
 /*详情*/
 .viewPage{
-	width: 1200px;
+	width: 1190px;
 	margin: 0 auto;
 }
 .viewPage .viewPageLeft{
@@ -841,6 +846,9 @@ a {
 }
 .viewPage .none {
 	display: none;
+}
+.viewPage .expanded #main-nav{
+	width: 950px;
 }
 .lin_a {
 	line-height: 22px;
@@ -1285,6 +1293,9 @@ a {
 	left: 28px;
 	background: url(../images/icon-product.png) no-repeat -50px -30px;
 }
+.viewPage .ncs-goods-info-content .default{
+	padding: 5px;
+}
 /*旅游轮番图样式 结束*/
 /*修改默认shopnc*/
 .nc-login-layout{
@@ -1359,6 +1370,9 @@ body .nc-layout-all{
 }
 /*footer部分*/
 .tcAboat, .joinTc, .contactTc, .tcWebSite {
-	width: 168px;
+	width: 167px;
+}
+.friendAnchor dd, .recomAnchor dd{
+	text-align: left;
 }
 

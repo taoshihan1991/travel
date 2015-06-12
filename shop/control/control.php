@@ -11,7 +11,37 @@
 defined('InShopNC') or exit('Access Invalid!');
 
 class Control{
-
+	/**
+	* 根据广告位id获取广告
+	* @return array()
+	*/
+	public function getAdvByAdvId($advid){
+		$condition=array(
+			'ap_id'=>$advid,
+			'field'=>'adv_content,adv_id'
+		);
+		$adv_model=Model('adv');
+		$list=$adv_model->getList($condition);
+		$advList=array();
+		foreach($list as $k=>$v){
+			$content=unserialize($v['adv_content']);
+			$temp=array();
+			$temp['pic']=UPLOAD_SITE_URL.'/shop/adv/'.$content['adv_pic'];
+			$temp['text']=$content['adv_word'];
+			$temp['link']=$content['adv_word_url'];
+			$temp['url']=$content['adv_pic_url'];
+			$temp['id']=$v['adv_id'];
+			$advList[]=$temp;
+		}
+		return $advList;
+	}
+	/**
+	* 分配变量
+	* @return 分配变量
+	*/
+	public function assign($key,$value){
+		Tpl::output($key,$value);
+	}
 	/**
 	 * 系统通知发送函数
 	 *
@@ -171,6 +201,10 @@ class Control{
 
 	//文章输出
 	protected function article() {
+		// 友情连接@tsh2015年6月10日 10:39:07
+        $friendLink=$this->getAdvByAdvId(384);
+        $this->assign('friendLink',$friendLink);
+        
 		if (file_exists(BASE_DATA_PATH.'/cache/index/article.php')){
 			include(BASE_DATA_PATH.'/cache/index/article.php');
 			Tpl::output('show_article',$show_article);
@@ -242,6 +276,8 @@ class Control{
 
 		Tpl::output('show_article',$show_article);
 		Tpl::output('article_list',$article_list);
+
+
 	}
 
 	/**

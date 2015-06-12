@@ -41,7 +41,7 @@ class paymentControl extends BaseHomeControl{
         if(!empty($result['error'])) {
             showMessage($result['error'], $url, 'html', 'error');
         }
-
+        
         //第三方API支付
         $this->_api_pay($result['order_pay_info'], $result['payment_info']);
 	}
@@ -75,7 +75,7 @@ class paymentControl extends BaseHomeControl{
 	    $order_info['pay_amount'] = $order_info['pdr_amount'];
 	    if(empty($order_info) || $order_info['pdr_payment_state'] == 1){
 	        showMessage(Language::get('cart_order_pay_not_exists'),$url,'html','error');
-	    }
+	    }       
 
 	    //其它第三方在线通用支付入口
 	    $this->_api_pay($order_info,$payment_info);
@@ -87,6 +87,8 @@ class paymentControl extends BaseHomeControl{
 	 *
 	 */
 	private function _api_pay($order_info, $payment_info) {
+		
+		
     	$inc_file = BASE_PATH.DS.'api'.DS.'payment'.DS.$payment_info['payment_code'].DS.$payment_info['payment_code'].'.php';
     	if(!file_exists($inc_file)){
     		showMessage(Language::get('payment_index_lose_file'),'','html','error');

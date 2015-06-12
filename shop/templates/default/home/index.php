@@ -24,7 +24,7 @@
   </div>
   <div class="bannerRight">
     <div class="login280"><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=login&op=register" target="_blank" title="游客注册" class="y"><i></i>游客注册</a><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=seller_login&op=index" target="_blank"><i></i>旅行社入驻</a></div>
-    <a href=""><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/ad1.jpg"/></a>
+    <a href="<?php echo $output['bannerRightAd'][0]['url'];?>"><img src="<?php echo $output['bannerRightAd'][0]['pic'];?>"/></a>
     <div class="notice280">
       <div class="notice_tag_top">
         <a href="" class="">旅游热点</a>
@@ -42,7 +42,7 @@
           </div>
           <div>
             <ul class="zixun">
-              <?php if(!empty($output['show_article']['notice']['list'])){foreach($output['show_article']['notice']['list'] as $v){?>
+              <?php if(!empty($output['show_article'])){foreach($output['show_article'] as $v){?>
               <li> 
                 <em><a href="<?php echo urlShop('article', 'article',array('ac_id'=> $v['ac_id']));?>" target="_blank">[<?php echo $v['ac_name']?>]</a></em>
                 <a href="<?php echo empty($v['article_url']) ? urlShop('article', 'show',array('article_id'=> $v['article_id'])):$v['article_url'] ;?>"><?php echo $v['article_title']?></a></li>
@@ -135,28 +135,28 @@
   <div id="portal-block-1026606249924" class="udiyblock"  type="CommonSource"> <ul class="cooper_list">
     <div id="portal-block-477488565169" class="udiyblock"  type="CommonSource">
       <li class="c_list1">
-        <a href="http://go.ly.com/abroad/city-busan-3176/?from=CNhome" target="_blank" class="c_bg1" rel="nofollow">釜山观光公社</a>
+        <a href="" target="_blank" class="c_bg1" rel="nofollow">釜山观光公社</a>
       </li>
       <li>
-        <a href="http://www.ly.com/zhuanti/jiangsuly/" class="c_bg2" target="_blank" rel="nofollow">江苏省旅游局</a>
+        <a href="" class="c_bg2" target="_blank" rel="nofollow">江苏省旅游局</a>
       </li>
       <li>
-        <a href="http://www.ly.com/zhuanti/tfsc/?from=CNhome" class="c_bg3"  target="_blank" rel="nofollow">四川省旅游局</a>
+        <a href="" class="c_bg3"  target="_blank" rel="nofollow">四川省旅游局</a>
       </li>
       <li>
-        <a href="http://www.ly.com/zhuanti/qxfj/?from=CNhome" class="c_bg4"  target="_blank" rel="nofollow">福建省旅游局</a>
+        <a href="" class="c_bg4"  target="_blank" rel="nofollow">福建省旅游局</a>
       </li>
       <li>
-        <a href="http://go.ly.com/gonglve/sheng-guangdong-44/?from=CNhome" class="c_bg5"  target="_blank" rel="nofollow">广东省旅游局</a>
+        <a href="" class="c_bg5"  target="_blank" rel="nofollow">广东省旅游局</a>
       </li>
       <li>
-        <a href="http://go.ly.com/gonglve/sheng-qinghai-63/?from=CNhome" class="c_bg6"  target="_blank" rel="nofollow">青海省旅游局</a>
+        <a href="" class="c_bg6"  target="_blank" rel="nofollow">青海省旅游局</a>
       </li>
       <li class="c_list7">
-        <a href="http://go.ly.com/gonglve/sheng-henan-41/?from=CNhome" class="c_bg7"  target="_blank" rel="nofollow">河南省旅游局</a>
+        <a href="" class="c_bg7"  target="_blank" rel="nofollow">河南省旅游局</a>
       </li>
       <li class="c_list8">
-        <a href="http://go.ly.com/gonglve/shi-suzhou-3205/?from=CNhome" class="c_bg8"  target="_blank" rel="nofollow">苏州市旅游局</a>
+        <a href="" class="c_bg8"  target="_blank" rel="nofollow">苏州市旅游局</a>
       </li>
     </div>
   </ul></div>

@@ -1,0 +1,3 @@
+[2015-06-11 14:37:57] /travel/shop/index.php?act=index&op=index&cate_id=1 ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`

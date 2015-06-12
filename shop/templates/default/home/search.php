@@ -34,7 +34,7 @@ _behavior: url(<?php echo SHOP_TEMPLATES_URL;
           <?php }?>
     
              <?php if(!empty($output['attr_array']) && is_array($output['attr_array'])){foreach($output['attr_array'] as $key=>$v){?>
-               
+              
              <dl class="dl-dest" <?php if(is_array($output['checked_attr'])){foreach ($output['checked_attr'] as $attkey=>$val){if($attkey==$key){?>style="display:none;"<?php }}}?>>
               <dt><?php echo($v['name'])?></dt>
               <dd class="choice">

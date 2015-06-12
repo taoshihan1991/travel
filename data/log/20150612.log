@@ -1,0 +1,6 @@
+[2015-06-12 14:37:37] /travel/shop/index.php?act=index&op=index&cate_id=1 ( act=index&op=index ) 
+ERR: Db Error: Unknown column 'id' in 'order clause'
+SELECT * FROM `travel`.`tr_article` as `article` left join `travel`.`tr_article_class` as `article_class` ON article.ac_id=article_class.ac_id  WHERE  article.ac_id = '1' order by id desc
+[2015-06-12 14:51:35] /travel/shop/index.php?act=index&op=index&cate_id=1 ( act=index&op=index ) 
+ERR: Db Error: Table 'travel.tr_goods_atindex' doesn't exist
+SHOW COLUMNS FROM `tr_goods_atindex`
