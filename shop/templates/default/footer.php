@@ -1,16 +1,16 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
 <!-- [底部] -->
 <div id="footer">
-  <ul class="clearfix">
+  <ul class="footerArticleBox">
     <!-- 反馈 -->
-    <li>
+    <li class="footerArticle">
       <dl class="clearfix question_icon">
         <dt></dt>
         <dd>意见反馈</dd>
       </dl>
       <dl class="clearfix tel24">
         <dt></dt>
-        <dd><p>24小时服务热线</p><p>4007-777-777</p></dd>
+        <dd><p>4007-777-777</p></dd>
       </dl>
     </li>
 
@@ -19,23 +19,20 @@
     <?php foreach ($output['article_list'] as $k=> $article_class){ ?>
     <?php if(!empty($article_class)){ ?>
     <!-- 关于同程 -->
-    <li>
-      <ul class="tcAboat">
-        <li>
-          <h3><?php if(is_array($article_class['class'])) echo $article_class['class']['ac_name'];?></h3>
-        </li>
-
+    <div class="footerArticle">
+        <h3><?php if(is_array($article_class['class'])) echo $article_class['class']['ac_name'];?></h3>
+        <ul>
         <?php if(is_array($article_class['list']) && !empty($article_class['list'])){ ?>
         <?php foreach ($article_class['list'] as $article){ ?>
         <li>
           <a target="_blank" title="<?php echo $article['article_title']?>" href="<?php echo urlShop('article', 'article',array('ac_id'=> $article['ac_id']));?>" rel="nofollow"><?php echo $article['article_title']?></a>
         </li>
         <?php }}?>
- 
         </li>
       </ul>
-    </li>
+    </div>
     <?php }}}?>
+    <div class="clearfix"></div>
   </ul>
   <div class="friendLink">
       <div class="friendMain clearfix">
@@ -85,7 +82,11 @@
 <!-- [//底部] -->
 
 <?php //echo getChat($layout);?>
+<div class="side_nav fixed side_nav_green">
+    <a style="visibility: visible;" class="back_top" href="javascript:;" title="返回顶部"></a>
+</div>
 
+  
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/perfect-scrollbar.min.js"></script>
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.mousewheel.js"></script>

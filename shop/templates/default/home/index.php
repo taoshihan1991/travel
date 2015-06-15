@@ -69,7 +69,7 @@
  
   <?if(is_array($output['categoryTabFloor'])){foreach($output['categoryTabFloor'] as $categoryKey=>$category){?>
   <div class="inbound theme<?php echo $categoryKey;?>" id="inbound">
-        <h3><?php echo $categoryKey+1;?>. <?php echo $category[0]['gc_name']?></h3>
+        <h3><?php echo $categoryKey+1;?>F <?php echo $category[0]['gc_name']?></h3>
         <div class="infocon">
       <div class="slpnel">
       <div class="udiyblock"  type="CommonSource"> <h4><a href="<?php echo urlShop('search','index',array('cate_id'=>$category[0]['gc_id']));?>" ><?php echo $category[0]['gc_name']?></a></h4>

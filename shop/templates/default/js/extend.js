@@ -134,5 +134,11 @@ $(function(){
 		$('#bigPic').attr('src',pic);
 	});
 
-	
+	// 回到顶部
+	$('.back_top').click(function(){
+		$('html,body').animate({
+			scrollTop:'0px'
+		},1000);
+		return false;
+	});
 });

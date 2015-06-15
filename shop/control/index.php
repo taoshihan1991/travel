@@ -14,7 +14,7 @@ class indexControl extends BaseHomeControl{
 	public function indexOp(){
 		Language::read('home_index_index');
 		Tpl::output('index_sign','index');
-
+		
 		//板块信息
 		$model_web_config = Model('web_config');
 		$web_html = $model_web_config->getWebHtml('index');
