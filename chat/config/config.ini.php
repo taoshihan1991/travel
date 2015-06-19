@@ -1,8 +1,8 @@
 <?php
 defined('InShopNC') or exit('Access Invalid!');
 
-define('NODE_SITE_URL','http://192.168.1.37:8090');
-define('CHAT_SITE_URL','http://192.168.1.37/2014/trunk/chat');
+define('NODE_SITE_URL','http://127.0.0.1:8090');
+define('CHAT_SITE_URL','http://127.0.0.1/travel/chat');
 
 
 

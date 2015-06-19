@@ -1,0 +1,15 @@
+[2015-06-19 15:41:47] /travel/shop/index.php ( act=charge&op=add ) 
+ERR: Db Error: Column 'pdr_member_id' cannot be null
+INSERT  INTO `travel`.`tr_pd_recharge` (pdr_sn,pdr_member_id,pdr_member_name,pdr_amount,pdr_add_time) VALUES ('640488043707183000',NULL,NULL,'100','1434699707')
+[2015-06-19 15:41:48] /travel/shop/index.php ( act=charge&op=add ) 
+ERR: Db Error: Column 'pdr_member_id' cannot be null
+INSERT  INTO `travel`.`tr_pd_recharge` (pdr_sn,pdr_member_id,pdr_member_name,pdr_amount,pdr_add_time) VALUES ('310488043708388000',NULL,NULL,'100','1434699708')
+[2015-06-19 15:42:13] /travel/shop/index.php ( act=charge&op=add ) 
+ERR: Db Error: Column 'pdr_member_id' cannot be null
+INSERT  INTO `travel`.`tr_pd_recharge` (pdr_sn,pdr_member_id,pdr_member_name,pdr_amount,pdr_add_time) VALUES ('840488043733344000',NULL,NULL,'100','1434699733')
+[2015-06-19 15:42:16] /travel/shop/index.php ( act=charge&op=add ) 
+ERR: Db Error: Column 'pdr_member_id' cannot be null
+INSERT  INTO `travel`.`tr_pd_recharge` (pdr_sn,pdr_member_id,pdr_member_name,pdr_amount,pdr_add_time) VALUES ('390488043736571000',NULL,NULL,'100','1434699736')
+[2015-06-19 15:42:19] /travel/shop/index.php ( act=charge&op=add ) 
+ERR: Db Error: Column 'pdr_member_id' cannot be null
+INSERT  INTO `travel`.`tr_pd_recharge` (pdr_sn,pdr_member_id,pdr_member_name,pdr_amount,pdr_add_time) VALUES ('720488043739366000',NULL,NULL,'100','1434699739')

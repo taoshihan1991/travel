@@ -26,16 +26,10 @@
               <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=cart">购物车</a>
             </li>
             <li id="topMyTc">
-              <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=pointprod&op=index">金币直购专区</a>
+              <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=pointprod&op=index" target="_blank">金币直购专区</a>
             </li>
             <li id="topMyTc">
-              <a href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_snsindex">会员中心</a>
-              <div data-height="100px">
-                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order">订单中心</a>
-                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order&state_type=state_new">待付款</a>
-                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order&state_type=state_send">待确认</a>
-                <a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=member_order&state_type=state_noeval">待评价</a>
-              </div>
+              <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/bbs" target="_blank">论坛</a>
             </li>
           
             <li id="weixinTc">

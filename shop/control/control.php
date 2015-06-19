@@ -371,6 +371,15 @@ class BaseMemberControl extends Control {
 		Tpl::output('nav_list',($nav = H('nav')) ? $nav : H('nav',true));
 		//自动更新订单，执行一次
 		if(empty($_SESSION['order_update_time'])) $this->updateOrder();
+
+		$member_model=Model('member');
+		$member_info = $member_model->infoMember(array('member_id'=>"{$_SESSION['member_id']}",'member_state'=>'1'));
+
+		if ($member_info['available_predeposit']=='0.00'&&$member_info['is_live']==0){
+			showDialog('充值成功后,才能激活成为正式会员',urlShop('charge','add'),'error');
+			exit;
+		}
+		
 	}
 
 	/**
@@ -689,6 +698,8 @@ class BaseStoreControl extends Control {
 		Tpl::output('nav_list',($g = H('nav')) ? $g : H('nav',true));
         $this->getStoreNavigation($store_id);
         $this->outputSeoInfo($this->store_info);
+
+        $this->article();//文章输出
 	}
 
 	/**

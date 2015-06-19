@@ -220,7 +220,7 @@
       <dl>
         <dt><?php echo $lang['store_goods_index_goods_desc'].$lang['nc_colon'];?></dt>
         <dd>
-          <?php showEditor('g_body',$output['goods']['goods_body'],'100%','480px','visibility:hidden;',"false",$output['editor_multimedia']);?>
+          <?php showEditor('g_body',$output['goods']['goods_body'],'100%','480px','visibility:hidden;',"true",$output['editor_multimedia']);?>
           <div class="hr8"><div class="ncsc-upload-btn"> <a href="javascript:void(0);"><span>
                   <input type="file" hidefocus="true" size="1" class="input-file" name="add_album" id="add_album" multiple="multiple">
                   </span>

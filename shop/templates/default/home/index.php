@@ -23,7 +23,7 @@
     </table>
   </div>
   <div class="bannerRight">
-    <div class="login280"><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=login&op=register" target="_blank" title="游客注册" class="y"><i></i>游客注册</a><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=seller_login&op=index" target="_blank"><i></i>旅行社入驻</a></div>
+    <div class="login280"><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=login&op=register" target="_blank" title="游客注册" class="y"><i></i>游客注册</a><a rel="nofollow" href="<?php echo SHOP_SITE_URL;?>/index.php?act=seller_login&op=index" target="_blank"><i></i>商家中心</a></div>
     <a href="<?php echo $output['bannerRightAd'][0]['url'];?>"><img src="<?php echo $output['bannerRightAd'][0]['pic'];?>"/></a>
     <div class="notice280">
       <div class="notice_tag_top">

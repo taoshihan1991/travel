@@ -13,6 +13,7 @@
 defined('InShopNC') or exit('Access Invalid!');
 
 class memberControl extends BaseMemberControl{
+
 	/**
 	 * 会员地址
 	 *

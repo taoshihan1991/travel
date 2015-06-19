@@ -116,6 +116,7 @@ class memberControl extends SystemControl{
 				$update_array['is_buy'] 			= trim($_POST['isbuy']);
 				$update_array['is_allowtalk'] 		= trim($_POST['allowtalk']);
 				$update_array['member_state'] 		= trim($_POST['memberstate']);
+				$update_array['is_live'] 		= trim($_POST['is_live']);
 				if (!empty($_POST['member_avatar'])){
 					$update_array['member_avatar'] = $_POST['member_avatar'];
 				}

@@ -183,66 +183,66 @@ if(C('mobile_isuse')){
 				)
 			);
 }
-if(C('microshop_isuse') !== null){
-	$arr['top'][] = array(
-				'args'	=> 'microshop',
-				'text'	=> $lang['nc_microshop']);
-	$arr['left'][] = array(
-				'nav' => 'microshop',
-				'text' => $lang['nc_microshop'],
-				'list' => array(
-					0 => array('args'=>'manage,microshop,microshop','text'=>$lang['nc_microshop_manage']),
-					1 => array('args'=>'goods_manage,microshop,microshop','text'=>$lang['nc_microshop_goods_manage']),
-					2 => array('args'=>'goodsclass_list,microshop,microshop','text'=>$lang['nc_microshop_goods_class']),
-					3 => array('args'=>'personal_manage,microshop,microshop','text'=>$lang['nc_microshop_personal_manage']),
-					4 => array('args'=>'personalclass_list,microshop,microshop','text'=>$lang['nc_microshop_personal_class']),
-					5 => array('args'=>'store_manage,microshop,microshop','text'=>$lang['nc_microshop_store_manage']),
-					6 => array('args'=>'comment_manage,microshop,microshop','text'=>$lang['nc_microshop_comment_manage']),
-					7 => array('args'=>'adv_manage,microshop,microshop','text'=>$lang['nc_microshop_adv_manage']),
-				)
-			);
-}
-if(C('cms_isuse') !== null){
-	$arr['top'][] = array(
-				'args'	=> 'cms',
-				'text'	=> $lang['nc_cms']);
-	$arr['left'][] = array(
-				'nav' => 'cms',
-				'text' => $lang['nc_cms'],
-				'list' => array(
-					0 => array('args'=>'cms_manage,cms_manage,cms','text'=>$lang['nc_cms_manage']),
-                    1 => array('args'=>'cms_index,cms_index,cms','text'=>$lang['nc_cms_index_manage']),
-                    2 => array('args'=>'cms_article_list,cms_article,cms','text'=>$lang['nc_cms_article_manage']),
-                    3 => array('args'=>'cms_article_class_list,cms_article_class,cms','text'=>$lang['nc_cms_article_class']),
-                    4 => array('args'=>'cms_picture_list,cms_picture,cms','text'=>$lang['nc_cms_picture_manage']),
-                    5 => array('args'=>'cms_picture_class_list,cms_picture_class,cms','text'=>$lang['nc_cms_picture_class']),
-                    6 => array('args'=>'cms_special_list,cms_special,cms','text'=>$lang['nc_cms_special_manage']),
-                    7 => array('args'=>'cms_navigation_list,cms_navigation,cms','text'=>$lang['nc_cms_navigation_manage']),
-                    8 => array('args'=>'cms_tag_list,cms_tag,cms','text'=>$lang['nc_cms_tag_manage']),
-                    9 => array('args'=>'comment_manage,cms_comment,cms','text'=>$lang['nc_cms_comment_manage']),
-				)
-			);
-}
+// if(C('microshop_isuse') !== null){
+// 	$arr['top'][] = array(
+// 				'args'	=> 'microshop',
+// 				'text'	=> $lang['nc_microshop']);
+// 	$arr['left'][] = array(
+// 				'nav' => 'microshop',
+// 				'text' => $lang['nc_microshop'],
+// 				'list' => array(
+// 					0 => array('args'=>'manage,microshop,microshop','text'=>$lang['nc_microshop_manage']),
+// 					1 => array('args'=>'goods_manage,microshop,microshop','text'=>$lang['nc_microshop_goods_manage']),
+// 					2 => array('args'=>'goodsclass_list,microshop,microshop','text'=>$lang['nc_microshop_goods_class']),
+// 					3 => array('args'=>'personal_manage,microshop,microshop','text'=>$lang['nc_microshop_personal_manage']),
+// 					4 => array('args'=>'personalclass_list,microshop,microshop','text'=>$lang['nc_microshop_personal_class']),
+// 					5 => array('args'=>'store_manage,microshop,microshop','text'=>$lang['nc_microshop_store_manage']),
+// 					6 => array('args'=>'comment_manage,microshop,microshop','text'=>$lang['nc_microshop_comment_manage']),
+// 					7 => array('args'=>'adv_manage,microshop,microshop','text'=>$lang['nc_microshop_adv_manage']),
+// 				)
+// 			);
+// }
+// if(C('cms_isuse') !== null){
+// 	$arr['top'][] = array(
+// 				'args'	=> 'cms',
+// 				'text'	=> $lang['nc_cms']);
+// 	$arr['left'][] = array(
+// 				'nav' => 'cms',
+// 				'text' => $lang['nc_cms'],
+// 				'list' => array(
+// 					0 => array('args'=>'cms_manage,cms_manage,cms','text'=>$lang['nc_cms_manage']),
+//                     1 => array('args'=>'cms_index,cms_index,cms','text'=>$lang['nc_cms_index_manage']),
+//                     2 => array('args'=>'cms_article_list,cms_article,cms','text'=>$lang['nc_cms_article_manage']),
+//                     3 => array('args'=>'cms_article_class_list,cms_article_class,cms','text'=>$lang['nc_cms_article_class']),
+//                     4 => array('args'=>'cms_picture_list,cms_picture,cms','text'=>$lang['nc_cms_picture_manage']),
+//                     5 => array('args'=>'cms_picture_class_list,cms_picture_class,cms','text'=>$lang['nc_cms_picture_class']),
+//                     6 => array('args'=>'cms_special_list,cms_special,cms','text'=>$lang['nc_cms_special_manage']),
+//                     7 => array('args'=>'cms_navigation_list,cms_navigation,cms','text'=>$lang['nc_cms_navigation_manage']),
+//                     8 => array('args'=>'cms_tag_list,cms_tag,cms','text'=>$lang['nc_cms_tag_manage']),
+//                     9 => array('args'=>'comment_manage,cms_comment,cms','text'=>$lang['nc_cms_comment_manage']),
+// 				)
+// 			);
+// }
 	
- if(C('circle_isuse') !== null){
-	$arr['top'][] = array(
-			'args'	=> 'circle',
-			'text'	=> $lang['nc_circle']);
-	$arr['left'][] = array(
-			'nav'	=> 'circle',
-			'text'	=> $lang['nc_circle'],
-			'list'	=> array(
-					0 => array('args'=>'index,circle_setting,circle','text'=>$lang['nc_circle_setting']),
-					1 => array('args'=>'index,circle_memberlevel,circle','text'=>$lang['nc_circle_memberlevel']),
-					2 => array('args'=>'class_list,circle_class,circle','text'=>$lang['nc_circle_classmanage']),
-					3 => array('args'=>'circle_list,circle_manage,circle','text'=>$lang['nc_circle_manage']),
-					4 => array('args'=>'theme_list,circle_theme,circle','text'=>$lang['nc_circle_thememanage']),
-					5 => array('args'=>'member_list,circle_member,circle','text'=>$lang['nc_circle_membermanage']),
-					6 => array('args'=>'inform_list,circle_inform,circle','text'=>$lang['nc_circle_informnamage']),
-					7 => array('args'=>'adv_manage,circle_setting,circle','text'=>$lang['nc_circle_advmanage']),
-					8 => array('args'=>'index,circle_cache,circle','text'=>$lang['nc_circle_cache'])
-			)
-	);
- }
+//  if(C('circle_isuse') !== null){
+// 	$arr['top'][] = array(
+// 			'args'	=> 'circle',
+// 			'text'	=> $lang['nc_circle']);
+// 	$arr['left'][] = array(
+// 			'nav'	=> 'circle',
+// 			'text'	=> $lang['nc_circle'],
+// 			'list'	=> array(
+// 					0 => array('args'=>'index,circle_setting,circle','text'=>$lang['nc_circle_setting']),
+// 					1 => array('args'=>'index,circle_memberlevel,circle','text'=>$lang['nc_circle_memberlevel']),
+// 					2 => array('args'=>'class_list,circle_class,circle','text'=>$lang['nc_circle_classmanage']),
+// 					3 => array('args'=>'circle_list,circle_manage,circle','text'=>$lang['nc_circle_manage']),
+// 					4 => array('args'=>'theme_list,circle_theme,circle','text'=>$lang['nc_circle_thememanage']),
+// 					5 => array('args'=>'member_list,circle_member,circle','text'=>$lang['nc_circle_membermanage']),
+// 					6 => array('args'=>'inform_list,circle_inform,circle','text'=>$lang['nc_circle_informnamage']),
+// 					7 => array('args'=>'adv_manage,circle_setting,circle','text'=>$lang['nc_circle_advmanage']),
+// 					8 => array('args'=>'index,circle_cache,circle','text'=>$lang['nc_circle_cache'])
+// 			)
+// 	);
+//  }
 return $arr;
 ?>

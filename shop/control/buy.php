@@ -16,6 +16,8 @@ class buyControl extends BaseBuyControl {
         if (!$_SESSION['member_id']){
             redirect('index.php?act=login&ref_url='.urlencode(request_uri()));
         }
+
+
         //验证该会员是否禁止购买
         if(!$_SESSION['is_buy']){
             showMessage(Language::get('cart_buy_noallow'),'','html','error');
@@ -26,6 +28,13 @@ class buyControl extends BaseBuyControl {
      * 购物车、直接购买第一步:选择收获地址和配置方式
      */
     public function buy_step1Op() {
+        $member_model=Model('member');
+        $member_info = $member_model->infoMember(array('member_id'=>"{$_SESSION['member_id']}",'member_state'=>'1'));
+        if ($member_info['available_predeposit']=='0.00'&&$member_info['is_live']==0){
+            showDialog('您没有激活成为正式会员',urlShop('charge','add'),'error');
+            exit;
+        }
+        
         $model_buy = Model('buy');
 
         $result = $model_buy->buyStep1($_POST['cart_id'], $_POST['ifcart'], $_POST['invalid_cart'], $_SESSION['member_id'], $_SESSION['store_id']);

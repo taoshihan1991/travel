@@ -181,7 +181,7 @@ class indexControl extends BaseHomeControl{
 	* 按楼层取数据
 	* @return array
 	*/
-	public function getDataByCate($cate,$limit,$pic_type='240'){
+	public function getDataByCate($cate,$limit,$pic_type='360'){
 		$goods_model=Model('goods');
 		$condition=array(
 			'goods_state'=>1,

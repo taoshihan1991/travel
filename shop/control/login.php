@@ -60,6 +60,7 @@ class loginControl extends BaseHomeControl {
 			    processClass::addprocess('login');
 			    showDialog($lang['login_index_login_fail']);
 			}
+
     		$model_member->createSession($member_info);
 			processClass::clear('login');
 			// cookie中的cart存入数据库
@@ -72,6 +73,7 @@ class loginControl extends BaseHomeControl {
 					$points_model->savePointsLog('login',array('pl_memberid'=>$member_info['member_id'],'pl_membername'=>$member_info['member_name']),true);
 				}
 			}
+
 			showDialog($lang['login_index_login_success'],$_POST['ref_url'],'succ',$extrajs);
 
 		}else{
@@ -165,17 +167,41 @@ class loginControl extends BaseHomeControl {
         $register_info['password_confirm'] = $_POST['password_confirm'];
         $register_info['email'] = $_POST['email'];
         $member_info = $model_member->register($register_info);
+
         if(!isset($member_info['error'])) {
+	     	//对接好客会员系统
+	        $data['username']=$register_info['username'];
+	        $data['password']=md5($register_info['password']);
+	        $data['key']=MEMBER_SYSTEM_KEY;
+	        $dataStr=json_encode($data);
+	        $this->toMemberSystemOp($data,MEMBER_SYSTEM_URL);
+
             $model_member->createSession($member_info);
 			processClass::addprocess('reg');
 
 			$this->mergecart();
 
 			$_POST['ref_url']	= (strstr($_POST['ref_url'],'logout')=== false && !empty($_POST['ref_url']) ? $_POST['ref_url'] : 'index.php?act=home&op=member');
-			showDialog(str_replace('site_name',C('site_name'),$lang['login_usersave_regist_success_ajax']),$_POST['ref_url'],'succ',$synstr,3);
+			showDialog(str_replace('site_name',C('site_name'),$lang['login_usersave_regist_success_ajax']),urlShop('charge','add'),'succ',$synstr,3);
         } else {
 			showDialog($member_info['error']);
         }
+	}
+	/**
+	 * 对接好客会员系统
+	 */
+	public function toMemberSystemOp($data,$url) {
+		$curl = curl_init();
+		curl_setopt($curl, CURLOPT_URL, $url);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+		if (!empty($data)){
+			curl_setopt($curl, CURLOPT_POST, 1);
+			curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+		}
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		$output = curl_exec($curl);
+		curl_close($curl);
 	}
 	/**
 	 * 会员名称检测

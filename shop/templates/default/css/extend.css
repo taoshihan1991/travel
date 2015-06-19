@@ -1402,3 +1402,15 @@ body .nc-layout-all{
 #footer .footerArticle li{
 	line-height: 25px;
 }
+.ncc-point-flow{
+	display: none;
+}
+body .wrapper{
+	width: 1190px;
+}
+body .ncc-wrapper{
+	width: 1190px;
+}
+body .ncc-head-layout{
+	width: 1190px;	
+}

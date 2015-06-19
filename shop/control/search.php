@@ -20,6 +20,22 @@ class searchControl extends BaseHomeControl {
     private $_model_search;
 
     public function indexOp() {
+
+        switch ($_GET['cate_id']) {
+                  case '308'://文化中心
+                    header("location:".urlShop('article','indexArticleShow',array('ac_id'=> 11,'cate_id'=>$_GET['cate_id'])));
+                    break;
+                  case '470'://游轮中心
+                    header("location:".urlShop('article','indexArticleShow',array('ac_id'=> 12,'cate_id'=>$_GET['cate_id'])));
+                    break;
+                  case '530'://春芝堂商场
+                    header("location:".'http://www.chinaspringtown.com');
+                    break;
+                  case '593'://商学院
+                    header("location:".urlShop('article','indexArticleShow',array('ac_id'=> 10,'cate_id'=>$_GET['cate_id'])));
+                    break;
+        }
+
         Language::read('home_goods_class_index');
         $this->_model_search = Model('search');
 

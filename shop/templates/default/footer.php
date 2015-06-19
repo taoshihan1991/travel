@@ -81,7 +81,7 @@
 </div>
 <!-- [//底部] -->
 
-<?php //echo getChat($layout);?>
+<?php echo getChat($layout);?>
 <div class="side_nav fixed side_nav_green">
     <a style="visibility: visible;" class="back_top" href="javascript:;" title="返回顶部"></a>
 </div>

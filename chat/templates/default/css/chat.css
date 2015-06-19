@@ -30,16 +30,16 @@
 .chat-list dd:hover a:hover { background-position: -130px -60px;}
 .chat-list dd a.msg { visibility: visible; background-position: -130px -60px;}
 .chat-box .bottom-bar { background-color: #30A9FC; width: 160px; height: 24px; padding: 8px 10px;}
-.chat-box .bottom-bar .ico { line-height: 999px; background: url(../images/ico_b.png) no-repeat 0 0; vertical-align: middle; display: inline-block; *display: inline/*IE7*/; width: 28px; height: 24px; margin-right: 12px; overflow: hidden; cursor: pointer; *zoom: 1;}
-.chat-box .bottom-bar .ico2 { line-height: 999px; background: url(../images/ico_b.gif) no-repeat 0 0; vertical-align: middle; display: inline-block; *display: inline/*IE7*/; width: 28px; height: 24px; margin-right: 12px; overflow: hidden; cursor: pointer; *zoom: 1;}
-.chat-box .bottom-bar a { font-size: 16px; font-weight: 600; line-height: 24px; color: #FFF; vertical-align: middle; display: inline-block; *display: inline/*IE7*/; text-shadow: 1px 1px 0 rgba(2,103,170,0.5); *zoom: 1;}
-.chat-box .bottom-bar a i { background: url(../images/chat_bg.png) no-repeat -130px -20px; vertical-align: middle; display: inline-block; *display: inline/*IE7*/; width: 16px; height: 16px; margin-left: 12px; *zoom: 1;}
+.chat-box .bottom-bar .ico { line-height: 999px; background: url(../images/ico_b.png) no-repeat 0 0; vertical-align: middle; display: inline-block; width: 28px; height: 24px; margin-right: 12px; overflow: hidden; cursor: pointer;}
+.chat-box .bottom-bar .ico2 { line-height: 999px; background: url(../images/ico_b.gif) no-repeat 0 0; vertical-align: middle; display: inline-block; width: 28px; height: 24px; margin-right: 12px; overflow: hidden; cursor: pointer;}
+.chat-box .bottom-bar a { font-size: 16px; font-weight: 600; line-height: 24px; color: #FFF; vertical-align: middle; display: inline-block;  text-shadow: 1px 1px 0 rgba(2,103,170,0.5);}
+.chat-box .bottom-bar a i { background: url(../images/chat_bg.png) no-repeat -130px -20px; vertical-align: middle; display: inline-block; width: 16px; height: 16px; margin-left: 12px;}
 
 /*状态*/
-.chat_online, .chat_offline { line-height: 999% !important; background: url(../images/chat_state_01.gif) no-repeat 0 0; vertical-align: middle; display: inline-block; *display: inline/*IE7*/; width: 21px; height: 21px; margin: 0 0 0 5px; overflow: hidden; *zoom: 1;}
+.chat_online, .chat_offline { background: url(../images/chat_state_01.gif) no-repeat 0 0; vertical-align: middle; text-indent: 999%; display: inline-block; width: 21px; height: 21px; margin: 0 0 0 5px; overflow: hidden;}
 .chat_offline { background-position: 0 -21px; }
 
-.chat_online_02, .chat_offline_02 { line-height: 999% !important; background: url(../images/chat_state_02.gif) no-repeat 0 0; vertical-align: middle; display: inline-block; *display: inline/*IE7*/; width: 77px; height: 21px; margin: 0 0 0 5px; overflow: hidden; *zoom: 1;}
+.chat_online_02, .chat_offline_02 { background: url(../images/chat_state_02.gif) no-repeat 0 0; vertical-align: middle; text-indent: 999%; display: inline-block; width: 77px; height: 21px; margin: 0 0 0 5px; overflow: hidden;}
 .chat_offline_02 { background-position: 0 -21px; }
 
 

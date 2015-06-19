@@ -142,6 +142,17 @@
           <td class="vatop tips"></td>
         </tr>
         <tr>
+          <td colspan="2" class="required"><label>是否激活:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform onoff">
+            <label for="is_live_1" class="cb-enable <?php if($output['member_array']['is_live'] == '1'){ ?>selected<?php } ?>" ><span>是</span></label>
+            <label for="is_live_2" class="cb-disable <?php if($output['member_array']['is_live'] == '0'){ ?>selected<?php } ?>" ><span>否</span></label>
+            <input id="is_live_1" name="is_live" <?php if($output['member_array']['is_live'] == '1'){ ?>checked="checked"<?php } ?>  value="1" type="radio">
+            <input id="is_live_2" name="is_live" <?php if($output['member_array']['is_live'] == '0'){ ?>checked="checked"<?php } ?> value="0" type="radio"></td>
+          <td class="vatop tips"></td>
+        </tr>
+        <tr>
           <td colspan="2" class="required"><label><?php echo $lang['member_index_points']?>:</label></td>
         </tr>
         <tr class="noborder">
