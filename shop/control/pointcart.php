@@ -26,12 +26,10 @@ class pointcartControl extends BaseHomeControl {
 			showMessage(Language::get('pointcart_unlogin_error'),'index.php?act=login','html','error');
 		}
 		
-	    $member_model=Model('member');
-        $member_info = $member_model->infoMember(array('member_id'=>"{$_SESSION['member_id']}",'member_state'=>'1'));
-        if ($member_info['available_predeposit']=='0.00'&&$member_info['is_live']==0){
-            showDialog('您没有激活成为正式会员',urlShop('charge','add'),'error');
-            exit;
-        }
+		if (!checkLive()){
+			showDialog('请先充值,等待激活成为正式会员',urlShop('charge','add'),'error');
+			exit;
+		}
 
 	}
 	/**

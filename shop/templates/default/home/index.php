@@ -63,6 +63,48 @@
 
 
 
+<!-- [会员专享] -->
+<?php
+if($_GET['cate_id']==1){
+  $model_pointsprod = Model('pointprod');
+  $new_pointsprod = $model_pointsprod->getPointProdListNew('*',array('pgoods_show'=>1,'pgoods_state'=>0),'pgoods_sort asc,pgoods_id desc',5);
+  //$memberPromote=
+}
+?>
+  <?if(is_array($new_pointsprod)){foreach($new_pointsprod as $goodsKey=>$v){?>
+  <div class="inbound theme4" id="inbound">
+        <h3>会员专享</h3>
+        <div class="infocon">
+      <div class="slpnel">
+        <a href="<?php echo urlShop('pointprod','index')?>" style="display:block;background:none;" target="_blank"><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/vip.png"/></a>
+      </div>
+      <div class="srpnel">
+
+ 
+          <div class="prooutinbound-list pnel">
+            <ul><div id="portal-block-692663448760" class="udiyblock"  type="CommonSource">  
+                  <li  class="<?php if($goodsKey%5==4){?>mr0<?php }?>">
+                    <a href="<?php echo urlShop('pointprod','pinfo',array('id'=>$v['pgoods_id']))?>" target="_blank">
+                    <div class="indexThumb">
+                      <img src="<?php echo $v['pgoods_image']?>" alt="<?php echo $v['pgoods_name']?>"/>
+                    </div>
+                    <p class="goodsName"><?php echo $v['pgoods_name']?></p>
+                    <p><i>金币</i><em><?php echo $v['pgoods_points']?></em></p>
+                   </a>
+                  </li>
+                      </div></ul>
+            </div>
+
+        <div class="prooutinbound-list pnel none"><ul></ul></div>
+      </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <?php }}?>
+<!-- [//会员专享] -->
+
+
 
 
 
@@ -85,7 +127,7 @@
       <div class="srpnel">
       <div class="udiyblock"  type="CommonSource">   
               <div>
-                        <ul>
+                        <ul  class="indexTabBtn">
                           <?if(is_array($category)){foreach($category as $k=>$cate){?>
                             <li <?php if($k==0){?>class="cur"<?php }?>><a des="<?php echo $cate['gc_name']?>" title="<?php echo $cate['gc_name']?>"><?php echo $cate['gc_name']?></a></li>
                           <?php }}?>

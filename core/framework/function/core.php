@@ -12,6 +12,15 @@
  * @since      File available since Release v1.1
  */
 defined('InShopNC') or exit('Access Invalid!');
+function checkLive(){
+	$member_model=Model('member');
+	$member_info = $member_model->infoMember(array('member_id'=>"{$_SESSION['member_id']}",'member_state'=>'1'));
+	if ($member_info['is_live']==0){
+		return false;
+	}else{
+		return true;
+	}
+} 
 function timeFormat($time){
  $now=time();
  //传递时间与当前时间秒相差

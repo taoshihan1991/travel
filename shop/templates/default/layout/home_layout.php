@@ -122,7 +122,7 @@ $(function(){
 <!-- [导航头部部分] -->
 <div id="travelHeader">
           <div class="logo">
-            <img src="<?php echo SHOP_TEMPLATES_URL;?>/images/logo.jpg"/>
+            <a href="<?php echo SHOP_SITE_URL;?>"><img src="<?php echo SHOP_TEMPLATES_URL;?>/images/logo.jpg"/></a>
           </div>
 
           <!--旅游搜索框-->
@@ -156,7 +156,7 @@ $(function(){
           <div id="menuNavPanel">
             <ul id="menuNav">
               <li <?php if(!$_GET['cate_id']){?>class="current"<?php }?>>
-                <a href="../index.html">综合首页</a>
+                <a href="<?php echo SHOP_SITE_URL;?>">综合首页</a>
                 <div class="all-category">
                 <?php require template('layout/home_goods_class_extend');?>
                 </div>
@@ -167,19 +167,9 @@ $(function(){
                 <a href="
                 <?php 
                 switch ($vals['gc_id']) {
-                  case '308'://文化中心
-                    echo urlShop('article','indexArticleShow',array('ac_id'=> 11,'cate_id'=>$vals['gc_id']));
-                    break;
-                  case '470'://游轮中心
-                    echo urlShop('article','indexArticleShow',array('ac_id'=> 12,'cate_id'=>$vals['gc_id']));
-                    break;
                   case '530'://春芝堂商场
                     echo 'http://www.chinaspringtown.com';
                     break;
-                  case '593'://商学院
-                    echo urlShop('article','indexArticleShow',array('ac_id'=> 10,'cate_id'=>$vals['gc_id']));
-                    break;
-                  
                   default:
                     echo urlShop('index','index',array('cate_id'=> $vals['gc_id']));
                     break;

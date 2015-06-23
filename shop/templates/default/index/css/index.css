@@ -24,7 +24,7 @@
     display: block;
     width: 110px;
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     position: relative;
 }
 
@@ -116,7 +116,7 @@
 
 .menu_two a {
     display: block;
-    width: 168px;
+    width:148px;
     height: 57px;
     line-height: 57px;
     font-weight: bold;

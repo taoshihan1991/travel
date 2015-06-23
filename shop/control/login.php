@@ -171,10 +171,12 @@ class loginControl extends BaseHomeControl {
         if(!isset($member_info['error'])) {
 	     	//对接好客会员系统
 	        $data['username']=$register_info['username'];
-	        $data['password']=md5($register_info['password']);
+	        $data['password']=$register_info['password'];
 	        $data['key']=MEMBER_SYSTEM_KEY;
 	        $dataStr=json_encode($data);
-	        $this->toMemberSystemOp($data,MEMBER_SYSTEM_URL);
+	        $url=MEMBER_SYSTEM_URL."/Synchro.aspx?Usercode={$data['username']}&Password={$data['password']}";
+	        $res=file_get_contents($url);
+	        //$this->toMemberSystemOp($data,MEMBER_SYSTEM_URL);
 
             $model_member->createSession($member_info);
 			processClass::addprocess('reg');
@@ -203,6 +205,7 @@ class loginControl extends BaseHomeControl {
 		$output = curl_exec($curl);
 		curl_close($curl);
 	}
+
 	/**
 	 * 会员名称检测
 	 *

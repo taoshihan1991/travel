@@ -43,7 +43,7 @@ $(function(){
 	});
 
 	// 首页tab
-	$('.udiyblock li').click(function(){
+	$('.indexTabBtn li').click(function(){
 		$(this).parents('.udiyblock').find('li').removeClass('cur');
 		$(this).addClass('cur');
 		var index=$(this).index();

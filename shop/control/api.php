@@ -6,25 +6,32 @@ defined('InShopNC') or exit('Access Invalid!');
 class apiControl extends BaseHomeControl{
 	//验证key
 	public function __construct(){
-		$key=$_POST['key'];
-		if($key!=MEMBER_SYSTEM_KEY){
-			exit('Access Invalid!');
-		}
+		// $key=$_POST['key'];
+		// if($key!=MEMBER_SYSTEM_KEY){
+		// 	exit('Access Invalid!');
+		// }
 	}
 	// 激活会员的接口
 	public function activeMemberOp(){
 		$model_member	= Model('member');
-		$array=array();
-		$array['member_name']	= $_POST['username'];
-		$array['member_passwd']	= $_POST['password'];
-		$is_live=intval($_POST['is_live']);
+		$member_name = htmlspecialchars($_GET['username']);
+		$member_info = $model_member->getMemberInfo(array('member_name'=>$member_name));
 
-		$member_info = $model_member->infoMember($array);
-		if(empty($member_info)) {
-			exit('username or password is error');
-		}
 		$result = $model_member->updateMember(array('is_live'=>$is_live),intval($member_info['member_id']));
 		exit($result);
 	}
-
+	/**
+	 * 对接好客会员系统回调
+	 */
+	public function MemberSystemCallBackOp() {
+		$data=$_GET;
+		$str='';
+		$time=date("Y-m-d H:i:s",time());
+		foreach($data as $k=>$v){
+		    $str.=$k.':'.$v."|";
+		}
+		$str.="{$time} \n ";
+		file_put_contents('2.txt', $str,FILE_APPEND);
+		echo 'ok';
+	}
 }

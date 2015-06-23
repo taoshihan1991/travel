@@ -12,6 +12,15 @@
 defined('InShopNC') or exit('Access Invalid!');
 class indexControl extends BaseHomeControl{
 	public function indexOp(){
+
+		//综合首页
+		if(empty($_GET['cate_id'])){
+			$this->superIndex();
+			exit;
+		}
+
+
+
 		Language::read('home_index_index');
 		Tpl::output('index_sign','index');
 		
@@ -35,19 +44,80 @@ class indexControl extends BaseHomeControl{
 		$list=Model('article')->getJoinList($condition,9);
 		Tpl::output('show_article',$list);
 
+        //banner部分
+        $this->assignBanner($cate_id);
+
+		// 商学院文章
+		if($_GET['cate_id']==593||$_GET['cate_id']==308||$_GET['cate_id']==470){
+			switch ($_GET['cate_id']) {
+				case '593':
+					$articleClassId=10;
+					break;
+				case '308':
+					$articleClassId=10;
+					break;
+				case '470':
+					$articleClassId=10;
+					break;
+			}
+			$this->articleIndex($articleClassId);
+			exit;
+		}
+
 		// 楼层效果
 		$cate_id=intval($_GET['cate_id']) ? intval($_GET['cate_id']) : 1;
         $this->assignFloorData($cate_id);
 
-        //banner部分
-        $this->assignBanner($cate_id);
-
-
-
 		Model('seo')->type('index')->show();
 		Tpl::showpage('index');
 	}
+	/**
+	* 文章首页
+	* @return 分配变量
+	*/
+	public function articleIndex($parentId){
+		$articleClassModel=Model('article_class');
+		$articleModel=Model('article');
+		$model_upload = Model('upload');
+		$articleClass = $articleClassModel->getClassList(array('ac_parent_id'=>$parentId));
+		$result=array();
 
+		foreach($articleClass as $k=>$v){
+			$list=$articleModel->getArticleList(array('ac_ids'=>$v['ac_id']),10);
+
+			foreach($list as $k=>$row){
+				$condition=array();
+				$condition['upload_type'] = '1';
+				$condition['item_id'] = $row['article_id'];
+				$file_upload = $model_upload->getUploadList($condition);
+				$list[$k]['image']=UPLOAD_SITE_URL.'/'.ATTACH_ARTICLE.'/'.$file_upload[0]['file_name'];
+			}
+			$result[]=array(
+				'ac_name'=>$v['ac_name'],
+				'list'=>$list
+			);
+		}
+		Tpl::output('categoryTabFloor',$result);
+		Tpl::showpage('article_index');
+	}
+
+	/**
+	* 综合首页
+	* @return 分配变量
+	*/
+	public function superIndex(){
+		Tpl::setLayout('super_index');
+		$topBannerList=$this->getAdvByAdvId(385);
+		Tpl::output('topBannerList',$topBannerList);
+
+		$midBannerList=$this->getAdvByAdvId(386);
+		Tpl::output('midBannerList',$midBannerList);
+
+		$productList=$this->getAdvByAdvId(387);
+		Tpl::output('productList',$productList);
+
+		Tpl::showpage('super_index');
+	}
 	/**
 	* 按楼层分配数据
 	* @return 分配变量

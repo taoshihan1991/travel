@@ -325,3 +325,12 @@ overflow: hidden;}
     right: 10px;
     top: 5px;
 }
+/*顶部轮播*/
+#topScollBanner{ width:1190px; height:60px; overflow:hidden; position:relative; margin: 0 auto;}
+#topScollBanner .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+#topScollBanner .hd ul{ overflow:hidden; zoom:1; float:left;  }
+#topScollBanner .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+#topScollBanner .hd ul li.on{ background:#229eba; color:#fff; }
+#topScollBanner .bd{ position:relative; height:100%; z-index:0;   }
+#topScollBanner .bd li{ zoom:1; vertical-align:middle; }
+#topScollBanner .bd img{ width:1190px; height:60px; display:block;  }

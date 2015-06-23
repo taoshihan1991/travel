@@ -18,7 +18,7 @@ class Control{
 	public function getAdvByAdvId($advid){
 		$condition=array(
 			'ap_id'=>$advid,
-			'field'=>'adv_content,adv_id'
+			'field'=>'adv_content,adv_id,adv_title'
 		);
 		$adv_model=Model('adv');
 		$list=$adv_model->getList($condition);
@@ -27,7 +27,7 @@ class Control{
 			$content=unserialize($v['adv_content']);
 			$temp=array();
 			$temp['pic']=UPLOAD_SITE_URL.'/shop/adv/'.$content['adv_pic'];
-			$temp['text']=$content['adv_word'];
+			$temp['text']=$v['adv_title'];
 			$temp['link']=$content['adv_word_url'];
 			$temp['url']=$content['adv_pic_url'];
 			$temp['id']=$v['adv_id'];
@@ -372,11 +372,8 @@ class BaseMemberControl extends Control {
 		//自动更新订单，执行一次
 		if(empty($_SESSION['order_update_time'])) $this->updateOrder();
 
-		$member_model=Model('member');
-		$member_info = $member_model->infoMember(array('member_id'=>"{$_SESSION['member_id']}",'member_state'=>'1'));
-
-		if ($member_info['available_predeposit']=='0.00'&&$member_info['is_live']==0){
-			showDialog('充值成功后,才能激活成为正式会员',urlShop('charge','add'),'error');
+		if (!checkLive()){
+			showDialog('请先充值,等待激活成为正式会员',urlShop('charge','add'),'error');
 			exit;
 		}
 		
