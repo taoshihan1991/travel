@@ -166,6 +166,22 @@ if($_GET['cate_id']==1){
 
   </div>
 </div>
+<?php if($_GET['cate_id']==470){?>
+<!-- [邮轮中心广告位] -->
+<style type="text/css">
+#shipIndexBanner{width: 1190px;margin: 0 auto;}
+#shipIndexBanner img{width: 1190px;height:80px;}
+</style>
+<div id="shipIndexBanner">
+          <?php if(is_array($output['shipBannerList'])){foreach($output['shipBannerList'] as $k=>$v){?>
+                    <a href="<?php echo $v['url']?>" target="_blank">
+                        <img src="<?php echo $v['pic']?>">
+                    </a>
+          <?php }}?>
+</div>
+<!-- [//邮轮中心广告位] -->
+<?php }?>
+
 <!--旅游局合作 start-->
 <div class="cooper_box">
   <div class="cooper_title">

@@ -164,17 +164,7 @@ $(function(){
               <?php $i=0;foreach($output['show_goods_class'] as $vals){$i++;if($i>=11) break;?>
               <li <?php if($vals['gc_id']==$_GET['cate_id']){?>class="current"<?php }?>>
               
-                <a href="
-                <?php 
-                switch ($vals['gc_id']) {
-                  case '530'://春芝堂商场
-                    echo 'http://www.chinaspringtown.com';
-                    break;
-                  default:
-                    echo urlShop('index','index',array('cate_id'=> $vals['gc_id']));
-                    break;
-                }
-                ?>" target="_blank"><?php echo $vals['gc_name'];?>
+                <a href="<?php echo urlShop('index','index',array('cate_id'=> $vals['gc_id']));?>" target="_blank"><?php echo $vals['gc_name'];?>
                   <i></i>
                 </a>
                 <div class="submenu-nav">

@@ -12,7 +12,7 @@
 defined('InShopNC') or exit('Access Invalid!');
 class indexControl extends BaseHomeControl{
 	public function indexOp(){
-
+		$cate_id=intval($_GET['cate_id']);
 		//综合首页
 		if(empty($_GET['cate_id'])){
 			$this->superIndex();
@@ -47,8 +47,8 @@ class indexControl extends BaseHomeControl{
         //banner部分
         $this->assignBanner($cate_id);
 
-		// 商学院文章
-		if($_GET['cate_id']==593||$_GET['cate_id']==308||$_GET['cate_id']==470){
+		// 文章形式首页
+		if($_GET['cate_id']==593||$_GET['cate_id']==308||$_GET['cate_id']==530||$_GET['cate_id']==2){
 			switch ($_GET['cate_id']) {
 				case '593':
 					$articleClassId=10;
@@ -56,8 +56,14 @@ class indexControl extends BaseHomeControl{
 				case '308':
 					$articleClassId=10;
 					break;
-				case '470':
-					$articleClassId=10;
+				case '530':
+					$articleClassId=12;
+					break;
+				case '2':
+					$buyBannerList=$this->getAdvByAdvId(388);
+					Tpl::output('buyBannerList',$buyBannerList);
+					Tpl::showpage('buy_index');
+					exit;
 					break;
 			}
 			$this->articleIndex($articleClassId);
@@ -69,6 +75,20 @@ class indexControl extends BaseHomeControl{
         $this->assignFloorData($cate_id);
 
 		Model('seo')->type('index')->show();
+
+		// 邮轮中心广告位
+		if($cate_id==470){
+			$shipBannerList=$this->getAdvByAdvId(389);
+			Tpl::output('shipBannerList',$shipBannerList);
+		}
+		// 好客专车广告位
+		if($cate_id==730){
+			$carBannerList=$this->getAdvByAdvId(390);
+			Tpl::output('carBannerList',$carBannerList);
+			Tpl::showpage('car_index');
+			exit;
+		}
+
 		Tpl::showpage('index');
 	}
 	/**
@@ -84,14 +104,13 @@ class indexControl extends BaseHomeControl{
 
 		foreach($articleClass as $k=>$v){
 			$list=$articleModel->getArticleList(array('ac_ids'=>$v['ac_id']),10);
-
-			foreach($list as $k=>$row){
+			if(!empty($list)){foreach($list as $k=>$row){
 				$condition=array();
 				$condition['upload_type'] = '1';
 				$condition['item_id'] = $row['article_id'];
 				$file_upload = $model_upload->getUploadList($condition);
 				$list[$k]['image']=UPLOAD_SITE_URL.'/'.ATTACH_ARTICLE.'/'.$file_upload[0]['file_name'];
-			}
+			}}
 			$result[]=array(
 				'ac_name'=>$v['ac_name'],
 				'list'=>$list

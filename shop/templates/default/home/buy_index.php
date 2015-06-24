@@ -3,11 +3,10 @@
 <!--[if IE 6]>
 <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/ie6.js" charset="utf-8"></script>
 <![endif]-->
+<div class="clear"></div>
 <style type="text/css">
 .all-category { display: block !important;}
 </style>
-  <div class="clear"></div>
-
 <!-- [banner部分] -->
 <div class="indexBannerBox">
   <div class="bannerCenter">
@@ -58,79 +57,32 @@
 
 <script type="text/javascript" src="<?php echo SHOP_RESOURCE_SITE_URL;?>/js/home_index.js" charset="utf-8"></script>
 
+
+
+
 <!-- [主体内容] -->
-<div class="content_box">
+<script type="text/javascript" src="<?php echo SHOP_TEMPLATES_URL;?>/js/jquery.SuperSlide.2.1.1.js"></script>
+<style type="text/css">
+/*顶部轮播*/
+#buyIndexBanner{ width:1190px; margin: 0 auto;}
+#buyIndexBanner .bd img{
+  width:1190px;  
+  height: 280px;
+}
+</style>
+<div id="buyIndexBanner">
 
-
- 
-  <?if(is_array($output['categoryTabFloor'])){foreach($output['categoryTabFloor'] as $categoryKey=>$row){?>
-  <div class="inbound theme<?php echo $categoryKey;?>" id="inbound">
-        <h3><?php echo $categoryKey+1;?>F <?php echo $row['ac_name']?></h3>
-        <div class="infocon">
-
-      <div class="srpnel" style="width:100%;">
-          <div class="prooutinbound-list pnel">
-            <ul><div class="udiyblock"  type="CommonSource">  
-               <?if(is_array($row['list'])){foreach($row['list'] as $goodsKey=>$v){?>
-                  <li  class="<?php if($goodsKey%5==4){?>mr0<?php }?>" style="margin-right: 13px;padding: 2px 0px;">
-                    <a href="<?php echo urlShop('article','show',array('article_id'=>$v['article_id']));?>" target="_blank">
-                    <div class="indexThumb">
-                      <img src="<?php echo $v['image']?>" alt=""/>
-                    </div>
-                    <p class="goodsName"><?php echo $v['article_title']?></p>
-                   </a>
-                  </li>
-               <?php }}?>
-                      </div></ul>
+            <div class="bd">
+                <ul>            
+                  <?php if(is_array($output['buyBannerList'])){foreach($output['buyBannerList'] as $k=>$v){?>
+                <li>
+                    <a href="<?php echo $v['url']?>" target="_blank">
+                        <img src="<?php echo $v['pic']?>">
+                    </a>
+                </li>
+            <?php }}?>
+            </ul>
             </div>
-        <div class="prooutinbound-list pnel none"><ul></ul></div>
-      </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <?php }}?>
 
-  </div>
 </div>
-<!--旅游局合作 start-->
-<div class="cooper_box">
-  <div class="cooper_title">
-    <h3>旅游局合作</h3>
-    <a href="" target="_blank" rel="nofollow">
-      更多旅游局
-    </a>
-  </div>
-  <div id="portal-block-1026606249924" class="udiyblock"  type="CommonSource"> <ul class="cooper_list">
-    <div id="portal-block-477488565169" class="udiyblock"  type="CommonSource">
-      <li class="c_list1">
-        <a href="" target="_blank" class="c_bg1" rel="nofollow">釜山观光公社</a>
-      </li>
-      <li>
-        <a href="" class="c_bg2" target="_blank" rel="nofollow">江苏省旅游局</a>
-      </li>
-      <li>
-        <a href="" class="c_bg3"  target="_blank" rel="nofollow">四川省旅游局</a>
-      </li>
-      <li>
-        <a href="" class="c_bg4"  target="_blank" rel="nofollow">福建省旅游局</a>
-      </li>
-      <li>
-        <a href="" class="c_bg5"  target="_blank" rel="nofollow">广东省旅游局</a>
-      </li>
-      <li>
-        <a href="" class="c_bg6"  target="_blank" rel="nofollow">青海省旅游局</a>
-      </li>
-      <li class="c_list7">
-        <a href="" class="c_bg7"  target="_blank" rel="nofollow">河南省旅游局</a>
-      </li>
-      <li class="c_list8">
-        <a href="" class="c_bg8"  target="_blank" rel="nofollow">苏州市旅游局</a>
-      </li>
-    </div>
-  </ul></div>
-  <p class="c_list_bg"></p>
-</div>
-<!--旅游局合作 end-->
-
 <!-- [//主体内容] -->

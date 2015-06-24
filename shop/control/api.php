@@ -14,11 +14,14 @@ class apiControl extends BaseHomeControl{
 	// 激活会员的接口
 	public function activeMemberOp(){
 		$model_member	= Model('member');
-		$member_name = htmlspecialchars($_GET['username']);
+		$member_name = htmlspecialchars($_GET['UserCode']);
+		$Status = intval($_GET['Status']);
+		$is_live= $Status==1 ? 1 : 0;
 		$member_info = $model_member->getMemberInfo(array('member_name'=>$member_name));
 
 		$result = $model_member->updateMember(array('is_live'=>$is_live),intval($member_info['member_id']));
-		exit($result);
+		header("content-type:text/html;charset=utf-8");
+		exit('操作成功');
 	}
 	/**
 	 * 对接好客会员系统回调
