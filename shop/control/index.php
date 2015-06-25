@@ -54,7 +54,7 @@ class indexControl extends BaseHomeControl{
 					$articleClassId=10;
 					break;
 				case '308':
-					$articleClassId=10;
+					$articleClassId=11;
 					break;
 				case '530':
 					$articleClassId=12;
@@ -102,7 +102,7 @@ class indexControl extends BaseHomeControl{
 		$articleClass = $articleClassModel->getClassList(array('ac_parent_id'=>$parentId));
 		$result=array();
 
-		foreach($articleClass as $k=>$v){
+		if(!empty($articleClass)){foreach($articleClass as $k=>$v){
 			$list=$articleModel->getArticleList(array('ac_ids'=>$v['ac_id']),10);
 			if(!empty($list)){foreach($list as $k=>$row){
 				$condition=array();
@@ -115,7 +115,7 @@ class indexControl extends BaseHomeControl{
 				'ac_name'=>$v['ac_name'],
 				'list'=>$list
 			);
-		}
+		}}
 		Tpl::output('categoryTabFloor',$result);
 		Tpl::showpage('article_index');
 	}

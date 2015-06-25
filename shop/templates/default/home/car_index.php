@@ -10,8 +10,7 @@
 /*顶部轮播*/
 #carIndexBanner{ width:1600px; margin: 0 auto;}
 #carIndexBanner img{
-  width:1600px;  
-  height: 584px;
+  width:1600px; 
 }
 </style>
 <div id="carIndexBanner">

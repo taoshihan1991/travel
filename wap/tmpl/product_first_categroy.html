@@ -27,6 +27,16 @@
 			}else {
 				locUrl = WapSiteUrl+"/tmpl/product_list.html?gc_id="+class_list[i].gc_id;
 			}
+			if(class_list[i].gc_id==308){
+				locUrl = WapSiteUrl+"/tmpl/article_second_categroy.html?gc_id=11";
+			}
+			if(class_list[i].gc_id==530){
+				locUrl = WapSiteUrl+"/tmpl/article_second_categroy.html?gc_id=12";
+			}
+			if(class_list[i].gc_id==593){
+				locUrl = WapSiteUrl+"/tmpl/article_second_categroy.html?gc_id=10";
+			}
+
 		%>
 			<li class="category-item">
 				<a href="<%=locUrl%>"class="category-item-a">
